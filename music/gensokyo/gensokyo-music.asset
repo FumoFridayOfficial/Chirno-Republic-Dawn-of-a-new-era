@@ -1,0 +1,42 @@
+# MUSIC STATION
+
+music = {
+	name = "dBu-Music-the-Ultimate-Truth"
+	file = "dBu-Music_-究極の真実-the-Ultimate-Truth.ogg"
+	volume = 1
+}
+music = {
+	name = "SWR-Aya-Shameimarus-Theme-Wind-God-Girl"
+	file = "SWR-Aya-Shameimarus-Theme-Wind-God-Girl.ogg"
+	volume = 1
+}
+music = {
+	name = "dBu-Shall-we-fuse"
+	file = "dBu-霊知の太陽信仰-Shall-we-fuse.ogg"
+	volume = 1
+}
+music = {
+	name = "The-Maid-and-the-Pocket-Watch-of-Blood-_Harumi-Shiina"
+	file = "The-Maid-and-the-Pocket-Watch-of-Blood-_Harumi-Shiina.ogg"
+	volume = 1
+}
+music = {
+	name = "House-Set-of-Perfect-Cherry-Blossom-12Another-Border-of-Life"
+	file = "House-Set-of-Perfect-Cherry-Blossom-12Another-Border-of-Life.ogg"
+	volume = 1
+}
+music = {
+	name = "Drunk-as-I-like"
+	file = "Drunk-as-I-like.ogg"
+	volume = 1
+}
+music = {
+	name = "Apparitions-Stalk-the-Night"
+	file = "Apparitions-Stalk-the-Night.ogg"
+	volume = 1
+}
+music = {
+	name = "Septette-for-the-Dead-Princess"
+	file = "Septette-for-the-Dead-Princess.ogg"
+	volume = 1
+}

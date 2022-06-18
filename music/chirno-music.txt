@@ -1,0 +1,36 @@
+music_station = "Chirno_Radio_Station"
+
+music = {
+	song = "Eye_em_in_the_spotlight"
+
+}
+
+music = {
+	song = "The_Start_of_an_adventure"
+	
+}
+
+music = {
+	song = "Beloved_Tomboyish_Girl"
+
+}
+
+music = {
+	song = "An_Awesome_Math_Class"
+}
+
+music = {
+	song = "House_Beloved_Tomboyish_Girl"
+}
+
+music = {
+	song = "dBu_Music_the_Foolish_Girl"
+}
+
+music = {
+	song = "Beloved_Tomboyish_Daughter_Intense_Symphonic_Metal_Cover"
+}
+
+music = {
+	song = "Original_Chirno_Theme"
+}

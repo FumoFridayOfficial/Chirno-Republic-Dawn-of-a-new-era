@@ -1,0 +1,56 @@
+# MUSIC STATION
+
+music = {
+	name = "maintheme"	# LINK: https://www.youtube.com/watch?v=1ChXLzOmNUM
+	file = "The-Start-of-an-adventure.ogg"
+	volume = 0.8
+}
+
+
+music = {
+	name = "Eye_em_in_the_spotlight" # LINK: https://www.youtube.com/watch?v=Gq0HjjELOAs /Credits Circle: Tutti Sound Album: 東方映画音楽選 ～Light/
+	file = "Eye_em_in_the_spotlight.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "The_Start_of_an_adventure" # LINK: https://www.youtube.com/watch?v=1ChXLzOmNUM
+	file = "The-Start-of-an-adventure.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "Beloved_Tomboyish_Girl" # LINK: https://www.youtube.com/watch?v=1kqgcNeJDYU
+	file = "Beloved-Tomboyish-Girl.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "An_Awesome_Math_Class" # LINK: https://www.youtube.com/watch?v=M09_jyNMhuQ
+	file = "An-Awesome-Math-Class.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "House_Beloved_Tomboyish_Girl" # LINK: https://www.youtube.com/watch?v=ZwkQfeVa038
+	file = "House-Beloved-Tomboyish-Girl.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "dBu_Music_the_Foolish_Girl" # LINK: https://www.youtube.com/watch?v=Bo0MgvtygtU
+	file = "dBu-Music_-おてんば恋娘-the-Foolish-Girl.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "Beloved_Tomboyish_Daughter_Intense_Symphonic_Metal_Cover" # LINK: https://www.youtube.com/watch?v=Hmxw4OtmtrE
+	file = "Beloved_Tomboyish_Daughter_Intense_Symphonic_Metal_Cover.ogg"
+	volume = 0.8
+}
+
+music = {
+	name = "Original_Chirno_Theme" # LINK: It's the original, you know from where it's from come on.
+	file = "Original_Chirno_Theme.ogg"
+	volume = 0.8
+}

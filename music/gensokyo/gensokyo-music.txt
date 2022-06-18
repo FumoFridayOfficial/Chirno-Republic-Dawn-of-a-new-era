@@ -1,0 +1,31 @@
+music_station = "Gensokyo_Radio_Station"
+
+music = {
+	song = "dBu-Music-the-Ultimate-Truth" #link https://www.youtube.com/watch?v=pOiAVXnnwVo
+}
+
+music = {
+	song = "SWR-Aya-Shameimarus-Theme-Wind-God-Girl" #link https://www.youtube.com/watch?v=128rfuJczCs
+}
+
+music = {
+	song = "dBu-Shall-we-fuse" #link https://www.youtube.com/watch?v=mjxKp6LfMsY
+}
+
+music = {
+	song = "The-Maid-and-the-Pocket-Watch-of-Blood-_Harumi-Shiina" #link https://www.youtube.com/watch?v=AhQNHyF8MFI
+}
+
+music = {
+	song = "House-Set-of-Perfect-Cherry-Blossom-12Another-Border-of-Life" #link https://www.youtube.com/watch?v=95YQQrqkX3k
+}
+
+music = {
+	song = "Drunk-as-I-like" #link: From Touhou 10.5 SWR
+}
+music = {
+	song = "Apparitions-Stalk-the-Night" #link: https://www.youtube.com/watch?v=YToBIZud-KQ
+}
+music = {
+	song = "Septette-for-the-Dead-Princess" #link: https://www.youtube.com/watch?v=DOq6spM1-Aw
+}
