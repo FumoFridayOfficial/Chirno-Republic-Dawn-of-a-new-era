@@ -2,6 +2,7 @@
 <h3 align="center">Hearts of iron 4 mod</h3>
 
 <h4 align="center">Current version v1.3</h4>
+<h4 align="center">Released on 06/05/2022</h4>
 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/107706059/174435795-7118e320-b5ed-459f-9c7c-2d475f422722.png" /></p>
