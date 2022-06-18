@@ -35,3 +35,5 @@ Future things i will do:
 
 
 Thanks <b>@Tsar_blin</b> and <b>@justexistsobu1</b> on twitter for letting me use your works! /The fumo propaganda one!/
+
+Steam version: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2597260351">https://steamcommunity.com/sharedfiles/filedetails/?id=2597260351</a>
