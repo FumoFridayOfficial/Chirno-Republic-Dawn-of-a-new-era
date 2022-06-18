@@ -1,0 +1,557 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_idea_The-Ninth"
+		texturefile = "gfx/interface/ideas-chirno/The-Ninth.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_The-Tenth_1"
+		texturefile = "gfx/interface/ideas-chirno/The-Tenth_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_The-Tenth_2"
+		texturefile = "gfx/interface/ideas-chirno/The-Tenth_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Revolutionary_guerillas"
+		texturefile = "gfx/interface/ideas-chirno/Revolutionary_guerillas.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Frozen-Realm"
+		texturefile = "gfx/interface/ideas-chirno/Frozen-Realm.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Frozen-Realm-2"
+		texturefile = "gfx/interface/ideas-chirno/Frozen-Realm.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Religious-Terrorists"
+		texturefile = "gfx/interface/ideas-chirno/ReligiousTerrorist.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Economic_Resource_Growth"
+		texturefile = "gfx/interface/ideas-chirno/Economic-Resource-Growth.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Through_Exploitation"
+		texturefile = "gfx/interface/ideas-chirno/Through-Exploitation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Industry_Project_I"
+		texturefile = "gfx/interface/ideas-chirno/Industry-Project-I.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Industry_Project_II"
+		texturefile = "gfx/interface/ideas-chirno/Industry-Project-II.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Industry_Project_III"
+		texturefile = "gfx/interface/ideas-chirno/Industry-Project-III.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_civilian_focus_I"
+		texturefile = "gfx/interface/ideas-chirno/Civilian-focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_civilian_focus_II"
+		texturefile = "gfx/interface/ideas-chirno/Civilian-focus-II.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military_focus_I"
+		texturefile = "gfx/interface/ideas-chirno/Military-focus-I.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military_focus_II"
+		texturefile = "gfx/interface/ideas-chirno/Military-focus-II.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_bunker_focus"
+		texturefile = "gfx/interface/ideas-chirno/Bunker-focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_A_Red_Ice"
+		texturefile = "gfx/interface/ideas-chirno/A_Red_Ice.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Coolest_Ice"
+		texturefile = "gfx/interface/ideas-chirno/Coolest_Ice.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Perfect_Shape_Ice"
+		texturefile = "gfx/interface/ideas-chirno/Perfect_Shape_Ice.dds"
+	}
+	######-RELIGIOUS-TERRORIST-#############
+	spriteType = {
+		name = "GFX_idea_Religious-Terrorists_2"
+		texturefile = "gfx/interface/ideas-chirno/ReligiousTerrorist.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Religious-Terrorists_3"
+		texturefile = "gfx/interface/ideas-chirno/ReligiousTerrorist.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Religious-Terrorists_4"
+		texturefile = "gfx/interface/ideas-chirno/ReligiousTerrorist.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Religious-Terrorists_5"
+		texturefile = "gfx/interface/ideas-chirno/ReligiousTerrorist.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Religious-Terrorists_6"
+		texturefile = "gfx/interface/ideas-chirno/ReligiousTerrorist.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Religious-Terrorists_7"
+		texturefile = "gfx/interface/ideas-chirno/ReligiousTerrorist.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Religious-Terrorists_8"
+		texturefile = "gfx/interface/ideas-chirno/ReligiousTerrorist.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Religious-Terrorists_9"
+		texturefile = "gfx/interface/ideas-chirno/ReligiousTerrorist.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Religious-Terrorists_10"
+		texturefile = "gfx/interface/ideas-chirno/ReligiousTerrorist.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Restore_Order"
+		texturefile = "gfx/interface/ideas-chirno/Restore_Order.dds"
+	}
+	##############################################
+	spriteType = {
+		name = "GFX_idea_Big_Recruitment_Program"
+		texturefile = "gfx/interface/ideas-chirno/Big_Recruitment_Program.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Rifles_Production_Boost"
+		texturefile = "gfx/interface/ideas-chirno/Rifles_Production_Boost.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Ground"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Ground.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Ground_1"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Ground.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Ground_5"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Ground.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Ground_6"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Ground.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Sea"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Sea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Sea_2"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Sea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Sea_3"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Sea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Sea_4"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Sea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Air"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Air.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Air_2"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Air.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Air_3"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Air.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Air_4"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Air.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Air_5"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Air.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Air_6"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Air.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Air_7"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Air.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ambition_Of_Air_8"
+		texturefile = "gfx/interface/ideas-chirno/Ambition_Of_Air.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Strongest_Army_LV_1"
+		texturefile = "gfx/interface/ideas-chirno/Strongest_Army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Strongest_Army_HV_2"
+		texturefile = "gfx/interface/ideas-chirno/Strongest_Army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Strongest_Army_LV_2"
+		texturefile = "gfx/interface/ideas-chirno/Strongest_Army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Strongest_Army_HV_1"
+		texturefile = "gfx/interface/ideas-chirno/Strongest_Army.dds"
+	}
+	######-RELIGIOUS-TERRORIST-#############
+	spriteType = {
+		name = "GFX_idea_resource_boost"
+		texturefile = "gfx/interface/ideas-chirno/Resource_boost.dds"
+	}
+	SpriteType = { 
+		name = "GFX_idea_yetunde_babajide"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-1.dds"
+	}
+	##Icon For:  Adegoke Adebowale
+	SpriteType = {
+		name = "GFX_idea_adegoke_adebowale"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-3.dds"
+	}
+	##Icon For: Kayin Temitope
+	SpriteType = { 
+		name = "GFX_idea_kayin_temitope"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-4.dds"
+	}
+	##Icon For: Babajide Lekan
+	SpriteType = { 
+		name = "GFX_idea_babajide_lekan"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-6.dds"
+	}
+	##Icon For: Patchouli Knowledge
+	SpriteType = { 
+		name = "GFX_idea_patchouli_knowledge"
+		texturefile = "gfx/interface/ideas-chirno/patch-pd.dds"
+	}
+	##Icon For: Patchouli Fumo
+	SpriteType = { 
+		name = "GFX_idea_patchouli_fumo"
+		texturefile = "gfx/interface/ideas-chirno/patch-fumo.dds"
+	}
+	##Icon For: AYA fumo
+	SpriteType = { 
+		name = "GFX_idea_aya_fumo"
+		texturefile = "gfx/interface/ideas-chirno/aya-fumo.dds"
+	}
+	##Icon For: Gensokyian Tank Manufacter
+	SpriteType = { 
+		name = "GFX_idea_gensokyian_tank_manufacter"
+		texturefile = "gfx/interface/ideas-chirno/Tank-Man.dds"
+	}
+	##Icon For: Gensokyian Naval Manufacter
+	SpriteType = { 
+		name = "GFX_idea_gensokyian_naval_manufacter"
+		texturefile = "gfx/interface/ideas-chirno/Navy-Man.dds"
+	}
+	##Icon For: Gensokyian Plane Manufacter
+	SpriteType = { 
+		name = "GFX_idea_gensokyian_plane_manufacter"
+		texturefile = "gfx/interface/ideas-chirno/Air-Man.dds"
+	}
+	##Icon For: Gensokyian Rifle Manufacter
+	SpriteType = { 
+		name = "GFX_idea_gensokyian_rifle_manufacter"
+		texturefile = "gfx/interface/ideas-chirno/Material.dds"
+	}
+	##Icon For: Gensokyian Industrial Concern
+	SpriteType = { 
+		name = "GFX_idea_gensokyian_industrial_concern"
+		texturefile = "gfx/interface/ideas-chirno/Industrial.dds"
+	}
+	##########RUMIA##########
+	SpriteType = { 
+		name = "GFX_idea_Insatiable_hunger"
+		texturefile = "gfx/interface/ideas-chirno/Insatiable_hunger.dds"
+	}
+	SpriteType = { 
+		name = "GFX_idea_Darkness_envolves_our_lands"
+		texturefile = "gfx/interface/ideas-chirno/Darkness_envolves_our_lands.dds"
+	}
+	#########################
+	##Icon For: Utsuho Reiuji
+	SpriteType = { 
+		name = "GFX_idea_utsuho_reiuji"
+		texturefile = "gfx/interface/ideas-chirno/Uthuso-pd.dds"
+	}
+	##Icon For: Utsuho Fumo
+	SpriteType = { 
+		name = "GFX_idea_utsuho_fumo"
+		texturefile = "gfx/interface/ideas-chirno/Uthuso-fumo.dds"
+	}
+	##Icon For: Aya Shameimaru
+	SpriteType = { 
+		name = "GFX_idea_aya_shameimaru"
+		texturefile = "gfx/interface/ideas-chirno/Aya-pd.dds"
+	}
+	##Icon For: Abioye Adebowale
+	SpriteType = { 
+		name = "GFX_idea_abioye_adebowale"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-5.dds"
+	}
+	##Icon For: Babatunde Yejide
+	SpriteType = { 
+		name = "GFX_idea_babatunde_yejide"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-2.dds"
+	}
+	
+	##Icon For: Chirno the ice fairy
+	SpriteType = { 
+		name = "GFX_idea_chirno_the_ice_fairy"
+		texturefile = "gfx/interface/ideas-chirno/chirno-pd.dds"
+	}
+
+	##Icon For: Chirno the fumo
+	SpriteType = { 
+		name = "GFX_idea_chirno_the_fumo"
+		texturefile = "gfx/interface/ideas-chirno/chirno-fumo.dds"
+	}
+	##Icon For: Sakuya Izayoi
+	SpriteType = { 
+		name = "GFX_idea_sakuya_izayoi"
+		texturefile = "gfx/interface/ideas-chirno/Sakuya-pd.dds"
+	}
+	##Icon For: Sakuya fumo
+	SpriteType = { 
+		name = "GFX_idea_sakuya_fumo"
+		texturefile = "gfx/interface/ideas-chirno/Sakuya-fumo.dds"
+	}
+	##Icon For: Tenshi Hinanawi
+	SpriteType = { 
+		name = "GFX_idea_tenshi_hinanawi"
+		texturefile = "gfx/interface/ideas-chirno/Tenhsi-pd.dds"
+	}
+	##Icon For: Tenshi Fumo
+	SpriteType = { 
+		name = "GFX_idea_tenshi_fumo"
+		texturefile = "gfx/interface/ideas-chirno/Tenhsi-fumo.dds"
+	}
+	##Icon For: Flandre Scarlet
+	SpriteType = { 
+		name = "GFX_idea_flandre_scarlet"
+		texturefile = "gfx/interface/ideas-chirno/flandre-pd.dds"
+	}
+	##Icon For: Minamitsu Murasa
+	SpriteType = { 
+		name = "GFX_idea_minamitsu_murasa"
+		texturefile = "gfx/interface/ideas-chirno/murasa-pd.dds"
+	}
+	##Icon For: Nitori Kawashiro
+	SpriteType = { 
+		name = "GFX_idea_nitori_kawashiro"
+		texturefile = "gfx/interface/ideas-chirno/nitori-pd.dds"
+	}
+	##Icon For: yukari_yakumo
+	SpriteType = { 
+		name = "GFX_idea_yukari_yakumo"
+		texturefile = "gfx/interface/ideas-chirno/yukari-pd.dds"
+	}
+	##Icon For: Wriggle Nightbug
+	SpriteType = { 
+		name = "GFX_idea_wriggle_nightbug"
+		texturefile = "gfx/interface/ideas-chirno/wriggle-pd.dds"
+	}
+	SpriteType = { 
+		name = "GFX_CHR_religious_terrorist"
+		texturefile = "gfx/interface/state_modifiers/CHR_religious_terrorist.dds"
+	}
+	##Icon For: Mystia Lorelei
+	SpriteType = { 
+		name = "GFX_idea_mystia_lorelei"
+		texturefile = "gfx/interface/ideas-chirno/mystia-pd.dds"
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_chirno"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_chirno.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_Portrait_Yukari_Yakumo"
+		texturefile = "gfx/leaders/CHR/Portrait_CHR_Yukari_Yakumo.dds"
+	}
+	spriteType = {
+		name = "GFX_Idea_Marisa"
+		texturefile = "gfx/interface/ideas-chirno/Marisa.dds"
+	}
+	spriteType = {
+		name = "GFX_Idea_Reimu"
+		texturefile = "gfx/interface/ideas-chirno/Reimu.dds"
+	}
+	spriteType = {
+		name = "GFX_Idea_Remilia"
+		texturefile = "gfx/interface/ideas-chirno/Remilia.dds"
+	}
+	spriteType = {
+		name = "GFX_Idea_Flandre"
+		texturefile = "gfx/interface/ideas-chirno/Flandre.dds"
+	}
+	spriteType = {
+		name = "GFX_Idea_Meiling"
+		texturefile = "gfx/interface/ideas-chirno/Meiling.dds"
+	}
+	spriteType = {
+		name = "GFX_Idea_Koakuma"
+		texturefile = "gfx/interface/ideas-chirno/Koakuma.dds"
+	}
+	##categories##decisions##
+	spriteType = {
+		name = "GFX_decision_category_chr_recruitt"
+		texturefile = "gfx/interface/decisions/decision_category_chr_recruitt.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_chr_tengu"
+		texturefile = "gfx/interface/decisions/decision_chr_tengu.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_chr_book"
+		texturefile = "gfx/interface/decisions/decision_chr_book.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_chr_books"
+		texturefile = "gfx/interface/decisions/decision_chr_books.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_chr_gate"
+		texturefile = "gfx/interface/decisions/decision_chr_gate.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_chr_pocketwatch"
+		texturefile = "gfx/interface/decisions/decision_chr_pocketwatch.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_chr_wings"
+		texturefile = "gfx/interface/decisions/decision_chr_wings.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_chr_batwings"
+		texturefile = "gfx/interface/decisions/decision_chr_batwings.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Remilia_Scarlet"
+		texturefile = "gfx/leaders/SDM/Portrait_Remilia_Scarlet.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Remilia_Scarlet_2"
+		texturefile = "gfx/leaders/SDM/Portrait_Remilia_Scarlet_2.dds"
+	}
+	###################################################
+	####################EVENTS#########################
+	###################################################
+	SpriteType = {
+		name = "GFX_report_event_riot_police"
+		texturefile = "gfx/event_gfx/report_event_riot_police.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_chr_chirno_speech"
+		texturefile = "gfx/event_gfx/report_event_chr_chirno_speech.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_chr_chirno_summer"
+		texturefile = "gfx/event_gfx/report_event_chr_chirno_summer.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_chr_fumo"
+		texturefile = "gfx/event_gfx/report_event_chr_fumo.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_chr_chirno_army"
+		texturefile = "gfx/event_gfx/report_event_chr_chirno_army.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_chr_chirno_army_2"
+		texturefile = "gfx/event_gfx/report_event_chr_chirno_army_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_chr_aya"
+		texturefile = "gfx/event_gfx/report_event_chr_aya.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_remimilia"
+		texturefile = "gfx/event_gfx/report_event_remimilia.dds"
+	}
+
+	############################################################
+	####################SCARLET MANSION#########################
+	############################################################
+	SpriteType = {
+		name = "GFX_idea_Scarlet_Mansion_0"
+		texturefile = "gfx/interface/ideas-chirno/Scarlet_Mansion-0.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_Scarlet_Mansion_1"
+		texturefile = "gfx/interface/ideas-chirno/Scarlet_Mansion-1.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_Scarlet_Mansion_2"
+		texturefile = "gfx/interface/ideas-chirno/Scarlet_Mansion-2.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_Scarlet_Mansion_3"
+		texturefile = "gfx/interface/ideas-chirno/Scarlet_Mansion-3.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_Scarlet_Mansion_4"
+		texturefile = "gfx/interface/ideas-chirno/Scarlet_Mansion-4.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_Scarlet_Mansion_5"
+		texturefile = "gfx/interface/ideas-chirno/Scarlet_Mansion-4.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_SDM"
+		texturefile = "gfx/interface/decisions/decision_category_SDM.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_flandre"
+		texturefile = "gfx/event_gfx/report_event_flandre.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_koakuma"
+		texturefile = "gfx/event_gfx/report_event_koakuma.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_report_event_meiling"
+		texturefile = "gfx/event_gfx/report_event_meiling.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_report_event_patchouli"
+		texturefile = "gfx/event_gfx/report_event_patchouli.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_report_event_remilia"
+		texturefile = "gfx/event_gfx/report_event_remilia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_report_event_sakuya"
+		texturefile = "gfx/event_gfx/report_event_sakuya.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_report_event_scarlet_mansion"
+		texturefile = "gfx/event_gfx/report_event_scarlet_mansion.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_report_event_scarlet_visit"
+		texturefile = "gfx/event_gfx/report_event_scarlet_visit.dds"
+	}
+}

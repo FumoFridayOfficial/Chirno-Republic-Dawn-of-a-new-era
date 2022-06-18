@@ -1,0 +1,150 @@
+spriteTypes = { 
+	##Icon For: Yetunde Babajide
+	SpriteType = { 
+		name = "yetunde_babajide"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-1.dds"
+	}
+
+	##Icon For:  Adegoke Adebowale
+	SpriteType = { 
+		name = "adegoke_adebowale"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-3.dds"
+	}
+
+	##Icon For: Kayin Temitope
+	SpriteType = { 
+		name = "kayin_temitope"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-4.dds"
+	}
+
+	##Icon For: Babajide Lekan
+	SpriteType = { 
+		name = "babajide_lekan"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-6.dds"
+	}
+
+	##Icon For: Patchouli Knowledge
+	SpriteType = { 
+		name = "patchouli_knowledge"
+		texturefile = "gfx/interface/ideas-chirno/patch-pd.dds"
+	}
+
+	##Icon For: Gensokyian Tank Manufacter
+	SpriteType = { 
+		name = "gensokyian_tank_manufacter"
+		texturefile = "gfx/interface/ideas-chirno/Tank-Man.dds"
+	}
+
+	##Icon For: Gensokyian Naval Manufacter
+	SpriteType = { 
+		name = "gensokyian_naval_manufacter"
+		texturefile = "gfx/interface/ideas-chirno/Navy-Man.dds"
+	}
+
+	##Icon For: Gensokyian Plane Manufacter
+	SpriteType = { 
+		name = "gensokyian_plane_manufacter"
+		texturefile = "gfx/interface/ideas-chirno/Air-Man.dds"
+	}
+
+	##Icon For: Gensokyian Rifle Manufacter
+	SpriteType = { 
+		name = "gensokyian_rifle_manufacter"
+		texturefile = "gfx/interface/ideas-chirno/Material.dds"
+	}
+
+	##Icon For: Gensokyian Industrial Concern
+	SpriteType = { 
+		name = "gensokyian_industrial_concern"
+		texturefile = "gfx/interface/ideas-chirno/Industrial.dds"
+	}
+
+	##Icon For: Utsuho Reiuji
+	SpriteType = { 
+		name = "utsuho_reiuji"
+		texturefile = "gfx/interface/ideas-chirno/Uthuso-pd.dds"
+	}
+	
+	##Icon For: Utsuho Fumo
+	SpriteType = { 
+		name = "utsuho_fumo"
+		texturefile = "gfx/interface/ideas-chirno/Uthuso-fumo.dds"
+	}
+
+	##Icon For: Aya Shameimaru
+	SpriteType = { 
+		name = "aya_shameimaru"
+		texturefile = "gfx/interface/ideas-chirno/Aya-pd.dds"
+	}
+
+	##Icon For: Abioye Adebowale
+	SpriteType = { 
+		name = "abioye_adebowale"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-5.dds"
+	}
+
+	##Icon For: Babatunde Yejide
+	SpriteType = { 
+		name = "babatunde_yejide"
+		texturefile = "gfx/interface/ideas-chirno/PLAV-2.dds"
+	}
+
+	##Icon For: Chirno the ice fairy
+	SpriteType = { 
+		name = "chirno_the_ice_fairy"
+		texturefile = "gfx/interface/ideas-chirno/chirno-pd.dds"
+	}
+
+	##Icon For: Sakuya Izayoi
+	SpriteType = { 
+		name = "sakuya_izayoi"
+		texturefile = "gfx/interface/ideas-chirno/Sakuya-pd.dds"
+	}
+
+	##Icon For: Tenshi Hinanawi
+	SpriteType = { 
+		name = "tenshi_hinanawi"
+		texturefile = "gfx/interface/ideas-chirno/Tenhsi-pd.dds"
+	}
+	
+	##Icon For: Flandre Scarlet
+	SpriteType = { 
+		name = "flandre_scarlet"
+		texturefile = "gfx/interface/ideas-chirno/flandre-pd.dds"
+	}
+	
+	##Icon For: Minamitsu Murasa
+	SpriteType = { 
+		name = "minamitsu_murasa"
+		texturefile = "gfx/interface/ideas-chirno/murasa-pd.dds"
+	}
+	
+	##Icon For: Nitori Kawashiro
+	SpriteType = { 
+		name = "nitori_kawashiro"
+		texturefile = "gfx/interface/ideas-chirno/nitori-pd.dds"
+	}
+	
+	##Icon For: Yukari Yukamo
+	SpriteType = { 
+		name = "yukari_yakumo"
+		texturefile = "gfx/interface/ideas-chirno/yukari-pd.dds"
+	}
+	
+	##Icon For: Wriggle Nightbug
+	SpriteType = { 
+		name = "wriggle_nightbug"
+		texturefile = "gfx/interface/ideas-chirno/wriggle-pd.dds"
+	}
+	
+	##Icon For: Mystia Lorelei
+	SpriteType = { 
+		name = "mystia_lorelei"
+		texturefile = "gfx/interface/ideas-chirno/mystia-pd.dds"
+	}
+	##Icon For: Hong Meiling
+	SpriteType = { 
+		name = "hong_meiling"
+		texturefile = "gfx/interface/ideas-chirno/Meiling.dds"
+	}
+}

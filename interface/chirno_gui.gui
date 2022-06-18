@@ -1,0 +1,32 @@
+#guiTypes = {
+#
+#	containerWindowType = {
+#			name = "cat_main_container"
+#			position = { x = -155 y = 100 }
+#			orientation = CENTER
+#			size = { width = 400 height= 200 }
+#
+#			fade_time = 1300
+#			fade_type = linear
+#			moveable = yes
+#			moveable = yes
+#			origo = center
+#			show_sound = pop_up
+#			moveable = yes
+#	
+#		background = {
+#			name = "Background"
+#			spriteType = "GFX_idea_The-Ninth"
+#		}
+#		buttonType = {
+#			name = "cat_open"
+#			quadTextureSprite = "GFX_idea_The-Ninth"
+#			position = { x = 35 y = 0 }
+#			shortcut = "shift+c"
+#			pdx_tooltip = "fog_tt"
+#			clicksound = click_ok
+#			oversound = ui_menu_over
+#			scale = 0.9
+#		}	
+#	}
+#}
