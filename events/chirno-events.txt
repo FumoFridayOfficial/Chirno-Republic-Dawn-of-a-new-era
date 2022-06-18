@@ -1,0 +1,1904 @@
+#Hello
+add_namespace = chirno
+
+# chirno event
+country_event = {
+	id = chirno.1
+	title = chirno.1.t
+	desc = chirno.1.d #both title and description can be written in the localization files
+	picture = GFX_report_event_riot_police
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+	set_country_flag  = Event1
+	}
+
+	
+	option = { 
+		name = chirno.1.a #OPTION 1 COMMUNIST
+		add_political_power = 25
+		set_country_flag = Option1
+		add_popularity = { 
+			ideology = democratic
+			popularity = -0.05
+		}
+		ai_chance = {
+		factor = 80 
+		}
+	}
+	
+	option = { 
+		name = chirno.1.b #OPTION 2 DEMOCRATIC
+		add_political_power = 25
+		set_country_flag = Option2
+		add_popularity = { 
+			ideology = democratic
+			popularity = 0.02
+		}
+		ai_chance = { factor = 80 }
+	}
+		
+	option = { 
+		name = chirno.1.c #OPTION 3 FASCISM
+		add_political_power = 25
+		set_country_flag = Option3
+		add_popularity = { 
+			ideology = democratic
+			popularity = -0.05
+		}
+		ai_chance = { factor = 80 }
+	}
+}
+country_event = { #Suppress the troublemakers
+		id = chirno.2
+		title = chirno.2.t
+		desc = chirno.2.d
+		picture = GFX_report_event_riot_police
+
+		
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+
+		immediate = {
+		set_country_flag  = Event2
+		}
+		
+		option = {
+			name = chirno.2.a #OPTION 1
+			add_political_power = 50
+			set_country_flag = STE
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.05
+			}
+			ai_chance = {
+			factor = 80 
+			}
+			add_manpower = -115500
+			add_stability = -0.10
+			add_war_support = 0.10
+			558 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+			776 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+		}
+}
+
+country_event = { #Give aid to those that cooperate with us
+	id = chirno.3
+	title = chirno.3.t
+	desc = chirno.3.d
+	picture = GFX_report_event_burma_road
+
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag  = Event3
+
+	}
+	
+	option = {
+		name = chirno.3.a #OPTION 1
+		add_political_power = 75
+		set_country_flag = GTC
+		add_popularity = { 
+			ideology = communism
+			popularity = 0.05
+		}
+		ai_chance = {
+			factor = 80 
+		}
+			777 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+			274 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+			268 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+		add_stability = 0.10
+	}
+}
+
+country_event = { #Make like nothing bad happened
+	id = chirno.4
+	title = chirno.4.t
+	desc = chirno.4.d
+	picture = GFX_report_event_saf_civil_war
+
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag  = Event4
+
+	}
+	
+	option = {
+		name = chirno.4.a #OPTION 1
+		add_political_power = 50
+		set_country_flag = MNH
+		add_popularity = { 
+			ideology = communism
+			popularity = 0.15
+		}
+		ai_chance = {
+			factor = 80 
+		}
+		269 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+		559 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+		add_stability = 0.10
+	}
+}
+
+country_event = { #Take Responsability
+	id = chirno.5
+	title = chirno.5.t
+	desc = chirno.5.d
+	picture = GFX_report_event_quit_india_movement
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag  = Event5
+
+	}
+	
+	option = {
+		name = chirno.5.a #OPTION 1
+		add_political_power = 25
+		set_country_flag = TRA
+		add_popularity = { 
+			ideology = democratic
+			popularity = 0.05
+		}
+		ai_chance = {
+			factor = 80 
+		}
+		add_war_support = -0.10
+		add_stability = 0.10
+	}
+}
+
+country_event = { #Transition to a better country
+	id = chirno.6
+	title = chirno.6.t
+	desc = chirno.6.d
+	picture = GFX_report_event_chr_chirno_speech
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag  = Event6
+
+	}
+	
+	option = {
+		name = chirno.6.a #OPTION 1
+		add_political_power = 75
+		set_country_flag = TBC
+		add_popularity = { 
+			ideology = democratic
+			popularity = 0.05
+		}
+		ai_chance = {
+			factor = 80 
+		}
+		add_war_support = 0.10
+		add_stability = 0.10
+		add_manpower = 125000
+	}
+}
+
+country_event = { #Construct Churches
+	id = chirno.7
+	title = chirno.7.t
+	desc = chirno.7.d #both title and description can be written in the localization files
+	picture = GFX_report_event_bul_making_bricks_for_school
+
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag  = Event7
+
+	}
+	
+	option = {
+		name = chirno.7.a #OPTION 1
+		add_political_power = 25
+		set_country_flag = CCL
+		add_popularity = { 
+			ideology = democratic
+			popularity = 0.05
+		}
+		ai_chance = {
+			factor = 80 
+		}
+		558 = {
+		add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		776 = {
+		add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		559 = {
+		add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+country_event = { #Put the fire out
+	id = chirno.8
+	title = chirno.8.t
+	desc = chirno.8.d #both title and description can be written in the localization files
+	picture = GFX_report_event_generic_army
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	set_country_flag = chirno8
+	}
+	
+	option = {
+		name = chirno.8.a #OPTION 1
+		add_political_power = 50
+		set_country_flag = PFO
+		add_popularity = { 
+			ideology = fascism
+			popularity = 0.05
+		}
+		ai_chance = {
+			factor = 80 
+		}
+		add_war_support = 0.10
+		add_stability = -0.10
+		add_manpower = -25000
+		add_state_core = 777
+		add_state_core = 776
+		add_state_core = 558
+		add_state_core = 274
+		add_state_core = 559
+		add_state_core = 269
+		add_state_core = 268
+		777 = { set_demilitarized_zone = yes }
+		776 = { set_demilitarized_zone = yes }
+		558 = { set_demilitarized_zone = yes }
+		274 = { set_demilitarized_zone = yes }
+		559 = { set_demilitarized_zone = yes }
+		269 = { set_demilitarized_zone = yes }
+		268 = { set_demilitarized_zone = yes }
+	}
+}
+country_event = { #Was there a problem
+	id = chirno.9
+	title = chirno.9.t
+	desc = chirno.9.d #both title and description can be written in the localization files
+	picture = GFX_report_event_generic_military_parade
+
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	set_country_flag = chirno9
+	}
+	
+	option = {
+		name = chirno.9.a #OPTION 1
+		add_political_power = 350
+		add_popularity = { 
+			ideology = fascism
+			popularity = 0.15
+		}
+		ai_chance = {
+			factor = 80 
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		add_war_support = 0.10
+		add_stability = 0.15
+		add_manpower = 15000
+		if = {
+			limit = {
+			NOT = { has_global_flag = ScarletTakeover }
+			set_cosmetic_tag = fumo
+			hidden_effect = { CHR = { country_event = { id = super.3 } } }
+			}
+		}
+	}
+}
+country_event = { #"Civil war"
+	id = chirno.10
+	title = chirno.10.t
+	desc = chirno.10.d #both title and description can be written in the localization files
+	picture = GFX_report_event_swedish_soldier
+	
+	fire_only_once = yes
+	
+	trigger = {
+			NOT = {
+				has_country_flag  = RebelForcesCrushed
+			}
+		has_completed_focus = CHR_Freeze_Them_Until_They_Stop_Moving
+	}
+	immediate = {
+		set_country_flag  = RebelForcesCrushed
+	}
+	option = {
+		name = chirno.10.a #OPTION 1
+		add_political_power = 150
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+		ai_chance = {
+			factor = 80 
+		}
+		add_war_support = 0.10
+		add_stability = -0.15
+				IRF = { 
+				hidden_effect = {
+					transfer_state = 269
+					add_state_core = 269
+					transfer_state = 268
+					add_state_core = 268
+					transfer_state = 559
+					add_state_core = 559
+					load_oob = "IRF_RISEUP"
+				}
+					declare_war_on = { type = annex_everything target = CHR }
+				}
+				CRF = {
+				hidden_effect = {
+					transfer_state = 558
+					add_state_core = 558
+					transfer_state = 776
+					add_state_core = 776
+					transfer_state = 777
+					add_state_core = 777
+					transfer_state = 274
+					add_state_core = 274	
+					load_oob = "CRF_RISEUP"
+				}
+					declare_war_on = { type = annex_everything target = CHR }
+				}
+	}
+}
+country_event = { #VictoryCivilwar
+	id = chirno.11
+	title = chirno.11.t
+	desc = chirno.11.d #both title and description can be written in the localization files
+	picture = GFX_report_event_chr_chirno_summer
+
+	fire_only_once = yes
+	
+	immediate = {
+		set_country_flag  = Victory1
+	}
+	
+	trigger = {
+		AND = {
+			has_completed_focus = CHR_Freeze_Them_Until_They_Stop_Moving
+		}
+		NOT = {
+			has_country_flag  = Victory1
+			has_war = yes
+			date < 1937.03.09
+		}
+	}
+
+	option = {
+		name = chirno.11.a #OPTION 1
+		remove_ideas = Religious-Terrorists_10
+		add_political_power = 150
+		set_country_flag = Victory1
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+		ai_chance = {
+			factor = 80 
+		}
+		add_war_support = 0.10
+		add_stability = 0.15
+		add_manpower = 125000
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			IRF = {
+				remove_state_core = 269
+				remove_state_core = 268
+				remove_state_core = 559
+			}
+			CRF = {
+				remove_state_core = 558
+				remove_state_core = 776
+				remove_state_core = 777
+				remove_state_core = 274
+			}
+		}
+	}
+}
+
+country_event = { #Rebels demi
+	id = chirno.29
+	title = chirno.29.t
+	desc = chirno.29.d #both title and description can be written in the localization files
+	picture = GFX_report_event_generic_army
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1				#an estimate of how much time until the event fires
+	}
+	
+	trigger = {
+			NOT = {
+				has_country_flag  = RebelForcesD
+				has_completed_focus = CHR_Bomb_Defusal_Manual
+			}
+		tag = CHR
+		date > 1936.08.01
+		has_country_flag = RS
+	}
+	
+	immediate = {
+	set_country_flag = RebelForcesD
+	}
+
+	option = {
+		name = chirno.29.a #OPTION 1
+		set_country_flag = RD
+		ai_chance = {
+			factor = 80 
+		}
+		add_war_support = -0.10
+		add_stability = -0.10
+		add_manpower = -25000
+		777 = { set_demilitarized_zone = yes }
+		776 = { set_demilitarized_zone = yes }
+		558 = { set_demilitarized_zone = yes }
+		274 = { set_demilitarized_zone = yes }
+		559 = { set_demilitarized_zone = yes }
+		269 = { set_demilitarized_zone = yes }
+		268 = { set_demilitarized_zone = yes }
+	}
+}
+
+country_event = { #
+	id = chirno.201
+	title = chirno.201.t
+	desc = chirno.201.d #both title and description can be written in the localization files
+	picture = GFX_report_event_generic_army
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		days = 1				#an estimate of how much time until the event fires
+	}	
+	
+	trigger = {
+		tag = CHR
+		date > 1936.03.01
+	}
+	
+	option = {
+		name = chirno.201.a #OPTION 1
+		set_country_flag = RS
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #"Rumia"
+	id = chirno.30
+	title = chirno.30.t
+	desc = chirno.30.d #both title and description can be written in the localization files
+	picture = GFX_report_event_swedish_soldier
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1				#an estimate of how much time until the event fires
+	}	
+	
+	trigger = {
+			NOT = {
+				has_country_flag  = RebelForces1937
+				has_completed_focus = CHR_Bomb_Defusal_Manual
+			}
+		tag = CHR
+		has_country_flag = RebelForcesD
+		date > 1936.11.01 
+	}
+	immediate = {
+		set_country_flag  = RebelForces1937
+	}
+	option = {
+		name = chirno.30.a #OPTION 1
+		add_political_power = -150
+		ai_chance = {
+			factor = 80 
+		}
+		add_war_support = -0.10
+		add_stability = -0.15
+				IRF = { 
+				hidden_effect = {
+					transfer_state = 269
+					add_state_core = 269
+					transfer_state = 268
+					add_state_core = 268
+					transfer_state = 559
+					add_state_core = 559
+					load_oob = "IRF_RISEUP"
+				}
+					declare_war_on = { type = annex_everything target = CHR }
+				}
+				CRF = {
+					hidden_effect = {
+						transfer_state = 558
+						add_state_core = 558
+						transfer_state = 776
+						add_state_core = 776
+						transfer_state = 777
+						add_state_core = 777
+						transfer_state = 274
+						add_state_core = 274	
+						load_oob = "CRF_RISEUP"
+					}
+					declare_war_on = { type = annex_everything target = CHR }
+				}
+				RMI = {
+					transfer_state = 546			
+					transfer_state = 768
+					transfer_state = 769
+					hidden_effect = { load_oob = "RMI_1937" }
+				}
+				set_global_flag  = Rumia1
+	}
+}
+
+country_event = { #Army
+	id = chirno.12
+	title = chirno.12.t
+	desc = chirno.12.d #both title and description can be written in the localization files
+	picture = GFX_report_event_chr_chirno_army
+
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag  = chirnoevent12
+	}
+	 
+	trigger = {
+		NOT = {
+			has_country_flag  = chirnoevent12
+		}
+	}
+	option = {
+		name = chirno.12.a #OPTION 1
+		set_country_flag = chirnoevent12
+		add_ideas = Ambition_Of_Ground
+		ai_chance = {
+			factor = 80 
+		}
+		add_manpower = 25000
+	}
+}
+
+country_event = { #theshallfearus
+	id = chirno.15
+	title = chirno.15.t
+	desc = chirno.15.d #both title and description can be written in the localization files
+	picture = GFX_report_event_chr_chirno_army
+
+		
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag  = chirnoevent15
+	}
+	 
+	trigger = {
+		NOT = {
+			has_country_flag  = chirnoevent15
+		}	
+	}
+	option = {
+		trigger = { has_country_flag = SIOP	}
+		name = chirno.15.a #OPTION 1
+		set_country_flag = chirnoevent15
+		add_political_power = 50
+		swap_ideas = {
+			remove_idea = Ambition_Of_Ground
+			add_idea = Ambition_Of_Ground_5
+		}
+		ai_chance = {
+			factor = 80 
+		}
+	}
+	option = {
+	trigger = { has_country_flag = PIK }
+		name = chirno.15.b #OPTION 2
+		set_country_flag = chirnoevent15
+		add_political_power = 50
+		swap_ideas = {
+			remove_idea = Ambition_Of_Ground
+			add_idea = Ambition_Of_Ground_6
+		}		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #planes
+	id = chirno.16
+	title = chirno.16.t
+	desc = chirno.16.d #both title and description can be written in the localization files
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	immediate = {
+		set_country_flag  = chirnoevent16
+	}
+	 
+	trigger = {
+		NOT = {
+			has_country_flag  = chirnoevent16
+		}	
+	}
+	option = {
+		trigger = { has_country_flag = LIGHTAIR	}
+		name = chirno.16.a #OPTION 1
+		set_country_flag = chirnoevent16
+		add_political_power = 50
+		swap_ideas = {
+			remove_idea = Ambition_Of_Air_3
+			add_idea = Ambition_Of_Air_6
+		}
+		ai_chance = {
+			factor = 80 
+		}
+	}
+	option = {
+	trigger = { has_country_flag = HEAVYAIR }
+		name = chirno.16.b #OPTION 2
+		set_country_flag = chirnoevent16
+		add_political_power = 50
+		swap_ideas = {
+			remove_idea = Ambition_Of_Air_4
+			add_idea = Ambition_Of_Air_5
+		}		
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #planes
+	id = chirno.17
+	title = chirno.17.t
+	desc = chirno.17.d #both title and description can be written in the localization files
+	picture = GFX_report_event_generic_military_parade
+
+	fire_only_once = yes
+	
+	immediate = {
+		set_country_flag  = chirnoevent17
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_country_flag  = chirnoevent17
+		}	
+	}
+	option = {
+		trigger = { has_country_flag = LIGHTAIR	}
+		name = chirno.17.a #OPTION 1
+		set_country_flag = chirnoevent17
+		add_political_power = 50
+		swap_ideas = {
+			remove_idea = Ambition_Of_Air_6
+			add_idea = Ambition_Of_Air_7
+		}
+		ai_chance = {
+			factor = 80 
+		}
+	}
+	option = {
+	trigger = { has_country_flag = HEAVYAIR }
+		name = chirno.17.b #OPTION 2
+		set_country_flag = chirnoevent17
+		add_political_power = 50
+		swap_ideas = {
+			remove_idea = Ambition_Of_Air_5
+			add_idea = Ambition_Of_Air_8
+		}		
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Strongest Army
+	id = chirno.18
+	title = chirno.18.t
+	desc = chirno.18.d #both title and description can be written in the localization files
+	picture = GFX_report_event_chr_chirno_army_2
+	
+	fire_only_once = yes
+	
+	immediate = {
+		set_country_flag  = chirnoevent18
+	}
+	 
+	trigger = {
+		tag = CHR
+		has_completed_focus = CHR_The_Strongest_Army
+		NOT = {
+			has_country_flag  = chirnoevent18
+		}	
+	}
+	option = {
+		trigger = { has_country_flag = LIGHTAIR has_country_flag = PIK	}
+		name = chirno.18.a #OPTION 1
+		set_country_flag = chirnoevent18
+		add_political_power = 50
+		hidden_effect = {
+			remove_ideas = Ambition_Of_Air_7
+			remove_ideas = Ambition_Of_Sea_4
+			remove_ideas = Ambition_Of_Ground_6
+		}
+		hidden_effect = { 
+		sound_effect = "super_Jojo-Parody_Cirno_Theme"
+		}
+		swap_ideas = {
+			remove_idea = Ambition_Of_Ground_6
+			remove_idea = Ambition_Of_Sea_4
+			remove_idea = Ambition_Of_Air_6
+			add_idea = Strongest_Army_LV_2
+		}
+		ai_chance = {
+			factor = 80 
+		}
+	}
+	option = {
+	trigger = { has_country_flag = LIGHTAIR has_country_flag = SIOP }
+		name = chirno.18.b #OPTION 2
+		set_country_flag = chirnoevent18
+		add_political_power = 50
+		hidden_effect = {
+			remove_ideas = Ambition_Of_Air_7
+			remove_ideas = Ambition_Of_Sea_4
+			remove_ideas = Ambition_Of_Ground_5
+		}
+		hidden_effect = { 
+		sound_effect = "super_Jojo-Parody_Cirno_Theme"
+		}		
+		swap_ideas = {
+			remove_idea = Ambition_Of_Ground_5
+			remove_idea = Ambition_Of_Sea_4
+			remove_idea = Ambition_Of_Air_7
+			add_idea = Strongest_Army_LV_1
+		}
+		ai_chance = {
+			factor = 80 
+		}
+	}
+	option = {
+	trigger = { has_country_flag = HEAVYAIR has_country_flag = SIOP }
+		name = chirno.18.c #OPTION 3
+		set_country_flag = chirnoevent18
+		add_political_power = 50
+		hidden_effect = {
+			remove_ideas = Ambition_Of_Air_8
+			remove_ideas = Ambition_Of_Sea_4
+			remove_ideas = Ambition_Of_Ground_5
+		}
+		hidden_effect = { 
+		sound_effect = "super_Jojo-Parody_Cirno_Theme"
+		}		
+		swap_ideas = {
+			remove_idea = Ambition_Of_Ground_5
+			remove_idea = Ambition_Of_Sea_4
+			remove_idea = Ambition_Of_Air_8
+			add_idea = Strongest_Army_HV_1
+		}		
+		ai_chance = {
+			factor = 80 
+		}
+	}
+	option = {
+	trigger = { has_country_flag = HEAVYAIR has_country_flag = PIK }
+		name = chirno.18.f #OPTION 4
+		set_country_flag = chirnoevent18
+		add_political_power = 50
+		hidden_effect = {
+			remove_ideas = Ambition_Of_Air_8
+			remove_ideas = Ambition_Of_Sea_4
+			remove_ideas = Ambition_Of_Ground_6
+		}
+		hidden_effect = { 
+		sound_effect = "super_Jojo-Parody_Cirno_Theme"
+		}		
+		swap_ideas = {
+			remove_idea = Ambition_Of_Ground_6
+			remove_idea = Ambition_Of_Sea_4
+			remove_idea = Ambition_Of_Air_8
+			add_idea = Strongest_Army_HV_2
+		}		
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #
+	id = chirno.19
+	title = chirno.19.t
+	desc = chirno.19.d #both title and description can be written in the localization files
+	picture = GFX_report_event_generic_military_parade
+
+	mean_time_to_happen = {
+		days = 1
+	}		
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_country_flag = chirno19 }
+		tag = CHR
+		has_completed_focus = CHR_Part_2_Asia
+	}
+	
+	immediate = {
+		CHR = {
+			country_event = { id = chirno.19 days = 1 } # where X is the number of days from January 9 to your desired date
+		}
+	set_country_flag = chirno19
+	set_country_flag = part2asia
+	mark_focus_tree_layout_dirty = yes 
+	}
+	
+	option = {
+		name = chirno.19.a #OPTION 1
+	}
+}
+
+country_event = { #
+	id = chirno.20
+	title = chirno.20.t
+	desc = chirno.20.d #both title and description can be written in the localization files
+	picture = GFX_report_event_generic_military_parade
+
+	mean_time_to_happen = {
+		days = 1				#an estimate of how much time until the event fires
+	}		
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_country_flag = chirno20 }
+		tag = CHR
+		has_completed_focus = CHR_Part_3_Europe
+	}
+	
+	immediate = {
+		CHR = {
+			country_event = { id = chirno.20 days = 1 } # where X is the number of days from January 9 to your desired date
+		}
+	set_country_flag = chirno20
+	set_country_flag = part3europe
+	mark_focus_tree_layout_dirty = yes 
+	}
+	
+	option = {
+		name = chirno.20.a #OPTION 1
+	}
+}
+
+country_event = { #
+	id = chirno.21
+	title = chirno.21.t
+	desc = chirno.21.d #both title and description can be written in the localization files
+	picture = GFX_report_event_generic_military_parade
+
+	mean_time_to_happen = {
+		days = 1				#an estimate of how much time until the event fires
+	}		
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_country_flag = chirno21 }
+		tag = CHR
+		has_completed_focus = CHR_Part_4_Whats_Left_Of_The_World
+	}
+	
+	immediate = {
+		CHR = {
+			country_event = { id = chirno.21 days = 1 } # where X is the number of days from January 9 to your desired date
+		}
+	set_country_flag = chirno21
+	set_country_flag = part4
+	mark_focus_tree_layout_dirty = yes 
+	}
+	
+	option = {
+		name = chirno.21.a #OPTION 1
+	}
+}
+
+country_event = { #LORE
+	id = chirno.22
+	title = chirno.22.t
+	desc = chirno.22.d #both title and description can be written in the localization files
+	picture = GFX_report_event_generic_military_parade
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	set_country_flag = chirno22
+	}
+	
+	option = {
+		name = chirno.22.a #OPTION 1
+		set_country_flag = chirno22
+	}
+}
+
+
+country_event = { #Demilit
+	id = chirno.24
+	title = chirno.24.t
+	desc = chirno.24.d #both title and description can be written in the localization files
+	picture = GFX_report_event_generic_army
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	set_country_flag = chirno24
+	}
+
+
+	option = {
+		name = chirno.24.a #OPTION 1
+		add_political_power = 75
+		set_country_flag = DFZ
+		add_popularity = { 
+			ideology = communism
+			popularity = 0.05
+		}
+		ai_chance = {
+			factor = 80 
+		}
+		add_war_support = 0.10
+		add_stability = -0.10
+		add_manpower = -25000
+		681 = { set_demilitarized_zone = yes }
+		719 = { set_demilitarized_zone = yes }
+		275 = { set_demilitarized_zone = yes }
+		542 = { set_demilitarized_zone = yes }
+		541 = { set_demilitarized_zone = yes }
+		545 = { set_demilitarized_zone = yes }
+		770 = { set_demilitarized_zone = yes }
+		544 = { set_demilitarized_zone = yes }
+	}
+}
+
+country_event = { #Democratic Civil war
+	id = chirno.23
+	title = chirno.23.t
+	desc = chirno.23.d #both title and description can be written in the localization files
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	fire_only_once = yes
+	
+	immediate = {
+		set_country_flag  = DemocraticForcesWar
+		set_country_flag = civilwar11
+	}
+
+	trigger = {
+	date > 1937.07.26
+	has_completed_focus = CHR_Problem_Solved
+	}
+
+	option = {
+		name = chirno.23.a #OPTION 1
+		add_political_power = 150
+		add_popularity = {
+			ideology = communism
+			popularity = 0.15
+		}
+		ai_chance = {
+			factor = 80 
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		add_war_support = 0.10
+		add_stability = -0.15
+		add_ideas = Restore_Order
+				DRF = { 
+					hidden_effect = {
+						transfer_state = 681
+						add_state_core = 719
+						transfer_state = 275
+						add_state_core = 542
+						transfer_state = 541
+						add_state_core = 545
+						add_state_core = 544
+						add_state_core = 770
+						transfer_state = 542
+						transfer_state = 719
+						transfer_state = 544
+						transfer_state = 770
+						transfer_state = 545
+						load_oob = "DRF_RISEUP"
+					}
+					declare_war_on = { type = annex_everything target = CHR }
+				}
+	}
+}
+
+country_event = { #VictoryCivilwarDemocratic
+	id = chirno.26
+	title = chirno.26.t
+	desc = chirno.26.d #both title and description can be written in the localization files
+	picture = GFX_report_event_chr_chirno_summer
+
+	fire_only_once = yes
+	
+	immediate = {
+		set_country_flag  = Victory2
+	}
+	
+	trigger = {
+		AND = {
+			has_completed_focus = CHR_Problem_Solved
+			has_country_flag = civilwar11
+		}
+		NOT = {
+			has_country_flag  = Victory2
+			has_war = yes
+			#date < 1937.03.09
+		}
+	}
+
+	option = {
+		name = chirno.26.a #OPTION 1
+		add_political_power = 150
+		set_country_flag = Victory2
+		add_popularity = {
+			ideology = communism
+			popularity = 0.10
+		}
+		ai_chance = {
+			factor = 80 
+		}
+		add_war_support = 0.10
+		add_stability = 0.15
+		add_manpower = 125000
+		remove_ideas = Restore_Order
+		hidden_effect = {
+			DRF = {
+				remove_state_core = 681
+				remove_state_core = 275
+				remove_state_core = 541
+				remove_state_core = 542
+				remove_state_core = 719
+				remove_state_core = 544
+				remove_state_core = 770
+				remove_state_core = 545
+			}
+		}
+	}
+}
+##################################################################
+#######################AYA make a newspaper#######################
+##################################################################
+country_event = { #makeanewspaper
+	id = chirno.40
+	title = chirno.40.t
+	desc = chirno.40.d #both title and description can be written in the localization files
+	picture = GFX_report_event_chr_aya
+	
+	immediate = {
+		set_country_flag  = newsp1
+	}
+	
+	trigger = {
+	has_country_flag = AYA
+		NOT = {
+			has_country_flag = newsp1
+			has_completed_focus = CHR_Aya
+		}
+		
+	}
+	option = {
+		name = chirno.40.a #OPTION 1
+		country_event = { id = chirno.41 }
+		add_political_power = 1
+		set_country_flag = MYST
+		ai_chance = {
+			factor = 80 
+		}
+	}
+	option = {
+		name = chirno.40.b #OPTION 2
+		country_event = { id = chirno.41 }
+		add_political_power = 1
+		set_country_flag = ACTI
+		ai_chance = {
+			factor = 80 
+		}
+	}
+	option = {
+		name = chirno.40.c #OPTION 3
+		country_event = { id = chirno.41 }
+		add_political_power = 1
+		set_country_flag = DRAM
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #subjectofnewspaper
+	id = chirno.41
+	title = chirno.41.t
+	desc = chirno.41.d
+	picture = GFX_report_event_chr_aya
+	
+	immediate = {
+		set_country_flag  = newsp2
+	}
+	 
+	trigger = {
+	has_country_flag = AYA
+		NOT = {
+			has_country_flag = newsp2
+			has_completed_focus = CHR_Aya
+		}
+	}
+	option = {
+		name = chirno.41.a #OPTION 1
+		add_political_power = 1
+		set_country_flag = AFFS
+		ai_chance = {
+			factor = 80 
+		}
+	}
+	option = {
+		name = chirno.41.b #OPTION 2
+		add_political_power = 1
+		set_country_flag = COIC
+		ai_chance = {
+			factor = 80 
+		}
+	}
+	option = {
+		name = chirno.41.c #OPTION 3
+		add_political_power = 1
+		set_country_flag = HICR
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+####################################################
+###########This is suffering########################
+####################################################
+
+
+country_event = { #Outcome1
+	id = chirno.441
+	title = chirno.441.t
+	desc = chirno.441.d
+	picture = GFX_report_event_chr_aya
+	
+	immediate = {
+		set_country_flag  = Outcome1
+	}
+	
+	trigger = {
+	has_country_flag = MYST
+	has_country_flag = AFFS
+		NOT = {
+			has_completed_focus = CHR_Aya
+		}
+	}
+	option = {
+		name = chirno.441.a #OPTION 1
+		add_political_power = 120
+		set_country_flag = yesayaya
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = CHR_Aya
+		clr_country_flag = newsp1
+		clr_country_flag = newsp2
+		clr_country_flag = MYST
+		clr_country_flag = AFFS
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Outcome2
+	id = chirno.442
+	title = chirno.442.t
+	desc = chirno.442.d
+	picture = GFX_report_event_chr_aya
+	
+	immediate = {
+	set_country_flag  = Outcome2
+	}
+	trigger = {
+	has_country_flag = MYST
+	has_country_flag = COIC
+		NOT = {
+			has_country_flag = outcome2-
+		}
+	}
+	option = {
+		name = chirno.442.a #OPTION 1
+		add_political_power = -150
+		clr_country_flag = AYA
+		clr_country_flag = newsp1
+		clr_country_flag = newsp2
+		clr_country_flag = MYST
+		clr_country_flag = COIC
+		set_country_flag = outcome2-
+		ai_chance = {
+			factor = 20 
+		}
+	}
+}
+
+country_event = { #Outcome3
+	id = chirno.443
+	title = chirno.443.t
+	desc = chirno.443.d
+	picture = GFX_report_event_chr_aya
+	
+	immediate = {
+		set_country_flag  = Outcome3
+	}
+	 
+	trigger = {
+	has_country_flag = MYST
+	has_country_flag = HICR
+		NOT = {
+			has_completed_focus = CHR_Aya
+		}
+	}
+	option = {
+		name = chirno.443.a #OPTION 1
+			add_political_power = 120
+			set_country_flag = yesayaya
+			mark_focus_tree_layout_dirty = yes
+			complete_national_focus = CHR_Aya
+			clr_country_flag = newsp1
+			clr_country_flag = newsp2
+			clr_country_flag = MYST
+			clr_country_flag = HICR
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Outcome4
+	id = chirno.444
+	title = chirno.444.t
+	desc = chirno.444.d
+	picture = GFX_report_event_chr_aya
+	
+	immediate = {
+		set_country_flag  = Outcome4
+	}
+	 
+	trigger = {
+	has_country_flag = ACTI
+	has_country_flag = AFFS
+		NOT = {
+			has_completed_focus = CHR_Aya
+		}
+	}
+	option = {
+		name = chirno.444.a #OPTION 1
+		add_political_power = -150
+			clr_country_flag = AYA
+			clr_country_flag = newsp1
+			clr_country_flag = newsp2
+			clr_country_flag = ACTI
+			clr_country_flag = AFFS
+			set_country_flag = outcome4-
+		ai_chance = {
+			factor = 20 
+		}
+	}
+}
+
+country_event = { #Outcome5
+	id = chirno.445
+	title = chirno.445.t
+	desc = chirno.445.d
+	picture = GFX_report_event_chr_aya
+	
+	immediate = {
+		set_country_flag  = Outcome5
+	}
+	
+	trigger = {
+	has_country_flag = ACTI
+	has_country_flag = COIC
+	}
+	option = {
+		name = chirno.445.a #OPTION 1
+		add_political_power = 120
+			set_country_flag = yesayaya
+			mark_focus_tree_layout_dirty = yes
+			complete_national_focus = CHR_Aya
+			clr_country_flag = newsp1
+			clr_country_flag = newsp2
+			clr_country_flag = ACTI
+			clr_country_flag = COIC
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Outcome6
+	id = chirno.446
+	title = chirno.446.t
+	desc = chirno.446.d
+	picture = GFX_report_event_chr_aya
+
+	immediate = {
+		set_country_flag  = Outcome6
+	}
+	 
+	trigger = {
+	has_country_flag = ACTI
+	has_country_flag = HICR
+	}
+	option = {
+		name = chirno.446.a #OPTION 1
+		add_political_power = 120
+			set_country_flag = yesayaya
+			mark_focus_tree_layout_dirty = yes
+			add_to_variable = { YesAyaVar = 1 }
+			complete_national_focus = CHR_Aya
+			clr_country_flag = newsp1
+			clr_country_flag = newsp2
+			clr_country_flag = ACTI
+			clr_country_flag = HICR
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Outcome7
+	id = chirno.447
+	title = chirno.447.t
+	desc = chirno.447.d
+	picture = GFX_report_event_chr_aya
+
+	immediate = {
+		set_country_flag  = Outcome7
+	}
+	 
+	trigger = {
+	has_country_flag = DRAM
+	has_country_flag = AFFS
+	}
+	option = {
+		name = chirno.447.a #OPTION 1
+		add_political_power = -150
+			clr_country_flag = AYA
+			clr_country_flag = newsp1
+			clr_country_flag = newsp2
+			clr_country_flag = DRAM
+			clr_country_flag = AFFS
+			set_country_flag = outcome7-
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Outcome8
+	id = chirno.448
+	title = chirno.448.t
+	desc = chirno.448.d
+	picture = GFX_report_event_chr_aya
+
+	immediate = {
+		set_country_flag  = Outcome8
+	}
+	 
+	trigger = {
+	has_country_flag = DRAM
+	has_country_flag = COIC
+	}
+	option = {
+		name = chirno.448.a #OPTION 1
+		add_political_power = 120
+			set_country_flag = yesayaya
+			mark_focus_tree_layout_dirty = yes
+			complete_national_focus = CHR_Aya
+			clr_country_flag = newsp1
+			clr_country_flag = newsp2
+			clr_country_flag = DRAM
+			clr_country_flag = COIC
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Outcome9
+	id = chirno.449
+	title = chirno.449.t
+	desc = chirno.449.d
+	picture = GFX_report_event_chr_aya
+
+	immediate = {
+		set_country_flag  = Outcome9
+	}
+	 
+	trigger = {
+	has_country_flag = DRAM
+	has_country_flag = HICR
+	}
+	option = {
+		name = chirno.449.a #OPTION 1
+		add_political_power = 120
+			set_country_flag = yesayaya
+			mark_focus_tree_layout_dirty = yes
+			complete_national_focus = CHR_Aya
+			clr_country_flag = newsp1
+			clr_country_flag = newsp2
+			clr_country_flag = DRAM
+			clr_country_flag = HICR
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+##################################################################
+#########################END######################################
+##################################################################
+country_event = { #Invite-Rumia
+	id = chirno.80
+	title = chirno.80.t
+	desc = chirno.80.d
+	picture = GFX_report_event_chr_aya
+	fire_only_once = yes
+	immediate = {
+		set_country_flag  = Rumia_Joined
+	}
+
+	trigger = {
+		has_country_flag = rumiaE
+	}
+	option = {
+		name = chirno.80.a #OPTION 1
+			complete_national_focus = CHR_Rumia_Joins_The_Party
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Invite-Mystia
+	id = chirno.81
+	title = chirno.81.t
+	desc = chirno.81.d
+	picture = GFX_report_event_chr_aya
+	fire_only_once = yes
+	immediate = {
+		set_country_flag  = Mystia_Joined
+	}
+	 
+	trigger = {
+		has_country_flag = mystiaE
+	}
+	option = {
+		name = chirno.81.a #OPTION 1
+			complete_national_focus = CHR_Mystia_Joins_The_Party
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Invite-Wriggle
+	id = chirno.82
+	title = chirno.82.t
+	desc = chirno.82.d
+	picture = GFX_report_event_chr_aya
+	fire_only_once = yes
+	immediate = {
+		set_country_flag  = Wriggle_Joined
+	}
+	 
+	trigger = {
+		has_country_flag = wriggleE
+	}
+	option = {
+		name = chirno.82.a #OPTION 1
+			complete_national_focus = CHR_Wriggle_Joins_The_Party
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Invite-Daiyousei
+	id = chirno.83
+	title = chirno.83.t
+	desc = chirno.83.d
+	picture = GFX_report_event_chr_aya
+	fire_only_once = yes
+	immediate = {
+		set_country_flag  = Daiyousei_Joined
+	}
+	 
+	trigger = {
+		has_country_flag = daiyouseiE
+	}
+	option = {
+		name = chirno.83.a #OPTION 1
+			complete_national_focus = CHR_Daiyousei_Joins_The_Party
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+##################################################################Events that start with chirno.6?? are SCARLET DEVIL MANSION related events
+##################SCARLET DEVIL MANSION###########################
+##################################################################
+
+country_event = { #Scarlet Mansion Appears
+	id = chirno.600
+	title = chirno.600.t
+	desc = chirno.600.d #both title and description can be written in the localization files
+	picture = GFX_report_event_scarlet_mansion
+	
+	mean_time_to_happen = {
+		days = 2				#an estimate of how much time until the event fires
+	}
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1936.3.1
+		#tag = CHR
+		has_completed_focus = CHR_Bomb_Defusal_Manual
+		NOT = {
+			has_country_flag = ScarletInfluenceFlag
+			has_country_flag = event600
+		} 
+	}
+	
+	option = {
+		name = chirno.600.a #OPTION 1 Accept
+		add_political_power = 1
+		set_country_flag = event600
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Scarlet Mansion Lore
+	id = chirno.601
+	title = chirno.601.t
+	desc = chirno.601.d #both title and description can be written in the localization files
+	picture = GFX_report_event_scarlet_visit
+	
+	mean_time_to_happen = {
+		days = 1				#an estimate of how much time until the event fires
+	}
+	
+	
+	trigger = {
+		date > 1936.4.1
+		#tag = CHR
+		has_completed_focus = CHR_Bomb_Defusal_Manual
+		has_country_flag = event600
+		NOT = {
+			has_country_flag = ScarletInfluenceFlag
+			has_completed_focus = CHR_Scarlet_Devil_Mansion
+		} 
+	}
+	
+	option = {
+		name = chirno.601.a #OPTION 1 Accept
+		add_political_power = -1
+		set_country_flag = ScarletInfluenceFlag
+		hidden_effect = { complete_national_focus = CHR_Scarlet_Devil_Mansion }
+		mark_focus_tree_layout_dirty = yes
+		add_to_variable = { ScarletInfluenceVar = 5 }
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+#country_event = { #Scarlet Mansion Takeover
+#	id = chirno.603
+#	title = chirno.603.t
+#	desc = chirno.603.d #both title and description can be written in the localization files
+#	picture = GFX_report_event_scarlet_visit
+#	
+#	mean_time_to_happen = {
+#		days = 1				#an estimate of how much time until the event fires
+#	}
+#	
+#	
+#	trigger = {
+#		#tag = CHR
+#		has_completed_focus = CHR_Scarlet_Devil_Mansion
+#		if = { 
+#			limit = {
+#				has_global_flag = ScarletTakeover
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = chirno.603.a #OPTION 1 Accept
+#		hidden_effect = { complete_national_focus = CHR_Scarlet_Incident_Failed }
+#		mark_focus_tree_layout_dirty = yes
+#		ai_chance = {
+#			factor = 80 
+#		}
+#	}
+#}
+
+country_event = { #Recruit-Sakuya
+	id = chirno.620
+	title = chirno.620.t
+	desc = chirno.620.d
+	picture = GFX_report_event_sakuya
+	
+	fire_only_once = yes
+	immediate = {
+		set_country_flag  = Sakuya_Joined
+	}
+
+	trigger = {
+		has_country_flag = sakuyaE
+	}
+
+	option = {
+		name = chirno.620.a #OPTION 1
+		complete_national_focus = CHR_Sakuya_Recruitment
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Recruit-Patchouli
+	id = chirno.621
+	title = chirno.621.t
+	desc = chirno.621.d
+	picture = GFX_report_event_patchouli
+	fire_only_once = yes
+	immediate = {
+		set_country_flag  = Patchy_Joined
+	}
+
+	trigger = {
+		has_country_flag = patchyE
+	}
+
+	option = {
+		name = chirno.621.a #OPTION 1
+		complete_national_focus = CHR_Patchouli_Recruitment
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Recruit-Meiling
+	id = chirno.622
+	title = chirno.622.t
+	desc = chirno.622.d
+	picture = GFX_report_event_meiling
+	fire_only_once = yes
+	immediate = {
+		set_country_flag  = Meiling_Joined
+	}
+
+	trigger = {
+		has_country_flag = meilingE
+	}
+
+	option = {
+		name = chirno.622.a #OPTION 1
+		complete_national_focus = CHR_Hong_Meiling_Recruitment
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Recruit-Flandr
+	id = chirno.623
+	title = chirno.623.t
+	desc = chirno.623.d
+	picture = GFX_report_event_flandre
+	fire_only_once = yes
+	immediate = {
+		set_country_flag  = Flandre_Joined
+	}
+
+	trigger = {
+		has_country_flag = flandreE
+	}
+
+	option = {
+		name = chirno.623.a #OPTION 1
+		complete_national_focus = CHR_Flandre_Recruitment
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Recruit-Remilia
+	id = chirno.624
+	title = chirno.624.t
+	desc = chirno.624.d
+	picture = GFX_report_event_remilia
+	
+	fire_only_once = yes
+	immediate = {
+		set_country_flag  = Remilia_Joined
+	}
+
+	trigger = {
+		has_country_flag = remiliaE
+	}
+
+	option = {
+		name = chirno.624.a #OPTION 1
+		complete_national_focus = CHR_Remilia_Recruitment
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #Recruit-Koakuma
+	id = chirno.625
+	title = chirno.625.t
+	desc = chirno.625.d
+	
+	picture = GFX_report_event_koakuma
+	
+	fire_only_once = yes
+	immediate = {
+		set_country_flag  = Koakuma_Joined
+	}
+
+	trigger = {
+		has_country_flag = koakumaE
+	}
+
+	option = {
+		name = chirno.625.a #OPTION 1
+		complete_national_focus = CHR_Koakuma_Recruitment
+		ai_chance = {
+			factor = 80 
+		}
+	}
+}
+
+country_event = { #start
+	id = chirno.99
+	title = chirno.99.t
+	desc = chirno.99.d #both title and description can be written in the localization files
+	picture = GFX_report_event_chr_fumo
+
+	mean_time_to_happen = {
+		days = 1				#an estimate of how much time until the event fires
+	}		
+	fire_only_once = yes
+	
+	immediate = {
+		set_country_flag  = startevent1
+	}
+	 
+	trigger = {
+	}
+	option = {
+		name = chirno.99.a #OPTION 1
+		add_political_power = 1
+		set_country_flag = startevent1
+		ai_chance = {
+			factor = 80 
+		}
+		add_manpower = 1
+	}
+}
