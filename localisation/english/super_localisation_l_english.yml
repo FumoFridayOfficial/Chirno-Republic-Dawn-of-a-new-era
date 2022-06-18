@@ -1,0 +1,24 @@
+﻿l_english:
+  sp_event_Second_World_War:0 "Softer World"
+  sp_event_Second_World_War_QUOTE:0 "A world softer that you can imagine.\n- Chirno IX of Gensokyo"
+  sp_event_Second_World_War_REMARK:0 "Become fumo"
+    
+  sp_event_Sino_Japanese:0 "The start of a new republic"
+  sp_event_Sino_Japanese_QUOTE:0 "We can't expect a country to succeed if we don't cut the rot of the problem. \n- Chirno IX of Gensokyo"
+  sp_event_Sino_Japanese_REMARK:0 "Glory to the republic"
+  
+  sp_event_Spanish_Civil_War:0 "A red blizzard coming our way"
+  sp_event_Spanish_Civil_War_QUOTE:0 "I'm the strongest, most invincible fairy of all! \n- Chirno IX of Gensokyo"
+  sp_event_Spanish_Civil_War_REMARK:0 "A planet covered in red ice"
+
+  sp_event_Freeze_World:0 "Freeze the world!"
+  sp_event_Freeze_World_QUOTE:0 "I have told you i'm the strongest! \n- Chirno IX of Gensokyo"
+  sp_event_Freeze_World_REMARK:0 "A new era of ice."
+  
+  sp_event_RumiaDarkness:0 "Darkest Night!"
+  sp_event_RumiaDarkness_QUOTE:0 "It's seems that the ribbon that she has on has been lost, and now her true power shines... \n- Unknown"
+  sp_event_RumiaDarkness_REMARK:0 "Is that so?"
+  
+  sp_event_ScarletTakeover:0 "Scarlet Takeover!"
+  sp_event_ScarletTakeover_QUOTE:0 "The moon tonight is red. You will know death." \n- Remilia Scarlet"
+  sp_event_ScarletTakeover_REMARK:0 "Tonight is a long night"

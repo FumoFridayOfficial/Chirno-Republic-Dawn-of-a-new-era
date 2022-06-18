@@ -1,0 +1,5 @@
+l_english:
+ CAT_OPEN:0 "§HActivate 'Country Annexing Tool'§!"
+ CAT_CLOSE:0 "§HDeactivate 'Country Annexing Tool'§!"
+ CAT_ARMY:0 "§HEnable transfer of army and unit leaders. Can be done only via annexing.§W"
+ CAT_DE_ARMY:0 "§HDisable annexing and transfer of army and unit leaders§W"country§W"

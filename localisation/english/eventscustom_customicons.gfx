@@ -1,0 +1,7 @@
+spriteTypes = { 
+
+	SpriteType = {
+		name = "GFX_report_event_riot_police"
+		texturefile = "gfx/interface/event-pictures/report_event_riot_police.dds"
+	}
+ }
