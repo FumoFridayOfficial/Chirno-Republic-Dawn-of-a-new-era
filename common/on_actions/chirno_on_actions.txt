@@ -1,0 +1,139 @@
+on_actions = { 
+	#startup
+	on_startup = {
+		effect = { 
+			CHR = {
+				country_event = { id = chirno.99 }
+				558 = { add_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				776 = { add_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				777 = { add_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				274 = { add_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				559 = { add_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				269 = { add_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				268 = { add_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+			}
+		}
+	}
+	on_daily_CHR = {
+		effect = {
+			if = { 
+				limit = {
+					has_country_flag = ScarletInfluenceFlag
+					AND = {
+						check_variable = {
+							ScarletInfluenceVar > -1
+						}
+						check_variable = {
+							ScarletInfluenceVar < 23
+						}
+					}
+				}
+				CHR = {
+					add_ideas = Scarlet_Mansion_0
+					remove_ideas = Scarlet_Mansion_1
+					remove_ideas = Scarlet_Mansion_2
+					remove_ideas = Scarlet_Mansion_3
+					remove_ideas = Scarlet_Mansion_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ScarletInfluenceFlag
+					AND = {
+						check_variable = {
+							ScarletInfluenceVar > 24
+						}
+						check_variable = {
+							ScarletInfluenceVar < 48
+						}
+					}
+				}
+				CHR = {
+					add_ideas = Scarlet_Mansion_1
+					remove_ideas = Scarlet_Mansion_0
+					remove_ideas = Scarlet_Mansion_2
+					remove_ideas = Scarlet_Mansion_3
+					remove_ideas = Scarlet_Mansion_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ScarletInfluenceFlag
+					AND = {
+						check_variable = {
+							ScarletInfluenceVar > 49
+						}
+						check_variable = {
+							ScarletInfluenceVar < 73
+						}
+					}
+				}
+				CHR = {
+					add_ideas = Scarlet_Mansion_2
+					remove_ideas = Scarlet_Mansion_0
+					remove_ideas = Scarlet_Mansion_1
+					remove_ideas = Scarlet_Mansion_3
+					remove_ideas = Scarlet_Mansion_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ScarletInfluenceFlag
+					AND = {
+						check_variable = {
+							ScarletInfluenceVar > 74
+						}
+						check_variable = {
+							ScarletInfluenceVar < 101
+						}
+					}
+				}
+				CHR = {
+					add_ideas = Scarlet_Mansion_3
+					remove_ideas = Scarlet_Mansion_0
+					remove_ideas = Scarlet_Mansion_1
+					remove_ideas = Scarlet_Mansion_2
+					remove_ideas = Scarlet_Mansion_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ScarletInfluenceFlag
+					check_variable = {
+						ScarletInfluenceVar > 101
+					}
+				}
+				CHR = {
+					add_ideas = Scarlet_Mansion_4
+					remove_ideas = Scarlet_Mansion_0
+					remove_ideas = Scarlet_Mansion_1
+					remove_ideas = Scarlet_Mansion_2
+					remove_ideas = Scarlet_Mansion_3
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = ScarletInfluenceFlag
+						has_variable = ScarletInfluenceVar
+					}
+				}
+				CHR = {
+					remove_ideas = Scarlet_Mansion_0
+					remove_ideas = Scarlet_Mansion_1
+					remove_ideas = Scarlet_Mansion_2
+					remove_ideas = Scarlet_Mansion_3
+					remove_ideas = Scarlet_Mansion_4
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						ScarletInfluenceVar < -1
+					}
+				}
+				set_variable = { ScarletInfluenceVar = 0 }
+			}
+		}
+	}
+}

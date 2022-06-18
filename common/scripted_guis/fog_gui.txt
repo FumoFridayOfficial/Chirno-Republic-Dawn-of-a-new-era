@@ -1,0 +1,27 @@
+#scripted_gui = {
+#
+#	fog_province = {
+#	window_name = "province_info_window"
+#	context_type = selected_state_context
+#	parent_window_name = province_info_window
+#	
+#		visible = {
+#			always = yes
+#		}
+#
+#		triggers = {
+#			fog_province_Icon_visible = {
+#				CHR = { 
+#					has_completed_focus = CHR_Scarlet_Devil_Mansion
+#				}
+#			}
+#		}
+#		effects = {
+#			fog_province_Icon_Click = {
+#				add_dynamic_modifier = { modifier = CHR_religious_terrorist days = 28 }
+#			}
+#		}
+#	}
+#
+#
+#}

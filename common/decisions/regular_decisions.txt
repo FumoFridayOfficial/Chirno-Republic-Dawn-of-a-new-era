@@ -1,0 +1,197 @@
+simple_category = {
+	Nigeria = {
+
+		icon = GFX_decision_generic_decision
+		on_map_mode = map_and_decisions_view
+		highlight_states = { state = 558 }
+		available = {
+			OR = { 
+				has_completed_focus = CHR_Problem_Fixed_For_Sure
+				has_completed_focus = CHR_Problem_Solved
+			}
+		}
+		fire_only_once = yes	
+		days_remove = 75 
+		
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+		}	
+
+		cost = 25	
+		complete_effect = { add_state_core = 558 }
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+	Dahomey = {
+
+		icon = GFX_decision_generic_decision
+		on_map_mode = map_and_decisions_view
+		highlight_states = { state = 776 }
+		available = {
+			OR = { 
+				has_completed_focus = CHR_Problem_Fixed_For_Sure
+				has_completed_focus = CHR_Problem_Solved
+			}
+		}
+		fire_only_once = yes	
+		days_remove = 75 
+		
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+		}	
+
+		cost = 25	
+		complete_effect = { add_state_core = 776 }
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+	Togo = {
+
+		icon = GFX_decision_generic_decision
+		on_map_mode = map_and_decisions_view
+		highlight_states = { state = 777 }
+		available = {
+			OR = { 
+				has_completed_focus = CHR_Problem_Fixed_For_Sure
+				has_completed_focus = CHR_Problem_Solved
+			}
+		}
+		fire_only_once = yes	
+		days_remove = 75 
+		
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+		}	
+
+		cost = 25	
+		complete_effect = { add_state_core = 777 }
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+	Ghana = {
+
+		icon = GFX_decision_generic_decision
+		on_map_mode = map_and_decisions_view
+		highlight_states = { state = 274 }
+		available = {
+			OR = { 
+				has_completed_focus = CHR_Problem_Fixed_For_Sure
+				has_completed_focus = CHR_Problem_Solved
+			}
+		}
+		fire_only_once = yes	
+		days_remove = 75 
+		
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+		}	
+
+		cost = 25	
+		complete_effect = { add_state_core = 274 }
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+	Somaliland = {
+
+		icon = GFX_decision_generic_decision
+		on_map_mode = map_and_decisions_view
+		highlight_states = { state = 559 }
+		available = {
+			OR = { 
+				has_completed_focus = CHR_Problem_Fixed_For_Sure
+				has_completed_focus = CHR_Problem_Solved
+			}
+		}
+		fire_only_once = yes	
+		days_remove = 75 
+		
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+		}	
+
+		cost = 25	
+		complete_effect = { add_state_core = 559 }
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+	Berbera = {
+
+		icon = GFX_decision_generic_decision
+		on_map_mode = map_and_decisions_view
+		highlight_states = { state = 269 }
+		available = {
+			OR = { 
+				has_completed_focus = CHR_Problem_Fixed_For_Sure
+				has_completed_focus = CHR_Problem_Solved
+			}
+		}
+		fire_only_once = yes	
+		days_remove = 75 
+		
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+		}	
+
+		cost = 25	
+		complete_effect = { add_state_core = 269 }
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+	Djibouti = {
+
+		icon = GFX_decision_generic_decision
+		on_map_mode = map_and_decisions_view
+		highlight_states = { state = 268 }
+		available = {
+			OR = { 
+				has_completed_focus = CHR_Problem_Fixed_For_Sure
+				has_completed_focus = CHR_Problem_Solved
+			}
+		}
+		fire_only_once = yes	
+		days_remove = 75 
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+		}	
+
+		cost = 25	
+		complete_effect = { add_state_core = 268 }
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+}

@@ -1,0 +1,139 @@
+recruitt_category = {
+	Tengu_recruitment = {
+
+		icon = GFX_decision_chr_tengu
+
+		visible = {
+		NOT = {
+			has_country_flag = Outcome1
+			has_country_flag = Outcome3
+			has_country_flag = Outcome5
+			has_country_flag = Outcome6
+			has_country_flag = Outcome7
+			has_country_flag = Outcome8
+			has_country_flag = AYA
+		}
+        }
+		days_re_enable = 15 
+		cost = 150	
+
+		complete_effect = { 
+		set_country_flag = AYA 
+		custom_effect_tooltip = ayaya-tt 
+		country_event = { id = chirno.40 }
+		}
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+	
+	Rumia_invite = {
+
+		icon = GFX_decision_chr_tengu
+		
+		available = {
+			has_completed_focus = CHR_Make_The_Group
+		}
+		cost = 50
+		
+		fire_only_once = yes
+		
+		visible = { 
+			NOT = {
+				has_completed_focus = CHR_Rumia_Joins_The_Party
+			}
+		}
+		
+		complete_effect = { 
+			set_country_flag = rumiaE 
+			country_event = { id = chirno.80 }
+		}
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+	
+	Mystia_invite = {
+
+		icon = GFX_decision_chr_tengu
+
+		available = {
+			has_completed_focus = CHR_Make_The_Group
+		}
+		cost = 50
+		
+		fire_only_once = yes
+		
+		visible = { 
+			NOT = {
+				has_completed_focus = CHR_Mystia_Joins_The_Party
+			}
+		}
+		
+		complete_effect = { 
+			set_country_flag = mystiaE 
+			country_event = { id = chirno.81 }
+		}
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+
+	Wriggle_invite = {
+
+		icon = GFX_decision_chr_tengu
+
+		available = {
+			has_completed_focus = CHR_Make_The_Group
+		}
+		cost = 50
+		
+		fire_only_once = yes
+		
+		visible = { 
+			NOT = {
+				has_completed_focus = CHR_Wriggle_Joins_The_Party
+			}
+		}
+		
+		complete_effect = { 
+			set_country_flag = wriggleE 
+			country_event = { id = chirno.82 }
+		}
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+
+	Daiyousei_invite = {
+
+		icon = GFX_decision_chr_tengu
+
+		available = {
+			has_completed_focus = CHR_Make_The_Group
+		}
+		cost = 50
+		
+		fire_only_once = yes
+		
+		visible = { 
+			NOT = {
+				has_completed_focus = CHR_Daiyousei_Joins_The_Party
+			}
+		}
+
+		complete_effect = { 
+			set_country_flag = daiyouseiE 
+			country_event = { id = chirno.83 }
+		}
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+	
+}

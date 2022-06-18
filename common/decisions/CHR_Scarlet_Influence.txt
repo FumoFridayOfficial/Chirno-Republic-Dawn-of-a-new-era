@@ -1,0 +1,388 @@
+SDM_category = {
+
+	recruit_koakuma = {
+
+	icon = GFX_decision_chr_book
+	
+		visible = {
+			has_country_flag = ScarletInfluenceFlag
+		}
+		
+		available = { 
+			NOT = {
+				has_country_flag = CurrentlyRecruiting
+			}
+		}
+		
+		cost = 50
+		
+		fire_only_once = yes		
+		
+		days_remove = 15
+	
+		complete_effect = {
+			set_country_flag = koakumaE
+			set_country_flag = CurrentlyRecruiting
+			add_to_variable = { ScarletInfluenceVar = 10 }
+			country_event = { id = chirno.625 }
+			custom_effect_tooltip = tt_influence_grows_0
+		}
+
+		remove_effect = { clr_country_flag = CurrentlyRecruiting }
+	}
+	
+	recruit_meiling = {
+	
+	icon = GFX_decision_chr_gate
+	
+		visible = {
+			has_country_flag = ScarletInfluenceFlag
+		}
+		
+		available = { 
+			NOT = {
+				has_country_flag = CurrentlyRecruiting
+			}
+		}
+		
+		cost = 75
+		
+		fire_only_once = yes
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = meilingE
+			set_country_flag = CurrentlyRecruiting
+			add_to_variable = { ScarletInfluenceVar = 15 }
+			country_event = { id = chirno.622 }
+			custom_effect_tooltip = tt_influence_grows_1
+		}
+		remove_effect = { clr_country_flag = CurrentlyRecruiting }
+	}
+	
+	recruit_patchouli = {
+	
+	icon = GFX_decision_chr_books
+	
+		visible = {
+			has_country_flag = ScarletInfluenceFlag
+		}
+		
+		available = { 
+			NOT = {
+				has_country_flag = CurrentlyRecruiting
+			}
+		}
+		
+		cost = 100
+		
+		fire_only_once = yes
+
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = patchyE
+			set_country_flag = CurrentlyRecruiting
+			add_to_variable = { ScarletInfluenceVar = 20 }
+			country_event = { id = chirno.621 }
+			custom_effect_tooltip = tt_influence_grows_2
+		}
+		remove_effect = { clr_country_flag = CurrentlyRecruiting }
+	}	
+	
+	recruit_sakuya = {
+	
+	icon = GFX_decision_chr_pocketwatch
+	
+		visible = {
+			has_country_flag = ScarletInfluenceFlag
+		}
+		
+		available = { 
+			NOT = {
+				has_country_flag = CurrentlyRecruiting
+			}
+		}
+		
+		cost = 150
+		
+		fire_only_once = yes
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = sakuyaE
+			set_country_flag = CurrentlyRecruiting
+			add_to_variable = { ScarletInfluenceVar = 25 }
+			country_event = { id = chirno.620 }
+			custom_effect_tooltip = tt_influence_grows_3
+		}
+		remove_effect = { clr_country_flag = CurrentlyRecruiting }
+	}
+
+	recruit_flandre = {
+	
+	icon = GFX_decision_chr_wings
+	
+		visible = {
+			has_country_flag = ScarletInfluenceFlag
+		}
+		
+		available = { 
+			NOT = {
+				has_country_flag = CurrentlyRecruiting
+			}
+		}
+		
+		cost = 200
+		
+		fire_only_once = yes
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = flandreE
+			set_country_flag = CurrentlyRecruiting
+			add_to_variable = { ScarletInfluenceVar = 40 }
+			country_event = { id = chirno.623 }
+			custom_effect_tooltip = tt_influence_grows_4
+		}
+		remove_effect = { clr_country_flag = CurrentlyRecruiting }
+	}	
+	
+	recruit_remilia = {
+	
+	icon = GFX_decision_chr_batwings
+	
+		visible = {
+			has_country_flag = ScarletInfluenceFlag
+		}
+		
+		available = { 
+			NOT = {
+				has_country_flag = CurrentlyRecruiting
+			}
+		}
+		
+		cost = 250
+		
+		fire_only_once = yes
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = remiliaE
+			set_country_flag = CurrentlyRecruiting
+			add_to_variable = { ScarletInfluenceVar = 55 }
+			country_event = { id = chirno.624 }
+			custom_effect_tooltip = tt_influence_grows_5
+		}
+		remove_effect = { clr_country_flag = CurrentlyRecruiting }
+	}
+	
+	augment_influence_mission = {
+	
+		icon = GFX_decision_category_generic_propaganda
+		
+		visible = {
+			has_country_flag = ScarletInfluenceFlag
+		}
+		
+		available = {
+			has_completed_focus = CHR_Scarlet_Incident_Resolved
+		}
+		
+		activation = {
+			has_country_flag = ScarletInfluenceFlag
+		}
+		
+		days_mission_timeout = 7
+		
+		is_good = no
+		
+		days_re_enable = 1
+		
+		timeout_effect = {
+			add_to_variable = { ScarletInfluenceVar = 5 }
+		}
+
+	}
+
+	#subtract_influence = {
+	#
+	#	icon = GFX_decision_chr_tengu
+	#	
+	#	visible = {
+	#		is_debug = yes
+	#	}
+	#	
+	#	complete_effect = {
+	#		subtract_from_variable = { ScarletInfluenceVar = 5 }
+	#	}
+	#
+	#}
+
+	remove_influence_1 = {	#Reduce influence
+	
+		icon = GFX_decision_eng_propaganda_campaigns
+		
+		visible = {
+			has_country_flag = ScarletInfluenceFlag
+		}
+		
+		days_re_enable = 15
+		
+		cost = 60
+		
+		
+		complete_effect = {
+			subtract_from_variable = { ScarletInfluenceVar = 20 }
+			custom_effect_tooltip = tt-remove_influence_1
+		}
+
+	}
+	
+	remove_influence_2 = { #Attack influence directly
+	
+		icon = GFX_decision_category_SOV_propaganda
+		
+		visible = {
+			AND = {
+				has_country_flag = ScarletInfluenceFlag
+				check_variable = {
+					ScarletInfluenceVar > 50
+				}
+			}
+		}
+		
+		days_re_enable = 15
+		
+		cost = 30
+		
+		
+		complete_effect = {
+			subtract_from_variable = { ScarletInfluenceVar = 30 }
+			custom_effect_tooltip = tt-remove_influence_2
+			add_stability = -0.03
+		}
+
+	}
+	
+	remove_influence_3 = { #Human donations
+	
+		icon = GFX_decision_category_eng_organize_the_blackshirts
+		
+		visible = {
+			AND = {
+				has_country_flag = ScarletInfluenceFlag
+				check_variable = {
+					ScarletInfluenceVar > 80
+				}
+			}
+		}
+		
+		days_re_enable = 15
+		
+		cost = 15
+		
+		
+		complete_effect = {
+			subtract_from_variable = { ScarletInfluenceVar = 40 }
+			custom_effect_tooltip = tt-remove_influence_3
+			add_manpower = -400
+			add_stability = -0.05
+			add_war_support = -0.10
+		}
+
+	}
+	
+	#subtract_influence_25 = {
+	#
+	#	icon = GFX_decision_chr_tengu
+	#	
+	#	visible = {
+	#		is_debug = yes
+	#	}
+	#	
+	#	complete_effect = {
+	#		subtract_from_variable = { ScarletInfluenceVar = 25 }
+	#	}
+	#
+	#}
+
+	#clear_influence = {
+	#
+	#	icon = GFX_decision_chr_tengu
+	#	
+	#	visible = {
+	#		is_debug = yes
+	#	}
+	#	
+	#	complete_effect = {
+	#		clear_variable = ScarletInfluenceVar 
+	#	}
+	#
+	#}
+	#clear_ScarletInfluence = {
+	#
+	#	icon = GFX_decision_chr_tengu
+	#	
+	#	visible = {
+	#		is_debug = yes
+	#	}
+	#	
+	#	complete_effect = {
+	#		clr_country_flag = ScarletInfluenceFlag 
+	#	}
+	#
+	#}
+	Scarlet_Takeover_Mission = {
+	
+		icon = GFX_decision_generic_nationalism
+		
+		visible = {
+			check_variable = {
+				ScarletInfluenceVar > 105
+			}
+		}
+		
+		available = {
+			#AND = {
+			#	has_completed_focus = CHR_Scarlet_Incident_Resolved
+			#	check_variable = {
+			#		ScarletInfluenceVar < 120
+			#	}
+			#}
+			NOT = {
+				check_variable = {
+					ScarletInfluenceVar > 104
+				}
+			}
+		}
+		
+		activation = {
+			AND = {
+				has_country_flag = ScarletInfluenceFlag
+				check_variable = {
+					ScarletInfluenceVar > 104
+				}
+			}
+		}
+		
+		days_mission_timeout = 60
+		
+		is_good = no
+		
+		days_re_enable = 1
+		
+		timeout_effect = {
+			set_global_flag = ScarletTakeover
+			CHR = { country_event = { id = super.6  } }
+			clr_country_flag = ScarletInfluenceFlag
+			clear_variable = ScarletInfluenceVar
+			#set_cosmetic_tag = Scarlet
+		}
+
+	}
+}

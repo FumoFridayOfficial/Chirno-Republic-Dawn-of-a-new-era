@@ -1,0 +1,29 @@
+CHR = {
+	color = rgb { 255  255  255 }
+	color_ui = rgb { 45 90 237 }
+}
+
+BWR = {
+	color = { 255  255  255 }
+	color_ui = { 255 255 255 }
+}
+
+CRF = {
+	color = { 255  255  255 }
+	color_ui = { 255 255 255 }
+}
+
+IRF = { 
+	color = { 255  255  255 }
+	color_ui = { 255 255 255 }
+}
+
+DRF = { 
+	color = { 255  255  255 }
+	color_ui = { 255 255 255 }
+}
+
+RMI = {
+	color = rgb { 149  0  0 }
+	color_ui = rgb { 149 0 0 }
+}

@@ -1,0 +1,3 @@
+country_whitepeace = {
+	every_other_country = { white_peace = CHR }
+}

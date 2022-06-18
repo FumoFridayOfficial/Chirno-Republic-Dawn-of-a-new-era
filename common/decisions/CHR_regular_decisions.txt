@@ -1,0 +1,142 @@
+chr_category = {
+	
+	FRA_surrender = {
+
+		icon = GFX_decision_generic_form_nation
+		available = {
+			has_completed_focus = CHR_Kick_The_French_Out
+			has_war_with = FRA
+			459 = {
+				is_controlled_by = CHR
+			}
+		}
+		fire_only_once = yes	
+
+		visible = {
+			country_exists = FRA 
+		}	
+	
+		fire_only_once = yes
+
+		cost = 150	
+
+		complete_effect = { set_country_flag = FRAS1 custom_effect_tooltip = UnderC }
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+	
+	FRA_surrender_1 = {
+
+		icon = GFX_decision_generic_form_nation
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = FRAS1
+					459 = {
+						is_controlled_by = CHR
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		visible = {
+		hidden_trigger = { NOT = { has_country_flag = FRAS1 } }
+		}	
+	
+		activation = { has_country_flag = FRAS1 }
+
+		fire_only_once = yes
+
+		days_mission_timeout = 120
+
+		timeout_effect = {
+			white_peace = FRA
+			transfer_state = 515
+			transfer_state = 775
+			transfer_state = 782
+			transfer_state = 786
+			transfer_state = 462
+			transfer_state = 461
+			transfer_state = 513
+			transfer_state = 460
+			transfer_state = 458
+			transfer_state = 665
+			transfer_state = 514
+			transfer_state = 459
+		}
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}	
+	
+	BWR_surrender = {
+
+		icon = GFX_decision_generic_form_nation
+		available = {
+			has_completed_focus = CHR_British_Western_Colony
+			has_war_with = BWR
+			has_war_with = ENG
+			701 = {
+				is_controlled_by = CHR
+			}
+		}
+		fire_only_once = yes	
+
+		visible = {
+			country_exists = BWR 
+		}	
+	
+		fire_only_once = yes
+
+		cost = 150	
+
+		complete_effect = { 
+		set_country_flag = BWRS1
+		custom_effect_tooltip = UnderCC
+		}
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+
+	BWR_surrender_1 = {
+
+		icon = GFX_decision_generic_form_nation
+		available = {
+				NOT = {
+					701 = {
+						is_controlled_by = CHR
+					}
+				}
+		}
+		fire_only_once = yes
+
+		visible = {
+		hidden_trigger = { NOT = { has_country_flag = BWRS1 } }
+		}	
+	
+		activation = { has_country_flag = BWRS1 }
+
+		fire_only_once = yes
+
+		days_mission_timeout = 120
+
+		timeout_effect = {
+			country_whitepeace = yes
+			every_state = {
+				limit = { is_owned_by = BWR  is_core_of = BWR }
+				CHR = { transfer_state = PREV }		
+			}
+		}
+
+		ai_will_do = {
+			factor = 20			
+		}
+	}
+	
+}

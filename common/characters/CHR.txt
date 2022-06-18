@@ -1,0 +1,1119 @@
+characters={
+  ####    ####   #    #  #    #  #####  #####   #   #      #       ######    ##    #####   ######  #####    ####  
+ #    #  #    #  #    #  ##   #    #    #    #   # #       #       #        #  #   #    #  #       #    #  #      
+ #       #    #  #    #  # #  #    #    #    #    #        #       #####   #    #  #    #  #####   #    #   ####  
+ #       #    #  #    #  #  # #    #    #####     #        #       #       ######  #    #  #       #####        # 
+ #    #  #    #  #    #  #   ##    #    #   #     #        #       #       #    #  #    #  #       #   #   #    # 
+  ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   #### 
+	CHR_chirno_the_ice_president={
+		name="Chirno The Ice President"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHR/Portrait_Chirno_DemoChirno_The_Ice_Fairy.dds"
+			}
+			army = {
+				#large = "gfx/leaders/CHR/.dds"
+				small = "gfx/interface/ideas-chirno/chirno-pd.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_CHIRNO_THE_ICE_FAIRY_DESC"
+			ideology=liberalism
+			traits={ The_Strongest_one }
+			expire="1967.3.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CHR_chirno_the_ice_fairy
+			allowed = {
+				original_tag = CHR
+			}
+			traits = {
+				army_regrouping_1
+			}
+			visible = {
+				has_government = democratic
+				NOT = {
+					has_cosmetic_tag = fumo
+				}
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CHR_chirno_the_fumo={
+		name="Chirno The Fumo"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHR/Portrait_Chirno_FumoChirno_The_Ice_Fairy.dds"
+			}
+			army = {
+				#large = "gfx/leaders/CHR/.dds"
+				small = "gfx/interface/ideas-chirno/chirno-fumo.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_CHIRNO_THE_ICE_FAIRY_DESC"
+			ideology=fascism_ideology
+			traits={ The_Strongest_one }
+			expire="1967.3.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CHR_chirno_the_ice_fairy
+			allowed = {
+				original_tag = CHR
+			}
+			traits = {
+				army_regrouping_1
+			}
+			visible = {
+				has_government = fascism
+				has_cosmetic_tag = fumo
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CHR_chirno_the_great_ice_fairy={
+		name="Chirno The Great Ice Fairy"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHR/Portrait_Chirno_ComChirno_The_Ice_Fairy.dds"
+			}
+			army = {
+				#large = "gfx/leaders/CHR/.dds"
+				small = "gfx/interface/ideas-chirno/chirno-pd-sov.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_CHIRNO_THE_ICE_FAIRY_DESC"
+			ideology=stalinism
+			traits={ The_Strongest_one }
+			expire="1967.3.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CHR_chirno_the_ice_fairy
+			allowed = {
+				original_tag = CHR
+			}
+			traits = {
+				army_regrouping_1
+			}
+			visible = {
+				has_government = communism
+				NOT = {
+					has_cosmetic_tag = fumo
+				}
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CHR_chirno_the_ice_fairy={
+		name = "Chirno The Ice Fairy"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHR/Portrait_Chirno_NetChirno_The_Ice_Fairy.dds"
+			}
+			army = {
+				#large = "gfx/leaders/CHR/.dds"
+				small = "gfx/interface/ideas-chirno/chirno-pd.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_CHIRNO_THE_ICE_FAIRY_DESC"
+			ideology=despotism
+			traits={ The_Strongest_one }
+			expire="1967.3.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CHR_chirno_the_ice_fairy
+			allowed = {
+				original_tag = CHR
+			}
+			traits = {
+				army_regrouping_1
+			}
+			visible = {
+				has_government = neutrality
+				NOT = {
+					has_cosmetic_tag = fumo
+				}
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CHR_Remilia_Scarlet_Leader = {
+		name="Remilia Scarlet"
+		portraits={
+			civilian={
+				large="gfx/leaders/SDM/Portrait_Remilia_Scarlet.dds"
+			}
+			army = {
+				large = "gfx/leaders/SDM/Portrait_Remilia_Scarlet_2.dds"
+				small = "gfx/interface/ideas-chirno/Remilia.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				has_completed_focus = CHR_Remilia_Recruitment
+			}
+		}
+		country_leader={
+			desc="POLITICS_REMILIA_DESC"
+			ideology=liberalism
+			traits={ Scarlet_Devil }
+			expire="2141.3.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SDM_Remilia_Scarlet
+			allowed = {
+				original_tag = SDM
+			}
+			traits = {
+				The_Scarlet_Devil_2
+			}
+			visible = {
+				has_government = democratic
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			
+		}
+	}
+	CHR_Remilia_Scarlet_Leader_s = {
+		name="Remilia Scarlet"
+		portraits={
+			civilian={
+				large="gfx/leaders/SDM/Portrait_Remilia_Scarlet.dds"
+			}
+			army = {
+				large = "gfx/leaders/SDM/Portrait_Remilia_Scarlet_2.dds"
+				small = "gfx/interface/ideas-chirno/Remilia.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_REMILIA_DESC"
+			ideology=stalinism
+			traits={ Scarlet_Devil }
+			expire="2141.3.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SDM_Remilia_Scarlet_s
+			allowed = {
+				original_tag = SDM
+			}
+			traits = {
+				The_Scarlet_Devil_2
+			}
+			visible = {
+				has_government = communism
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			
+		}
+	}
+	CHR_Remilia_Scarlet_Leader_f = {
+		name="Remilia Scarlet"
+		portraits={
+			civilian={
+				large="gfx/leaders/SDM/Portrait_Remilia_Scarlet.dds"
+			}
+			army = {
+				large = "gfx/leaders/SDM/Portrait_Remilia_Scarlet_2.dds"
+				small = "gfx/interface/ideas-chirno/Remilia.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_REMILIA_DESC"
+			ideology=fascism_ideology
+			traits={ Scarlet_Devil }
+			expire="2141.3.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SDM_Remilia_Scarlet_f
+			allowed = {
+				original_tag = SDM
+			}
+			traits = {
+				The_Scarlet_Devil_2
+			}
+			visible = {
+				has_government = fascism
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			
+		}
+	}
+	CHR_Remilia_Scarlet_Leader_n = {
+		name="Remilia Scarlet"
+		portraits={
+			civilian={
+				large="gfx/leaders/SDM/Portrait_Remilia_Scarlet.dds"
+			}
+			army = {
+				large = "gfx/leaders/SDM/Portrait_Remilia_Scarlet_2.dds"
+				small = "gfx/interface/ideas-chirno/Remilia.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_REMILIA_DESC"
+			ideology=despotism
+			traits={ Scarlet_Devil }
+			expire="2141.3.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SDM_Remilia_Scarlet_n
+			allowed = {
+				original_tag = SDM
+			}
+			traits = {
+				The_Scarlet_Devil_2
+			}
+			visible = {
+				has_government = neutrality
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			
+		}
+	}
+   # #    #####   #    #  #   #      #        ######    ##    #####   ######  #####    ####  
+  #   #   #    #  ##  ##   # #       #        #        #  #   #    #  #       #    #  #      
+ #     #  #    #  # ## #    #        #        #####   #    #  #    #  #####   #    #   ####  
+ #######  #####   #    #    #        #        #       ######  #    #  #       #####        # 
+ #     #  #   #   #    #    #        #        #       #    #  #    #  #       #   #   #    # 
+ #     #  #    #  #    #    #        #######  ######  #    #  #####   ######  #    #   ####  
+	CHR_abioye_lanre={
+		name="Abioye Lanre"
+		portraits={
+			army={
+				small="gfx/interface/ideas-chirno/idea_south_africa_army_generic_2.dds"
+			}
+			army={
+				large="gfx/leaders/CHR/Portrait_South_Africa_Army_Generic_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist trickster }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CHR_Marisa_Kirisame = {
+		name="Marisa Kirisame"
+		portraits={
+			army={
+				small="gfx/interface/ideas-chirno/Marisa.dds"
+			}
+			army={
+				large="gfx/leaders/CHR/Portrait_Marisa_Kirisame_Army.dds"
+			}
+		}
+		corps_commander={				
+			traits = { trickster trait_reckless }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id=-1
+			visible = { 
+				has_completed_focus = CHR_Call_The_Ordinary_Witch 
+			}
+		}
+	}
+	CHR_Reimu_Hakurei = {
+		name="Reimu Hakurei"
+		portraits={
+			army={
+				small="gfx/interface/ideas-chirno/Reimu.dds"
+			}
+			army={
+				large="gfx/leaders/CHR/Portrait_Reimu_Hakurei_Army.dds"
+			}
+		}
+		corps_commander={				
+			traits = { inflexible_strategist }
+			skill = 5
+			attack_skill = 1
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id=-1
+			visible = { 
+				has_completed_focus = CHR_Call_The_Incident_Resolver 
+			}
+		}
+	}
+	CHR_Rumia = {
+		name="Rumia"
+		portraits={
+			army={
+				small="gfx/interface/ideas-chirno/Rumia.dds"
+			}
+			army={
+				large="gfx/leaders/CHR/Portrait_Rumia_Army.dds"
+			}
+		}
+		corps_commander={				
+			traits = {}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id=-1
+			visible = { 
+				has_completed_focus = CHR_Rumia_Joins_The_Party 
+			}
+		}
+	}
+	CHR_Daiyousei = {
+		name="Daiyousei"
+		portraits={
+			army={
+				small="gfx/interface/ideas-chirno/Daiyousei.dds"
+			}
+			army={
+				large="gfx/leaders/CHR/Portrait_Daiyousei_Army.dds"
+			}
+		}
+		corps_commander={				
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id=-1
+			visible = { 
+				has_completed_focus = CHR_Daiyousei_Joins_The_Party 
+			}
+		}
+	}
+	CHR_aya_shameimaru={
+		name="Aya Shameimaru"
+		portraits={
+			army={
+				small = GFX_idea_aya_shameimaru
+			}
+			#army={
+			#	large="gfx/leaders/CHR/Portrait_South_Africa_Army_Generic_2.dds"
+			#}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = aya_shameimaru
+			allowed = {
+				original_tag = CHR
+				NOT = {
+					has_cosmetic_tag = fumo
+				}
+			}
+			available = { has_completed_focus = CHR_Aya }
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		#corps_commander={
+		#	traits={ media_personality }
+		#	skill=4
+		#	attack_skill=2
+		#	defense_skill=2
+		#	planning_skill=4
+		#	logistics_skill=2
+		#	legacy_id=-1
+		#}
+	}
+	CHR_aya_fumo = {
+		name="Aya Fumo"
+		portraits={
+			army={
+				small = GFX_idea_aya_fumo
+			}
+			#army={
+			#	large="gfx/leaders/CHR/Portrait_South_Africa_Army_Generic_2.dds"
+			#}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = aya_shameimaru
+			allowed = {
+				original_tag = CHR
+				has_cosmetic_tag = fumo
+			}
+			available = { 
+				has_completed_focus = CHR_Aya
+				has_cosmetic_tag = fumo
+			}
+			visible = { has_cosmetic_tag = fumo }
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		#corps_commander={
+		#	traits={ media_personality }
+		#	skill=4
+		#	attack_skill=2
+		#	defense_skill=2
+		#	planning_skill=4
+		#	logistics_skill=2
+		#	legacy_id=-1
+		#}
+	}
+	CHR_Hong_Meiling={
+		name="Hong Meiling"
+		portraits={
+			army={
+				small = GFX_Idea_Meiling
+			}
+			army={
+				large="gfx/leaders/SDM/Portrait_Hong_Meiling.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = hong_meiling
+			allowed = {
+				original_tag = CHR
+			}
+			available = { has_completed_focus = CHR_Hong_Meiling_Recruitment }
+			traits = {
+				mastery_of_t_ai_chi_ch_uan
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist }
+			skill=4
+			attack_skill=1
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+			visible = { 
+				has_completed_focus = CHR_Hong_Meiling_Recruitment
+			}
+		}
+	}
+##################################################################################################################################
+#██████   ██████  ██      ██ ████████ ██  ██████  █████  ██           █████  ██████  ██    ██ ██ ███████  ██████  ██████  ███████#
+#██   ██ ██    ██ ██      ██    ██    ██ ██      ██   ██ ██          ██   ██ ██   ██ ██    ██ ██ ██      ██    ██ ██   ██ ██     #
+#██████  ██    ██ ██      ██    ██    ██ ██      ███████ ██          ███████ ██   ██ ██    ██ ██ ███████ ██    ██ ██████  ███████#
+#██      ██    ██ ██      ██    ██    ██ ██      ██   ██ ██          ██   ██ ██   ██  ██  ██  ██      ██ ██    ██ ██   ██      ██#
+#██       ██████  ███████ ██    ██    ██  ██████ ██   ██ ███████     ██   ██ ██████    ████   ██ ███████  ██████  ██   ██ ███████#
+##################################################################################################################################
+	CHR_yetunde_babajide = {
+		name = yetunde_babajide
+		portraits = {
+			army = {
+				small = GFX_idea_yetunde_babajide
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = yetunde_babajide
+			allowed = {
+				original_tag = CHR
+			}
+			
+			visible = {
+				NOT = {
+					has_cosmetic_tag = fumo
+				}
+			}
+			available = {
+			}
+			traits = {
+				economist 
+			}
+		}
+	}
+	
+	CHR_kayin_temitope = {
+		name = kayin_temitope
+		portraits = {
+			army = {
+				small = GFX_idea_kayin_temitope
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = kayin_temitope
+			allowed = {
+				original_tag = CHR
+			}
+			
+			visible = {
+				NOT = {
+					has_cosmetic_tag = fumo
+				}
+			}
+			available = {
+			}
+			traits = {
+				captain_of_industry 
+			}
+		}
+	}
+
+	CHR_babajide_lekan = {
+		name = babajide_lekan
+		portraits = {
+			army = {
+				small = GFX_idea_babajide_lekan
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = babajide_lekan
+			allowed = {
+				original_tag = CHR
+			}
+			
+			visible = {
+				NOT = {
+					has_cosmetic_tag = fumo
+				}
+			}
+			available = {
+			}
+			traits = {
+				silent_workhorse 
+			}
+		}
+	}
+	CHR_patchouli_knowledge = {
+		name = patchouli_knowledge
+		portraits = {
+			army = {
+				small = GFX_idea_patchouli_knowledge
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = patchouli_knowledge
+			allowed = {
+				original_tag = CHR
+			}
+			
+			visible = {
+				NOT = {
+					has_cosmetic_tag = fumo
+				}
+			}
+			available = {
+				has_completed_focus = CHR_Patchouli_Recruitment
+			}
+			traits = {
+				the_girl_of_knowledge_and_shade 
+			}
+		}
+	}
+	CHR_Koakuma = {
+		name = koakuma
+		portraits = {
+			army = {
+				small = GFX_Idea_Koakuma
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = koakuma
+			allowed = {
+				original_tag = CHR
+			}
+			
+			visible = {
+				NOT = {
+					has_cosmetic_tag = fumo
+				}
+			}
+			available = {
+				has_completed_focus = CHR_Koakuma_Recruitment
+			}
+			traits = {
+				the_librarian_assistant
+			}
+		}
+	}
+	CHR_Flandre_Scarlet = {
+		name = flandre_scarlet
+		portraits = {
+			army = {
+				small = GFX_Idea_Flandre
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = flandre_scarlet
+			allowed = {
+				original_tag = CHR
+			}
+			
+			visible = {
+			}
+			available = {
+				has_completed_focus = CHR_Flandre_Recruitment
+			}
+			traits = {
+				the_princess_of_terror
+			}
+		}
+	}
+	CHR_Remilia_Scarlet = {
+		name = remilia_scarlet
+		portraits = {
+			army = {
+				small = GFX_Idea_Remilia
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = remilia_scarlet
+			allowed = {
+				original_tag = CHR
+			}
+			
+			visible = {
+				has_completed_focus = CHR_Scarlet_Devil_Mansion
+			}
+			available = {
+				has_completed_focus = CHR_Remilia_Recruitment
+			}
+			traits = {
+				The_Scarlet_Devil
+			}
+		}
+	}
+	CHR_mystia_lorelei = {
+		name = mystia_lorelei
+		portraits = {
+			army = {
+				small = GFX_idea_mystia_lorelei
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = mystia_lorelei
+			allowed = {
+				original_tag = CHR
+			}
+			
+			visible = {
+			}
+			available = { has_completed_focus = CHR_Mystia_Joins_The_Party }
+			traits = {
+				Singing_Night_Sparrow 
+			}
+		}
+	}
+	CHR_patchouli_fumo = {
+		name = patchouli_fumo
+		portraits = {
+			army = {
+				small = GFX_idea_patchouli_fumo
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = patchouli_fumo
+			allowed = {
+				original_tag = CHR
+			}
+			
+			visible = {
+				has_cosmetic_tag = fumo
+			}
+			available = {
+			}
+			traits = {
+				the_girl_of_knowledge_and_shade 
+			}
+		}
+	}
+	CHR_minamitsu_murasa = {
+		name = minamitsu_murasa
+		portraits = {
+			army = {
+				small = GFX_idea_minamitsu_murasa
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = minamitsu_murasa
+			allowed = {
+				original_tag = CHR
+			}
+			
+			available = { has_completed_focus = CHR_Chirno_Freezes_The_Waves }
+			cost = 125
+			traits = {
+				navy_chief_decisive_battle_3 
+			}
+		}
+	}
+	CHR_nitori_kawashiro = {
+		name = nitori_kawashiro
+		portraits = {
+			army = {
+				small = GFX_idea_nitori_kawashiro
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = nitori_kawashiro
+			allowed = {
+				original_tag = CHR
+			}
+			
+			available = { has_completed_focus = CHR_Kappa_Improved_Airplanes }
+			cost = 125
+			traits = {
+				kappa_engineer 
+			}
+		}
+	}
+	CHR_sakuya_izayoi = {
+		name = sakuya_izayoi
+		portraits = {
+			army = {
+				small = GFX_idea_sakuya_izayoi
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = high_command
+			idea_token = sakuya_izayoi
+			allowed = {
+				original_tag = CHR
+			}
+			visible = {
+				NOT = { has_cosmetic_tag = fumo }
+			}
+			available = { has_completed_focus = CHR_Sakuya_Recruitment }
+			cost = 150
+			traits = {
+				perfect_and_elegant_maid 
+			}
+		}
+	}
+	CHR_sakuya_fumo = {
+		name = sakuya_fumo
+		portraits = {
+			army = {
+				small = GFX_idea_sakuya_fumo
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = high_command
+			idea_token = sakuya_fumo
+			allowed = {
+				original_tag = CHR
+			}
+			visible = {
+				has_cosmetic_tag = fumo
+			}
+			cost = 125
+			available = { has_completed_focus = CHR_Sakuya_Recruitment }
+
+			traits = {
+				perfect_and_elegant_maid 
+			}
+		}
+	}
+	CHR_tenshi_hinanawi = {
+		name = tenshi_hinanawi
+		portraits = {
+			army = {
+				small = GFX_idea_tenshi_hinanawi
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = high_command
+			idea_token = tenshi_hinanawi
+			allowed = {
+				original_tag = CHR
+			}
+			visible = {
+				NOT = { has_cosmetic_tag = fumo }
+			}
+			available = { has_completed_focus = CHR_A_New_Army }
+			cost = 125
+			traits = {
+				army_chief_organizational_2 
+			}
+		}
+	}
+	CHR_tenshi_fumo = {
+		name = tenshi_fumo
+		portraits = {
+			army = {
+				small = GFX_idea_tenshi_fumo
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = high_command
+			idea_token = tenshi_fumo
+			allowed = {
+				original_tag = CHR
+			}
+			visible = {
+				has_cosmetic_tag = fumo
+			}
+			available = { has_completed_focus = CHR_A_New_Army }
+			cost = 125
+			traits = {
+				army_chief_organizational_2 
+			}
+		}
+	}
+	CHR_wriggle_nightbug = {
+		name = wriggle_nightbug
+		portraits = {
+			army = {
+				small = GFX_idea_wriggle_nightbug
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = high_command
+			idea_token = wriggle_nightbug
+			allowed = {
+				original_tag = CHR
+			}
+
+			available = { has_completed_focus = CHR_Wriggle_Joins_The_Party }
+			cost = 125
+			traits = {
+				swarm_of_bright_bugs 
+			}
+		}
+	}
+	CHR_yukari_yakumo = {
+		name = yukari_yakumo
+		portraits = {
+			army = {
+				small = GFX_idea_yukari_yakumo
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = yukari_yakumo
+			allowed = {
+				original_tag = CHR
+			}
+
+			available = { 
+				has_intelligence_agency  = yes
+			}
+			cost = 150
+			traits = {
+				youkai_of_Boundaries 
+			}
+		}
+	}
+	CHR_dd = {
+		name = CHR_dd
+		portraits = {
+			army = {
+				small = CHR_dd
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CHR_dd
+			allowed = {
+				original_tag = CHR
+			}
+			visible = { 
+				NOT = { original_tag = CHR }
+			}
+			available = { 
+				has_intelligence_agency  = yes
+			}
+			cost = 150
+			traits = {
+				head_of_intelligence 
+			}
+		}
+	}
+	##########################
+	###### THEORIST ##########
+	##########################
+	CHR_utsuho_reiuji = {
+		name = utsuho_reiuji
+		portraits = {
+			army = {
+				small = GFX_idea_utsuho_reiuji
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = theorist
+			idea_token = utsuho_reiuji
+			ledger = army
+			allowed = {
+				original_tag = CHR
+			}
+			cost = 150
+			visible = {
+				NOT = {
+					has_cosmetic_tag = fumo
+				}
+			}
+			research_bonus = {
+				nuclear = 0.15
+			}
+			available = {
+				has_completed_focus = CHR_Make_A_Deal_With_A_Bird
+			}
+			traits = {
+				nuclear_scientist 
+			}
+		}
+	}
+	CHR_utsuho_fumo = {
+		name = utsuho_fumo
+		portraits = {
+			army = {
+				small = GFX_idea_utsuho_fumo
+			}
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor = {
+			slot = theorist
+			idea_token = utsuho_fumo
+			ledger = army
+			allowed = {
+				original_tag = CHR
+			}
+			cost = 125
+			visible = {
+				has_cosmetic_tag = fumo
+			}
+			research_bonus = {
+				nuclear = 0.15
+			}
+			available = {
+				has_completed_focus = CHR_Make_A_Deal_With_A_Bird
+			}
+			traits = {
+				nuclear_scientist 
+			}
+		}
+	}
+}

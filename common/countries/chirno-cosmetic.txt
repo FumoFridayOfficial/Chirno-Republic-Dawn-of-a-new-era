@@ -1,0 +1,4 @@
+SDM_CHR = {
+	color = rgb { 240 36 97 }
+	color_ui = rgb { 240 36 97 }
+}

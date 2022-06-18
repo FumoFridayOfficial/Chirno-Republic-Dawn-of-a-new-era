@@ -1,0 +1,30 @@
+#scripted_gui = {
+#	cat_main_container = {
+#	
+#		context_type = selected_country_context
+#		
+#		window_name = "cat_main_container"
+#		
+#		visible = {
+#		}
+#		effects = {
+#			cat_open_click = {
+#				CHR = { add_political_power = 1 }
+#					random_owned_state = {
+#						prioritize = { id }
+#						add_dynamic_modifier = { 
+#							modifier = CHR_religious_terrorist
+#						}
+#						}
+#					}
+#				}
+#           }
+#		}
+#		triggers = {
+#			cat_open_visible = {
+#			}
+#			cat_open_click_enabled = {
+#			}
+#		}
+#	}
+#}

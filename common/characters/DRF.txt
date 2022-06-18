@@ -1,0 +1,62 @@
+characters = { 
+  ####    ####   #    #  #    #  #####  #####   #   #      #       ######    ##    #####   ######  #####    ####  
+ #    #  #    #  #    #  ##   #    #    #    #   # #       #       #        #  #   #    #  #       #    #  #      
+ #       #    #  #    #  # #  #    #    #    #    #        #       #####   #    #  #    #  #####   #    #   ####  
+ #       #    #  #    #  #  # #    #    #####     #        #       #       ######  #    #  #       #####        # 
+ #    #  #    #  #    #  #   ##    #    #   #     #        #       #       #    #  #    #  #       #   #   #    # 
+  ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   #### 
+  DRF_Thabani_Olufunmilola = {
+  	name="Thabani Olufunmilola"
+		portraits={
+			civilian={
+				large="gfx/leaders/GENERIC/Portrait_Africa_Generic_land_2.dds"
+			}
+			army = {
+				large = "gfx/leaders/GENERIC/Portrait_Africa_Generic_land_2.dds"
+				small = "gfx/leaders/GENERIC/idea_generic_army_africa_3.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_THABANI_OLUFUNMILOLA_DESC"
+			ideology=liberalism
+			traits={ Nationalist_Symbol }
+			expire="1960.1.2.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = DRF_Thabani_Olufunmilola
+			allowed = {
+			}
+			traits = {
+				army_regrouping_1
+			}
+			visible = {
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	DRF_Gudina_Refilwe={
+		name="Gudina Refilwe"
+		portraits={
+			army={
+				small="gfx/leaders/GENERIC/idea_generic_army_africa_2.dds"
+			}
+			army={
+				large="gfx/leaders/GENERIC/Portrait_Africa_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=3
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+}

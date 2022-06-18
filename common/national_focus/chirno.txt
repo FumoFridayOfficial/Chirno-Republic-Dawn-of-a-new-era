@@ -1,0 +1,4821 @@
+focus_tree = {
+	id = chirno
+	continuous_focus_position = { x = 0000 y = 2700 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHR
+		}
+	}
+	
+	#Industry Project
+	focus = {
+		id = CHR_industry_project
+		icon = GFX_focus_generic_industry_1
+		x = 2
+		y = 0
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available = {
+			OR = { 
+				has_completed_focus = CHR_Problem_Fixed_For_Sure
+				has_completed_focus = CHR_Problem_Solved
+				has_completed_focus = CHR_Was_There_Even_A_Problem
+			}
+		}
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure						
+					level = 2
+					instant_build = yes					
+				}
+			}
+			add_timed_idea = { idea = Industry_Project_I days = 320 }
+		}
+	} 
+
+	#Industry Project
+	focus = {
+		id = CHR_industry_project_II
+		icon = GFX_focus_generic_industry_2
+		x = 2
+		y = 4
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = { factor = 80 }
+		prerequisite = {
+			focus = CHR_steady_effort_for_civilian_factories_II
+			focus = CHR_steady_effort_for_military_factories_II
+		}
+		prerequisite = { focus = CHR_infrastructure_effort_II }
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure						
+					level = 2
+					instant_build = yes					
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			add_timed_idea = { idea = Industry_Project_II  days = 320 }
+		}
+		
+	}
+	
+	#Industry Project
+	focus = {
+		id = CHR_industry_project_III
+		icon = GFX_focus_generic_industry_3
+		x = 2
+		y = 7
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = { factor = 80 }
+		prerequisite = { focus = CHR_Plan_To_Delevop_Resources }
+		prerequisite = { focus = CHR_Plan_To_Construct_Defenses }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure						
+					level = 2
+					instant_build = yes					
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			add_timed_idea = { idea = Industry_Project_III  days = 460 }
+		}
+	}
+
+	#Focus on Civilian Factories.
+	focus = {
+		id = CHR_focus_on_civilian_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 1
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_industry_project  }
+		mutually_exclusive = { focus = CHR_focus_on_military_factories  }
+		completion_reward = {
+			add_timed_idea = { idea = civilian_focus_I  days = 250 }
+			
+		}
+	}
+
+	#Focus on Military Factories
+	focus = {
+		id = CHR_focus_on_military_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 5
+		y = 1
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_industry_project  }
+		mutually_exclusive = { focus = CHR_focus_on_civilian_factories }
+		completion_reward = {
+			add_timed_idea = { idea = military_focus_I  days = 250 }
+			
+		}
+	}
+
+	#Steady effort for civilian factories
+	focus = {
+		id = CHR_steady_effort_for_civilian_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 2
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_focus_on_civilian_factories  }
+		completion_reward = {
+		set_country_flag = FCF
+			random_owned_controlled_state ={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state ={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Steady effort for civilian factories
+	focus = {
+		id = CHR_steady_effort_for_civilian_factories_II
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 3
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_steady_effort_for_civilian_factories  }
+		completion_reward = {
+			random_owned_controlled_state ={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state ={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Steady effort for civilian factories
+	focus = {
+		id = CHR_steady_effort_for_civilian_factories_III
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 5
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_industry_project_II  }
+		mutually_exclusive = { focus = CHR_steady_effort_for_military_factories_III }
+		completion_reward = {
+			if = {
+				limit = { has_country_flag = FCF }
+				swap_ideas = {
+					remove_idea = civilian_focus_I
+					add_idea = civilian_focus_II
+				}
+				remove_ideas = civilian_focus_I
+			}
+			if = {
+				limit = { 
+					NOT = {
+							has_country_flag = FCF 
+					}
+				}
+				add_ideas = civilian_focus_I
+			}
+		}
+	}
+	
+	#Steady effort for civilian factories
+	focus = {
+		id = CHR_steady_effort_for_civilian_factories_IV
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 6
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_steady_effort_for_civilian_factories_III  }
+		completion_reward = {
+			random_owned_controlled_state ={
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#Resources
+	focus = {
+		id = CHR_Plan_To_Delevop_Resources
+		icon = GFX_goal_generic_construct_civilian
+		x = 1
+		y = 6
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_industry_project_II  }
+		prerequisite = { focus = CHR_steady_effort_for_civilian_factories_III focus = CHR_steady_effort_for_military_factories_III }
+		completion_reward = {
+			set_country_flag = Resource-Plan
+			custom_effect_tooltip = Resource_Plan_tt
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = CHR_Start_The_Resource_Plan
+		icon = GFX_goal_generic_construct_civilian
+		x = 6
+		y = 8
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available = { has_country_flag = Resource-Plan }
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = CHR_Increased_Rubber_Production
+		icon = GFX_focus_generic_rubber
+		x = 4
+		y = 9
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Start_The_Resource_Plan }
+		completion_reward = {
+		768 = {
+		add_extra_state_shared_building_slots = 1
+		}
+			add_resource = {
+				type = rubber
+				amount = 4
+				state = 768
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Increased_Oil_Production
+		icon = GFX_goal_generic_oil_refinery
+		x = 5
+		y = 10
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Start_The_Resource_Plan }
+		completion_reward = {
+		774 = {
+		add_extra_state_shared_building_slots = 1
+		}
+			add_resource = {
+				type = oil
+				amount = 4
+				state = 774
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Increased_Aluminum_Production
+		icon = GFX_focus_generic_aluminum
+		x = 6
+		y = 9
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Start_The_Resource_Plan }
+		completion_reward = {
+		545 = {
+		add_extra_state_shared_building_slots = 1
+		}
+			add_resource = {
+				type = aluminium
+				amount = 6
+				state = 545
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Increased_Tungsten_Production
+		icon = GFX_focus_generic_tungsten
+		x = 7
+		y = 10
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Start_The_Resource_Plan }
+		completion_reward = {
+		681 = {
+		add_extra_state_shared_building_slots = 1
+		}
+			add_resource = {
+				type = tungsten
+				amount = 8
+				state = 681
+			}
+		}
+	}	
+	
+	focus = {
+		id = CHR_Increased_Steel_Production
+		icon = GFX_focus_generic_steel
+		x = 8
+		y = 9
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Start_The_Resource_Plan }
+		completion_reward = {
+		547 = {
+		add_extra_state_shared_building_slots = 1
+		}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 547
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Finish_The_Resource_Plan
+		icon = GFX_goal_generic_construction
+		x = 6
+		y = 11
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Increased_Rubber_Production  }
+		prerequisite = { focus = CHR_Increased_Oil_Production }
+		prerequisite = { focus = CHR_Increased_Aluminum_Production }
+		prerequisite = { focus = CHR_Increased_Tungsten_Production }
+		prerequisite = { focus = CHR_Increased_Steel_Production }
+		completion_reward = {
+			add_ideas = resource_boost
+		}
+	}
+	
+	#Resources
+	focus = {
+		id = CHR_Plan_To_Construct_Defenses
+		icon = GFX_goal_generic_defence
+		x = 3
+		y = 6
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_industry_project_II  }
+		prerequisite = { focus = CHR_steady_effort_for_civilian_factories_III focus = CHR_steady_effort_for_military_factories_III }
+		completion_reward = {
+			set_country_flag = Construct_Defenses
+			custom_effect_tooltip = Plan_of_Defenses
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = CHR_Frist_Lines_Of_Defense
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 8
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available = {
+		has_country_flag = Construct_Defenses
+		}
+		completion_reward = {
+			add_timed_idea = { idea = bunker_focus days = 125 }
+		}
+	}
+	
+	focus = {
+		id = CHR_Second_Lines_Of_Defense
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 10
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Fortress_Ethiopia }
+		prerequisite = { focus = CHR_Cameroon_Defensive_Line }
+		completion_reward = {
+			539 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 8207
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 13210
+						instant_build = yes
+					}
+				}
+			}
+			548 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 12989
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 7088
+						instant_build = yes
+					}
+				}
+			}			
+			547 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5210
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6020
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1939
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 10860
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_Defend_Gensokyo
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 12
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Defend_Somalia }
+		prerequisite = { focus = CHR_Defend_South_Africa }
+		completion_reward = {
+				796 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 2115
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 10968
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Defend_Somalia
+		icon = GFX_goal_generic_defence
+		x = -1
+		y = 11
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Second_Lines_Of_Defense  }
+		completion_reward = {
+			268 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 8124
+						instant_build = yes
+					}
+				}
+			}
+			269 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 10833
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 5068
+						instant_build = yes
+					}
+				}
+			}
+			559 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 12991
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Defend_South_Africa
+		icon = GFX_goal_generic_defence
+		x = 1
+		y = 11
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Second_Lines_Of_Defense  }
+		completion_reward = {
+			681 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 12589
+						instant_build = yes
+					}
+				}
+			}
+			719 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 1468
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 1468
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Cameroon_Defensive_Line
+		icon = GFX_goal_generic_defence
+		x = -1
+		y = 9
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Frist_Lines_Of_Defense  }
+			completion_reward = {
+				773 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 5036
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 2080
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 5054
+						instant_build = yes
+					}
+				}
+				}
+			660 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+							type = bunker
+							level = 2
+							province = 8078
+							instant_build = yes
+					}
+					add_building_construction = {
+							type = bunker
+							level = 2
+							province = 11012
+							instant_build = yes
+					}
+				}
+			}
+			774 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 13211
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9152
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 2081
+						instant_build = yes
+					}
+				}
+			}
+		}	
+	}
+
+	focus = {
+		id = CHR_Fortress_Ethiopia
+		icon = GFX_goal_generic_defence
+		x = 1
+		y = 9
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_Frist_Lines_Of_Defense  }
+			completion_reward = {
+				271 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 5010
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 7980
+						instant_build = yes
+					}
+				}
+				}
+				271 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+								type = bunker
+								level = 2
+								province = 1984
+								instant_build = yes
+						}
+						add_building_construction = {
+								type = bunker
+								level = 2
+								province = 8036
+								instant_build = yes
+						}
+					}
+				}
+				271 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 4954
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 5097
+							instant_build = yes
+						}
+					}
+				}
+		}	
+	}
+
+	#Steady Effort for military factories.
+	focus = {
+		id = CHR_steady_effort_for_military_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 2
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_focus_on_military_factories  }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+		set_country_flag = FMF
+			random_owned_controlled_state ={
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state ={
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#Steady Effort for military factories.
+	focus = {
+		id = CHR_steady_effort_for_military_factories_II
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 5
+		y = 3
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_steady_effort_for_military_factories  }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			random_owned_controlled_state ={
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state ={
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Steady Effort for military factories.
+	focus = {
+		id = CHR_steady_effort_for_military_factories_III
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 5
+		y = 5
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_industry_project_II  }
+		mutually_exclusive = { focus = CHR_steady_effort_for_civilian_factories_III }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			if = {
+				limit = { has_country_flag = FMF }
+				swap_ideas = {
+					remove_idea = military_focus_I
+					add_idea = military_focus_II
+				}
+				remove_ideas = military_focus_I
+			}
+			if = {
+				limit = { 
+					NOT = {
+							has_country_flag = FMF 
+					}
+				}
+				add_ideas = military_focus_I
+			}
+		}
+	}
+	
+	#Steady Effort for military factories.
+	focus = {
+		id = CHR_steady_effort_for_military_factories_IV
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 5
+		y = 6
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_steady_effort_for_military_factories_III  }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Infrastructure effort.
+	focus = {
+		id = CHR_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 2
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_industry_project  }
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {						
+					type = infrastructure						
+					level = 2
+					instant_build = yes					
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {						
+					type = infrastructure						
+					level = 3
+					instant_build = yes					
+				}
+			}
+		}
+	}
+
+	#Infrastructure effort.
+	focus = {
+		id = CHR_infrastructure_effort_II
+		icon = GFX_goal_generic_production
+		x = 2
+		y = 3
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = CHR_infrastructure_effort }
+		ai_will_do = { factor = 40 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {						
+					type = infrastructure						
+					level = 2
+					instant_build = yes					
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {						
+					type = infrastructure						
+					level = 3
+					instant_build = yes					
+				}
+			}
+		}
+	}
+	####################################################
+	####################################################
+	###########Second_Part_of_Focus_Tree################
+	####################################################
+	####################################################
+	
+	focus = {
+		id = CHR_Bomb_Defusal_Manual
+		icon = GFX_CHR_Bomb_Defusal_Manual
+		x = 17
+		y = 0
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			custom_effect_tooltip = Bomb_Defusal-tt
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = CHR_Deal_With_The_Terrorist
+		icon = GFX_CHR_Deal_With_The_Terrorist
+		x = 17
+		y = 1
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Bomb_Defusal_Manual }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.1 }
+		}
+	}
+	
+	focus = {
+		id = CHR_Option_1
+		icon = GFX_CHR_Option_1
+		x = 11
+		y = 2
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = { has_country_flag = Option1 }
+		mutually_exclusive = { focus = CHR_Option_2 }
+		mutually_exclusive = { focus = CHR_Option_3 }
+		prerequisite = { focus = CHR_Deal_With_The_Terrorist }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			custom_effect_tooltip = Option1-tt
+			add_ideas = A_Red_Ice
+		}
+	}
+
+	focus = {
+		id = CHR_Option_2
+		icon = GFX_CHR_Option_2
+		x = 17
+		y = 2
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = { has_country_flag = Option2 }
+		mutually_exclusive = { focus = CHR_Option_1 }
+		mutually_exclusive = { focus = CHR_Option_3 }
+		prerequisite = { focus = CHR_Deal_With_The_Terrorist }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			custom_effect_tooltip = Option2-tt
+			add_ideas = Coolest_Ice
+		}
+	}
+
+	focus = {
+		id = CHR_Option_3
+		icon = GFX_CHR_Option_3
+		x = 23
+		y = 2
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = { has_country_flag = Option3 }
+		mutually_exclusive = { focus = CHR_Option_1 }
+		mutually_exclusive = { focus = CHR_Option_2 }
+		prerequisite = { focus = CHR_Deal_With_The_Terrorist }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			custom_effect_tooltip = Option3-tt
+			add_ideas = Perfect_Shape_Ice
+		}
+	}
+	
+	focus = {
+		id = CHR_Stop_all_Harrasment_On_Religious_People
+		icon = GFX_goal_continuous_increase_nu
+		x = 14
+		y = 3
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Option_1 focus = CHR_Option_2 }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Religious-Terrorists
+				add_idea = Religious-Terrorists_2
+			}
+			add_political_power = 50
+		}
+	}
+	######################################
+	###############OPTION-1###############
+	######################################
+	focus = {
+		id = CHR_Appease_The_Religious_People
+		icon = GFX_CHR_Appease_The_Religious_People
+		x = 17
+		y = 4
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Stop_all_Harrasment_On_Religious_People }
+		prerequisite = { focus = CHR_Option_2 }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Religious-Terrorists_2
+				add_idea = Religious-Terrorists_6
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Start_Sending_Aid
+		icon = GFX_CHR_Start_Sending_Aid
+		x = 17
+		y = 5
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Appease_The_Religious_People }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Religious-Terrorists_6
+				add_idea = Religious-Terrorists_7
+			}
+			add_political_power = 75
+		}
+	}
+	
+	focus = {
+		id = CHR_Make_A_Deal_With_The_Extremist
+		icon = GFX_CHR_Make_A_Deal_With_The_Extremist
+		x = 17
+		y = 6
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Start_Sending_Aid }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Religious-Terrorists_7
+				add_idea = Religious-Terrorists_8
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Take_Responsability_Of_The_Past_Actions
+		icon = GFX_CHR_Take_Responsability_Of_The_Past_Actions
+		x = 15
+		y = 7
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Make_A_Deal_With_The_Extremist }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.5 }
+		}
+	}
+	
+	focus = {
+		id = CHR_Transition_To_A_Better_Country
+		icon = GFX_CHR_Transition_To_A_Better_Country
+		x = 17
+		y = 7
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Make_A_Deal_With_The_Extremist }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.6 }
+		}
+	}
+	
+	focus = {
+		id = CHR_Construct_Churches_For_Them
+		icon = GFX_CHR_Construct_Churches_For_Them
+		x = 19
+		y = 7
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Make_A_Deal_With_The_Extremist }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.7 }
+		}
+	}
+	
+	focus = {
+		id = CHR_Problem_Fixed_For_Sure
+		icon = GFX_CHR_Problem_Fixed_For_Sure
+		x = 17
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Construct_Churches_For_Them }
+		prerequisite = { focus = CHR_Transition_To_A_Better_Country }
+		prerequisite = { focus = CHR_Take_Responsability_Of_The_Past_Actions }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_political_power = 125
+			hidden_effect = {
+				set_country_flag = PFFS
+				remove_ideas = Religious-Terrorists
+				remove_ideas = Religious-Terrorists_4
+				558 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				776 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				777 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				274 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				268 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				269 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				559 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				CHR = { country_event = { id = super.2 } }
+			}
+			remove_ideas = Religious-Terrorists_8
+			custom_effect_tooltip = Problem_Fixed-tt
+		}
+	}
+	
+	###OPTION-2###
+	
+	focus = {
+		id = CHR_Calm_Down_The_Religious_People
+		icon = GFX_CHR_freeze_the_extremists_tensions
+		x = 11
+		y = 4
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Stop_all_Harrasment_On_Religious_People }
+		prerequisite = { focus = CHR_Option_1 }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Religious-Terrorists
+				add_idea = Religious-Terrorists_2
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Start_A_Propaganda_Campaing
+		icon = GFX_CHR_Start_A_Propaganda_Campaing
+		x = 11
+		y = 5
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Calm_Down_The_Religious_People }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+		#event
+			swap_ideas = {
+				remove_idea = Religious-Terrorists_2
+				add_idea = Religious-Terrorists_3
+			}
+			add_political_power = 75
+		}
+	}
+	
+	focus = {
+		id = CHR_Start_Fixing_The_Mess
+		icon = GFX_CHR_Start_Fixing_The_Mess
+		x = 11
+		y = 6
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Start_A_Propaganda_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Religious-Terrorists_3
+				add_idea = Religious-Terrorists_4
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Start_Suppresing_Extremist
+		icon = GFX_CHR_Start_Suppresing_Extremist
+		x = 9
+		y = 7
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Start_Fixing_The_Mess }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.2 }
+		}
+	}
+	
+	focus = {
+		id = CHR_Give_Aid_To_Those_That_Cooperate
+		icon = GFX_CHR_Give_Aid_To_Those_That_Cooperate
+		x = 11
+		y = 7
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = { has_completed_focus = CHR_Start_Suppresing_Extremist  }
+		prerequisite = { focus = CHR_Start_Fixing_The_Mess }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.3 }
+		}
+	}
+	
+	focus = {
+		id = CHR_Make_Like_This_Never_Happened
+		icon = GFX_CHR_Make_Like_This_Never_Happened
+		x = 13
+		y = 7
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = { has_completed_focus = CHR_Give_Aid_To_Those_That_Cooperate has_completed_focus = CHR_Start_Suppresing_Extremist  }
+		prerequisite = { focus = CHR_Start_Fixing_The_Mess }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.4 }
+		}
+	}
+	
+	focus = {
+		id = CHR_Problem_Solved
+		icon = GFX_CHR_Problem_Solved
+		x = 11
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Make_Like_This_Never_Happened }
+		prerequisite = { focus = CHR_Start_Suppresing_Extremist }
+		prerequisite = { focus = CHR_Give_Aid_To_Those_That_Cooperate }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+		custom_effect_tooltip = Problem_Solved_tt	
+			hidden_effect = {
+				set_country_flag = PSC
+				remove_ideas = Religious-Terrorists_4
+				add_timed_idea = { idea = Religious-Terrorists_4 days = 1 }
+				CHR = { country_event = { id = super.3 } }
+			}
+			country_event = { id = chirno.24 }
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+	}
+	
+	###OPTION-3###
+	
+	focus = {
+		id = CHR_Tell_Them_To_Stop
+		icon = GFX_CHR_Put_The_Army_On_Duty
+		x = 23
+		y = 3
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Option_3 }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Religious-Terrorists
+				add_idea = Religious-Terrorists_9
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Put_The_Army_Agaist_Them
+		icon = GFX_CHR_Put_The_Army_Agaisnt_Them
+		x = 23
+		y = 4
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Tell_Them_To_Stop }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Religious-Terrorists_9
+				add_idea = Religious-Terrorists_10
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Put_Out_The_Fire
+		icon = GFX_CHR_Put_The_Fire_Out
+		x = 23
+		y = 5
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Put_The_Army_Agaist_Them }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			custom_effect_tooltip = POTF-tt
+			add_political_power = 75
+				hidden_effect = { country_event = { id = chirno.8 } }
+		}
+	}
+
+	focus = {
+		id = CHR_Extinguish_The_Christian_Fire
+		icon = GFX_CHR_Extinguish_The_Christian_Fire
+		x = 22
+		y = 6
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Put_Out_The_Fire }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = -0.10
+			add_manpower = -78200
+			hidden_effect = {
+				558 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				776 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				777 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				274 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+			}
+			custom_effect_tooltip = remove_effect_C
+		}
+	}
+	
+	focus = {
+		id = CHR_Extinguish_The_Islamic_Fire
+		icon = GFX_CHR_Extinguish_The_Islamic_Fire
+		x = 24
+		y = 6
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Put_Out_The_Fire }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = -0.10
+			add_manpower = -151300
+			hidden_effect = {
+				268 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				269 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+				559 = { remove_dynamic_modifier = { modifier = CHR_religious_terrorist } }
+			}
+			custom_effect_tooltip = remove_effect_I
+		}
+	}
+	
+	focus = {
+		id = CHR_Freeze_Them_Until_They_Stop_Moving
+		icon = GFX_CHR_Freeze_Them_Until_They_Stop_Moving
+		x = 23
+		y = 7
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Extinguish_The_Christian_Fire }
+		prerequisite = { focus = CHR_Extinguish_The_Islamic_Fire }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			custom_effect_tooltip = FTUM-tt
+			hidden_effect = { add_timed_idea = { idea = Restore_Order days = 400 } }
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = CHR_Was_There_Even_A_Problem
+		icon = GFX_CHR_Was_There_Even_A_Problem
+		x = 23
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			hidden_trigger = {
+			has_country_flag = Victory1
+				NOT = {
+					has_idea = Religious-Terrorists_10
+					has_idea = Religious-Terrorists
+				}
+			}
+		}
+		prerequisite = { focus = CHR_Freeze_Them_Until_They_Stop_Moving }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.9 }
+		}
+	}
+	
+	#############################
+	####THIRD PART FOCUS TREE####
+	#############################
+
+	focus = {
+		id = CHR_A_New_Start
+		icon = GFX_CHR_A_New_Start-4
+		x = 22
+		y = 12
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			OR = {
+				has_completed_focus = CHR_Problem_Fixed_For_Sure
+				has_completed_focus = CHR_Problem_Solved
+				has_completed_focus = CHR_Was_There_Even_A_Problem
+			}
+		}
+		#allow_branch = {
+		#	NOT = { has_global_flag = ScarletTakeover }
+		#}
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			swap_ideas = { 
+			  remove_idea = Frozen-Realm 
+			  add_idea = Frozen-Realm-2 
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Finish_What_We_Started
+		icon = GFX_CHR_Finish_What_We_Started
+		x = 22
+		y = 13
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			OR = { 
+			has_army_manpower = { size > 349999 }
+			num_divisions > 45
+			}
+		}
+		#allow_branch = { NOT = {has_global_flag = ScarletTakeover } }
+		prerequisite = { focus = CHR_A_New_Start }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			country_event = { id = chirno.22 }
+		}
+	}
+	
+	#focus = {
+	#	id = CHR_Scarlet_Takeover
+	#	icon = GFX_CHR_Scarlet_Takeover
+	#	x = 22
+	#	y = 12
+	#	cost = 8
+	#	search_filters = {
+	#		FOCUS_FILTER_POLITICAL
+	#	}
+	#	allow_branch = {
+	#		NOT = {
+	#			has_country_flag = ScarletInfluenceFlag
+	#			has_country_flag = ScarletInfluenceFinished
+	#		}
+	#		has_global_flag = ScarletTakeover
+	#	}
+	#	ai_will_do = { factor = 80 }
+	#	completion_reward = {
+	#		#SDM
+	#		clr_country_flag = ScarletInfluenceFlag
+	#		clear_variable = ScarletInfluenceVar
+	#		set_country_flag = ScarletInfluenceFinished
+	#		add_stability = 0.12
+	#		add_war_support = 0.10
+	#	}
+	#}
+	
+	#focus = {
+	#	id = CHR_Start_Something_New
+	#	icon = GFX_CHR_Start_Something_New
+	#	x = 22
+	#	y = 13
+	#	cost = 6
+	#	search_filters = {
+	#		FOCUS_FILTER_POLITICAL
+	#	}
+	#	available = {
+	#		OR = { 
+	#		has_army_manpower = { size > 349999 }
+	#		num_divisions > 45
+	#		}
+	#	}
+	#	prerequisite = { focus = CHR_Scarlet_Takeover }
+	#	ai_will_do = { factor = 80 }
+	#	completion_reward = {
+	#		#event
+	#		country_event = { id = chirno.22 }
+	#	}
+	#}
+	
+	focus = {
+		id = CHR_British_Western_Colony
+		icon = GFX_CHR_Take_Them_Out_Of_Here_2
+		x = 20
+		y = 14
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = CHR_Finish_What_We_Started
+		}
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			every_state = {
+				limit = { is_owned_by = BWR  is_core_of = BWR }
+				CHR = { add_state_claim = PREV }		
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BWR
+			}			
+		}
+	}
+	focus = {
+		id = CHR_Claim_The_Nile
+		icon = GFX_CHR_Claim_The_Nile
+		x = 19
+		y = 15
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_British_Western_Colony }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			551 = {
+				add_claim_by = CHR
+			}
+			767 = {
+				add_claim_by = CHR
+			}
+			456 = {
+				add_claim_by = CHR
+			}
+			457 = {
+				add_claim_by = CHR
+			}
+			446 = {
+				add_claim_by = CHR
+			}
+			447 = {
+				add_claim_by = CHR
+			}
+			452 = {
+				add_claim_by = CHR
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = ENG
+				generator = { 551 767 456 457 446 447 452 }
+			}
+		}
+	}
+	focus = {
+		id = CHR_Claim_The_Holy_Land
+		icon = GFX_CHR_Claim_The_Suez
+		x = 21
+		y = 15
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_British_Western_Colony }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			453 = {
+				add_claim_by = CHR
+			}
+			454 = {
+				add_claim_by = CHR
+			}
+			455 = {
+				add_claim_by = CHR
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = ENG
+				generator = { 453 454 455 }
+			}			
+		}
+	}
+ 
+	focus = {
+		id = CHR_Remove_The_British_Presence
+		icon = GFX_CHR_Take_Them_Out_Of_Here
+		x = 18
+		y = 21
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Middle_East_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			659 = {
+				add_claim_by = CHR
+			}
+			658 = {
+				add_claim_by = CHR
+			}
+			765 = {
+				add_claim_by = CHR
+			}
+			656 = {
+				add_claim_by = CHR
+			}
+			183 = {
+				add_claim_by = CHR
+			}
+		}
+	}	
+	
+	focus = {
+		id = CHR_Threaten_The_Italian_Colony
+		icon = GFX_CHR_Threaten_The_Italian_Colony
+		x = 24
+		y = 14
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = ITA }
+			550 = { is_owned_and_controlled_by = ITA }
+		}
+		prerequisite = { focus = CHR_Finish_What_We_Started
+			#focus = CHR_Start_Something_New
+		}
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			ITA = { 
+				country_event = { id = italy.21 }
+			}
+			550 = {
+				add_claim_by = CHR
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_Italy_North_africa
+		icon = GFX_CHR_Threaten_The_Italian_Colony
+		x = 24
+		y = 15
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			550 = { is_owned_and_controlled_by = CHR }
+		}
+		bypass = {
+			NOT = { country_exists = ITA }
+		}
+		prerequisite = { focus = CHR_Threaten_The_Italian_Colony }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			550 = {
+				add_claim_by = CHR
+			}
+			273 = {
+				add_claim_by = CHR
+			}
+			663 = {
+				add_claim_by = CHR
+			}
+			451 = {
+				add_claim_by = CHR
+			}
+			450 = {
+				add_claim_by = CHR
+			}
+			449 = {
+				add_claim_by = CHR
+			}
+			662 = {
+				add_claim_by = CHR
+			}
+			661 = {
+				add_claim_by = CHR
+			}
+			448 = {
+				add_claim_by = CHR
+			}			
+			create_wargoal = {
+				type = take_state_focus
+				target = ITA
+				generator = { 550 }
+			}
+		}
+	}	
+	
+	focus = {
+		id = CHR_Take_Spanish_Land_In_Africa
+		icon = GFX_focus_focus_fra_intervention_spain
+		x = 25
+		y = 16
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			701 = {
+				is_owned_and_controlled_by = CHR
+			}
+		}
+		prerequisite = { focus = CHR_Italy_North_africa }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			if = {
+				limit = {
+					SPR = { exists = yes }
+				}
+				SPR = { country_event = { id = spain.771 } }
+			}
+			if = {
+				limit = {
+					SPA = { exists = yes }
+				}
+				SPA = { country_event = { id = spain.771 } }
+			}
+			699 = {
+				add_claim_by = CHR
+			}
+			783 = {
+				add_claim_by = CHR
+			}
+			290 = {
+				add_claim_by = CHR
+			}			
+		}
+	}	
+	
+	focus = {
+		id = CHR_Kick_The_French_Out
+		icon = GFX_CHR_Kick_The_French_Out
+		x = 23
+		y = 16
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			701 = {
+				is_owned_by = CHR
+			}
+		}
+		bypass = {
+			NOT = { country_exists = FRA }
+		}
+		prerequisite = { focus = CHR_Italy_North_africa }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			515 = {
+				add_claim_by = CHR
+			}
+			775 = {
+				add_claim_by = CHR
+			}
+			514 = {
+				add_claim_by = CHR
+			}
+			782 = {
+				add_claim_by = CHR
+			}
+			786 = {
+				add_claim_by = CHR
+			}
+			462 = {
+				add_claim_by = CHR
+			}
+			461 = {
+				add_claim_by = CHR
+			}
+			513 = {
+				add_claim_by = CHR
+			}
+			460 = {
+				add_claim_by = CHR
+			}
+			458 = {
+				add_claim_by = CHR
+			}
+			665 = {
+				add_claim_by = CHR
+			}
+			514 = {
+				add_claim_by = CHR
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = FRA
+				generator = { 515 775 782 786 462 461 513 460 458 665 514 }
+			}
+		}
+	}		
+
+	focus = {
+		id = CHR_Part_2_Asia
+		icon = GFX_focus_generic_tank_production
+		x = 22
+		y = 17
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			701 = {
+				is_owned_by = CHR
+			}
+			459 = {
+				is_owned_by = CHR
+			}
+			447 = {
+				is_owned_by = CHR
+			}
+			448 = {
+				is_owned_by = CHR
+			}
+		}
+		prerequisite = { focus = CHR_Kick_The_French_Out focus = CHR_Take_Spanish_Land_In_Africa }
+		prerequisite = { focus = CHR_Claim_The_Nile focus = CHR_Claim_The_Holy_Land } 
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			custom_effect_tooltip = P2A-tt
+			hidden_effect = {
+				country_event = { id = chirno.19 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_Middle_East_Campaing
+		icon = GFX_CHR_Middle_East_Campaing
+		x = 18
+		y = 18
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+		}
+		bypass = {
+		}
+		allow_branch = { 
+			has_country_flag = part2asia
+		}
+		prerequisite = { focus = CHR_Part_2_Asia }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event	
+		}
+	}
+
+	focus = {
+		id = CHR_Take_Our_Territory_Back
+		icon = GFX_CHR_Take_Our_Territory_Back
+		x = 17
+		y = 19
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+		}
+		bypass = {
+			NOT = { country_exists = YEM }
+			NOT = { country_exists = OMA }
+		}
+		prerequisite = { focus = CHR_Middle_East_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			293 = {
+				add_claim_by = CHR
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = YEM
+				generator = { 293 }
+			}			
+			294 = {
+				add_claim_by = CHR
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = OMA
+				generator = { 294 }
+			}			
+		}
+	}
+
+	focus = {
+		id = CHR_The_Rivers_Of_Civilization
+		icon = GFX_CHR_The_Rivers_Of_Civilization
+		x = 20
+		y = 20
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+		}
+		bypass = {
+			NOT = { country_exists = IRQ }
+		}
+		prerequisite = { focus = CHR_Middle_East_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			676 = {
+				add_claim_by = CHR
+			}		
+			291 = {
+				add_claim_by = CHR
+			}
+			676 = {
+				add_claim_by = CHR
+			}		
+			675 = {
+				add_claim_by = CHR
+			}
+			680 = {
+				add_claim_by = CHR
+			}		
+			554 = {
+				add_claim_by = CHR
+			}	
+			676 = {
+				add_claim_by = CHR
+			}		
+			799 = {
+				add_claim_by = CHR
+			}
+			677 = {
+				add_claim_by = CHR
+			}		
+			553 = {
+				add_claim_by = CHR
+			}			
+			create_wargoal = {
+				type = annex_everything
+				target = IRQ
+			}			
+		}
+	}
+
+	focus = {
+		id = CHR_Long_Time_No_See
+		icon = GFX_focus_generic_attack_turkey
+		x = 16
+		y = 20
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+		}
+		bypass = {
+			NOT = { country_exists = TUR }
+		}
+		prerequisite = { focus = CHR_Middle_East_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event		
+			every_state = {
+				limit = { is_owned_by = TUR  is_core_of = TUR }
+				CHR = { add_state_claim = PREV }		
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TUR
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_Eastern_Campaing
+		icon = GFX_CHR_Eastern_Campaing
+		x = 26
+		y = 18
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = { 
+			has_country_flag = part2asia
+		}
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = CHR_Part_2_Asia }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event	
+		}
+	}
+	
+	focus = {
+		id = CHR_Take_The_Mountains
+		icon = GFX_CHR_Take_The_Mountains
+		x = 28
+		y = 19
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+		}
+		bypass = {
+			NOT = { country_exists = NEP }
+			NOT = { country_exists = TIB }
+			NOT = { country_exists = BHU }
+		}
+		prerequisite = { focus = CHR_Eastern_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event		
+			create_wargoal = {
+				type = annex_everything
+				target = NEP
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BHU
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TIB
+			}			
+		}
+	}	
+
+	focus = {
+		id = CHR_Sauidi_No_More
+		icon = GFX_CHR_Sauidi_No_More
+		x = 19
+		y = 19
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+		}
+		bypass = {
+			NOT = { country_exists = SAU }
+		}
+		prerequisite = { focus = CHR_Middle_East_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			678 = {
+				add_claim_by = CHR
+			}			
+			679 = {
+				add_claim_by = CHR
+			}
+			292 = {
+				add_claim_by = CHR
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = SAU
+				generator = { 678 679 292 }
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_India_More_Like_Outdia
+		icon = GFX_CHR_India_More_Like_Outdia
+		x = 24
+		y = 19
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+		}
+		bypass = {
+			NOT = { country_exists = RAJ }
+		}
+		prerequisite = { focus = CHR_Eastern_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = RAJ
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_Im_A_Stan_For_Pakistan
+		icon = GFX_CHR_Im_A_Stan_For_Pakistan
+		x = 25
+		y = 20
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = PAK }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Eastern_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = PAK
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_Graveyard_Of_Empires
+		icon = GFX_CHR_Graveyard_Of_Empires
+		x = 27
+		y = 20
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = AFG }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Eastern_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = AFG
+			}			
+		}
+	}	
+	
+	focus = {
+		id = CHR_Persian_Kingdom
+		icon = GFX_CHR_Persian_Kingdom
+		x = 26
+		y = 21
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = PER }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Eastern_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = PER
+			}			
+		}
+	}	
+	
+	focus = {
+		id = CHR_Part_3_Europe
+		icon = GFX_CHR_Part_3_Europe
+		x = 22
+		y = 23
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			797 = { is_owned_by = CHR }
+			291 = { is_owned_by = CHR }
+			439 = { is_owned_by = CHR }
+		}
+		prerequisite = { focus = CHR_Remove_The_British_Presence focus = CHR_Persian_Kingdom }
+		prerequisite = { focus = CHR_Part_2_Asia }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event	
+			custom_effect_tooltip = P3E-tt
+			hidden_effect = {
+				country_event = { id = chirno.20 }
+			}
+		}
+	}	
+
+	focus = {
+		id = CHR_Mediterranean_Vacation
+		icon = GFX_CHR_Mediterranean_Vacation
+		x = 22
+		y = 24
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+			has_country_flag = part3europe
+		}
+		bypass = {
+			NOT = { country_exists = GRE }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Part_3_Europe }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event			
+		}
+	}
+
+	focus = {
+		id = CHR_Greek_Salad
+		icon = GFX_focus_generic_attack_greece
+		x = 23
+		y = 25
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = GRE }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Mediterranean_Vacation }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = GRE
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_The_Boot_Is_Ours
+		icon = GFX_CHR_The_Boot_Is_Ours
+		x = 22
+		y = 26
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = ITA }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Mediterranean_Vacation }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
+			}			
+		}
+	}
+
+	focus = {
+		id = CHR_Iberian_Brothers
+		icon = GFX_CHR_Iberian_Brothers
+		x = 21
+		y = 25
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = SPR }
+			NOT = { country_exists = POR }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Mediterranean_Vacation }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = SPR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = POR
+			}				
+		}
+	}
+
+	focus = {
+		id = CHR_Neutrality_Wont_Save_You
+		icon = GFX_focus_attack_switzerland
+		x = 21
+		y = 27
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = SWI }
+			NOT = { country_exists = POR }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_The_Boot_Is_Ours }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = SWI
+			}			
+		}
+	}
+
+	focus = {
+		id = CHR_Put_Albania_Under_A_New_Government
+		icon = GFX_CHR_Put_Albania_Under_A_New_Government
+		x = 23
+		y = 27
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = ALB }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_The_Boot_Is_Ours }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = ALB
+			}			
+		}
+	}	
+
+	focus = {
+		id = CHR_Western_Europe_Is_Inferior_To_Us
+		icon = GFX_focus_usa_focus_on_europe
+		x = 17
+		y = 24
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+			has_country_flag = part3europe
+		}
+		bypass = {
+			NOT = { country_exists = FRA }
+		}
+		available = {
+			OR = {
+			num_divisions > 50
+			has_army_manpower = { size > 600000 }
+			}
+		}
+		prerequisite = { focus = CHR_Part_3_Europe }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event			
+		}
+	}
+
+	focus = {
+		id = CHR_Take_The_Metal_Tower
+		icon = GFX_CHR_Take_The_Metal_Tower
+		x = 16
+		y = 25
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = FRA }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Western_Europe_Is_Inferior_To_Us }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = FRA
+			}				
+		}
+	}
+
+	focus = {
+		id = CHR_Put_An_End_To_The_Reich
+		icon = GFX_CHR_Put_An_End_To_The_Reich
+		x = 18
+		y = 26
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = GER }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Western_Europe_Is_Inferior_To_Us }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = GER
+			}		
+		}
+	}
+	
+	focus = {
+		id = CHR_Benelux_In_Fire
+		icon = GFX_CHR_Benelux_In_Fire
+		x = 15
+		y = 26
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = LUX }
+			NOT = { country_exists = BEL }
+			NOT = { country_exists = HOL }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Western_Europe_Is_Inferior_To_Us }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = LUX
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BEL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HOL
+			}			
+		}
+	}	
+
+	focus = {
+		id = CHR_End_The_Empire
+		icon = GFX_CHR_End_The_Empire
+		x = 17
+		y = 27
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = ENG }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Western_Europe_Is_Inferior_To_Us }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = ENG
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_Eastern_Europe_Campaing
+		icon = GFX_CHR_Eastern_Europe_Campaing
+		x = 27
+		y = 24
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+			has_country_flag = part3europe
+		}
+		bypass = {
+			NOT = { country_exists = FRA }
+		}
+		available = {
+			OR = { 
+			has_army_manpower = { size > 649999 }
+			num_divisions > 60
+			}
+		}
+		prerequisite = { focus = CHR_Part_3_Europe }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event			
+		}
+	}
+
+	focus = {
+		id = CHR_Attack_Yugoslavia
+		icon = GFX_CHR_Attack_Yugoslavia
+		x = 28
+		y = 25
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = YUG }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Eastern_Europe_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = YUG
+			}				
+		}
+	}
+	
+	focus = {
+		id = CHR_Bulgaria_Conquest
+		icon = GFX_focus_generic_attack_bulgaria
+		x = 26
+		y = 25
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = BUL }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Eastern_Europe_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = BUL
+			}				
+		}
+	}
+
+	focus = {
+		id = CHR_Central_Europe
+		icon = GFX_CHR_Central_Europe
+		x = 28
+		y = 26
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = HUN }
+			NOT = { country_exists = CZE }
+			NOT = { country_exists = AUS }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Attack_Yugoslavia }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = HUN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CZE
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = AUS
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_Romanian_Oil_Fields
+		icon = GFX_CHR_Romanian_Oil_Fields
+		x = 26
+		y = 26
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = ROM }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Bulgaria_Conquest }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = ROM
+			}			
+		}
+	}	
+
+	focus = {
+		id = CHR_Take_The_Red_Giant
+		icon = GFX_CHR_Take_The_Red_Giant
+		x = 27
+		y = 27
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = SOV }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Central_Europe focus = CHR_Romanian_Oil_Fields }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}			
+		}
+	}
+
+	focus = {
+		id = CHR_Part_4_Whats_Left_Of_The_World
+		icon = CHR_Part_4_Whats_Left_Of_The_World
+		x = 22
+		y = 29
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			64 = { is_owned_by = CHR }
+			126 = { is_owned_by = CHR }
+			219 = { is_owned_by = CHR }
+		}
+		prerequisite = { focus = CHR_Take_The_Red_Giant focus = CHR_End_The_Empire }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event	
+			custom_effect_tooltip = P4-tt
+			hidden_effect = {
+				country_event = { id = chirno.21 }
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_The_Far_East_Campaing
+		icon = GFX_focus_usa_focus_on_asia
+		x = 27
+		y = 30
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+			has_country_flag = part4
+		}
+		available = {
+			64 = { is_owned_by = CHR }
+			126 = { is_owned_by = CHR }
+			219 = { is_owned_by = CHR }
+		}
+		prerequisite = { focus = CHR_Part_4_Whats_Left_Of_The_World }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+		}
+	}
+
+	focus = {
+		id = CHR_Take_Out_China
+		icon = GFX_focus_attack_china
+		x = 26
+		y = 32
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { NOT = { country_exists = CHI country_exists = PRC }  }
+		available = {
+		}
+		prerequisite = { focus = CHR_The_Far_East_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = CHI
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PRC
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_South_Asia_Express
+		icon = CHR_South_Asia_Express
+		x = 30
+		y = 31
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { NOT = { country_exists = SIA country_exists = MAL }  }
+		available = {
+		}
+		prerequisite = { focus = CHR_The_Far_East_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = SIA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MAL
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_Too_Many_Islands_Goddamnit
+		icon = CHR_Too_Many_Islands_Goddamnit
+		x = 30
+		y = 32
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { NOT = { country_exists = INS country_exists = AST }  }
+		available = {
+		}
+		prerequisite = { focus = CHR_South_Asia_Express }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = INS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = AST
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_Chinese_Warlords
+		icon = CHR_Chinese_Warlords
+		x = 28
+		y = 31
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = {
+				country_exists = YUN
+				country_exists = XSM
+				country_exists = GXC
+				country_exists = SHX
+				country_exists = SIK
+				country_exists = MEN
+				country_exists = MAN
+			}
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_The_Far_East_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = YUN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = XSM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GXC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SHX
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SIK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MEN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_Northern_Europe_Campaing
+		icon = CHR_Northern_Europe_Campaing
+		x = 22
+		y = 30
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+			has_country_flag = part4
+		}
+		bypass = {
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Part_4_Whats_Left_Of_The_World }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+		}
+	}
+	
+	focus = {
+		id = CHR_Scandinavian_Brothers
+		icon = CHR_Scandinavian_Brothers
+		x = 22
+		y = 31
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { NOT = { 
+				country_exists = DEN
+				country_exists = SWE
+				country_exists = NOR
+			} 
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Northern_Europe_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = DEN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SWE
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = NOR
+			}			
+		}
+	}
+
+	focus = {
+		id = CHR_Warsaw_Is_Ours
+		icon = CHR_Warsaw_Is_Ours
+		x = 24
+		y = 31
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { NOT = { 
+				country_exists = POL
+			} 
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Northern_Europe_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = POL
+			}			
+		}
+	}
+
+	focus = {
+		id = CHR_Baltic_Under_Our_Hands
+		icon = CHR_Baltic_Under_Our_Hands
+		x = 24
+		y = 32
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { NOT = { 
+				country_exists = LIT
+				country_exists = EST
+				country_exists = LAT
+			} 
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Warsaw_Is_Ours }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = LIT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = EST
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LAT
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_Finland_More_Like_Ourland
+		icon = CHR_Finland_More_Like_Ourland
+		x = 22
+		y = 33
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { NOT = { 
+				country_exists = FIN
+			} 
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_Warsaw_Is_Ours focus = CHR_Scandinavian_Brothers }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = FIN
+			}		
+		}
+	}
+
+	focus = {
+		id = CHR_The_Falling_Sun
+		icon = GFX_CHR_The_Falling_Sun
+		x = 27
+		y = 33
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { NOT = { country_exists = JAP } }
+		available = {
+		}
+		prerequisite = { focus = CHR_The_Far_East_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = JAP
+			}			
+		}
+	}	
+	
+	focus = {
+		id = CHR_The_New_World_Campaing
+		icon = CHR_The_New_World_Campaing
+		x = 17
+		y = 30
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+			has_country_flag = part4
+		}
+		available = {
+			64 = { is_owned_by = CHR }
+			126 = { is_owned_by = CHR }
+			219 = { is_owned_by = CHR }
+		}
+		prerequisite = { focus = CHR_Part_4_Whats_Left_Of_The_World }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event			
+		}
+	}
+
+	focus = {
+		id = CHR_We_Are_Going_To_Brazil
+		icon = CHR_We_Are_Going_To_Brazil
+		x = 14
+		y = 31
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { NOT = { country_exists = BRA } }
+		available = {
+		}
+		prerequisite = { focus = CHR_The_New_World_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = BRA
+			}			
+		}
+	}
+
+	focus = {
+		id = CHR_Venezuelan_Oil_Fields
+		icon = CHR_Venezuelan_Oil_Fields
+		x = 15
+		y = 32
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			NOT = { country_exists = VEN }
+			NOT = { country_exists = COL }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_We_Are_Going_To_Brazil }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = VEN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = COL
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_Andes_Mountains_Conquest
+		icon = CHR_Andes_Mountains_Conquest
+		x = 13
+		y = 32
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { 
+			NOT = { country_exists = PRU }
+			NOT = { country_exists = BOL }
+			NOT = { country_exists = ECU }		
+			}
+		available = {
+		}
+		prerequisite = { focus = CHR_We_Are_Going_To_Brazil }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = PRU
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BOL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ECU
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Southern_American_Expansion
+		icon = CHR_Southern_American_Expansion
+		x = 14
+		y = 33
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { 
+			NOT = { country_exists = ARG }
+			NOT = { country_exists = CHL }
+			NOT = { country_exists = URG }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_We_Are_Going_To_Brazil }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = ARG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = URG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CHL
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_8_In_1_Package
+		icon = CHR_8_In_1_Package
+		x = 16
+		y = 31
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { 
+			NOT = { country_exists = GUA }
+			NOT = { country_exists = HON }
+			NOT = { country_exists = ELS }
+			NOT = { country_exists = NIC }
+			NOT = { country_exists = COS }
+			NOT = { country_exists = PAN }			
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_The_New_World_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = GUA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HON
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ELS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = NIC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = COS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PAN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GUA
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_Into_Mexico
+		icon = GFX_focus_attack_mexico
+		x = 19
+		y = 31
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { 
+			NOT = { country_exists = MEX }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_The_New_World_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = MEX
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_The_Leaf_Flag
+		icon = CHR_The_Leaf_Flag
+		x = 18
+		y = 32
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { 
+			NOT = { country_exists = CAN }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_The_New_World_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = CAN
+			}			
+		}
+	}
+
+	focus = {
+		id = CHR_The_Land_Of_Corruption
+		icon = CHR_The_Land_Of_Corruption
+		x = 17
+		y = 33
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { 
+			NOT = { country_exists = USA }
+		}
+		available = {
+		}
+		prerequisite = { focus = CHR_The_New_World_Campaing }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			create_wargoal = {
+				type = annex_everything
+				target = USA
+			}			
+		}
+	}
+	
+	focus = {
+		id = CHR_Freeze_The_World
+		icon = GFX_CHR_Freeze_The_World_shine
+		x = 22
+		y = 35
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = { 
+		}
+		available = {
+			NOT = { country_exists = JAP }
+			NOT = { country_exists = USA }
+			NOT = { country_exists = SOV }
+			NOT = { country_exists = ENG }
+			NOT = { country_exists = GER }
+			NOT = { country_exists = FRA }
+			NOT = { country_exists = ITA }
+		}
+		prerequisite = { focus = CHR_The_Land_Of_Corruption }
+		prerequisite = { focus = CHR_The_Falling_Sun }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+		}
+	}	
+
+	#####
+	#########ARMY###############No it's not what you think.
+	#####
+	#####Anyways why are you here? Im not a guy that comments on my own code. I guess there's something you want to find out?
+	focus = {
+		id = CHR_A_New_Army #Event Idea
+		icon = GFX_CHR_A_New_Army
+		x = 7
+		y = 13
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_A_New_Start
+		#	#focus = CHR_Scarlet_Takeover 
+		}
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.12 }
+		}
+	}
+
+	focus = {
+		id = CHR_A_Bigger_Army #Manpower in idea
+		icon = GFX_focus_generic_manpower
+		x = 6
+		y = 14
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = CHR_An_Upgraded_Army }
+		prerequisite = { focus = CHR_A_New_Army }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+		set_country_flag = ABA
+		add_timed_idea = { idea = Big_Recruitment_Program days = 180 }
+		}
+	}	
+
+	focus = {
+		id = CHR_An_Upgraded_Army #More tech speed at weapons, tanks, doctrine
+		icon = GFX_focus_generic_little_entente
+		x = 8
+		y = 14
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = CHR_A_Bigger_Army }
+		prerequisite = { focus = CHR_A_New_Army }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+		set_country_flag = AUA
+		army_experience = 115
+			add_tech_bonus = {
+				bonus = 0.65
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				bonus = 0.45
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Improve_Our_Weapons #more tech speed at weapons, and factories
+		icon = GFX_focus_generic_tank_production
+		x = 8
+		y = 15
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = CHR_A_Ton_Of_Guns }
+		prerequisite = { focus = CHR_An_Upgraded_Army focus = CHR_A_Bigger_Army }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.65
+				uses = 2
+				category = armor
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory						
+					level = 2
+					instant_build = yes					
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_A_Ton_Of_Guns # more speed at creating weapons
+		icon = CHR_A_Ton_Of_Guns
+		x = 6
+		y = 15
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = CHR_Improve_Our_Weapons }
+		prerequisite = { focus = CHR_A_Bigger_Army focus = CHR_An_Upgraded_Army }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_timed_idea = { idea = Rifles_Production_Boost days = 360 }
+		}
+	}
+	
+	focus = {
+		id = CHR_Strength_Is_Our_Priority #buff idea by 15% attack
+		icon = GFX_CHR_Strength_Is_Our_Priority
+		x = 6
+		y = 16
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = CHR_Patience_Is_Key }
+		prerequisite = { focus = CHR_A_Ton_Of_Guns focus = CHR_Improve_Our_Weapons }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = SIOP-tt
+			set_country_flag = SIOP
+		#This focus will make sure when you pick the last focus you will get a bonus on attack!
+		}
+	}
+	
+	focus = {
+		id = CHR_Patience_Is_Key #buff idea by 15% defence
+		icon = GFX_CHR_Patience_Is_Key
+		x = 8
+		y = 16
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = CHR_Strength_Is_Our_Priority }
+		prerequisite = { focus = CHR_Improve_Our_Weapons focus = CHR_A_Ton_Of_Guns }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = PIK-tt
+			set_country_flag = PIK
+		}
+	}
+
+	focus = {
+		id = CHR_Call_The_Incident_Resolver #New military leader called reimu
+		icon = CHR_Call_The_Incident_Resolver
+		x = 8
+		y = 17
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Patience_Is_Key }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			custom_effect_tooltip = reimu_general-tt
+		}
+	}
+	
+	focus = {
+		id = CHR_Call_The_Ordinary_Witch #New military leader called Marisa
+		icon = CHR_Call_The_Ordinary_Witch
+		x = 6
+		y = 17
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Strength_Is_Our_Priority }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			custom_effect_tooltip = marisa_general-tt
+		}
+	}
+
+	focus = {
+		id = CHR_They_Will_Fear_Us #buff manpower factor by 7% org by 7 too
+		icon = GFX_CHR_They_Will_Fear_Us
+		x = 7
+		y = 18
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Call_The_Incident_Resolver focus = CHR_Call_The_Ordinary_Witch }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			custom_effect_tooltip = TWFU-tt
+			country_event = { id = chirno.15 }
+		}
+	}
+	
+	##########NAVY##################
+	focus = {
+		id = CHR_Wait_We_Have_A_Navy #Naval XP
+		icon = GFX_CHR_Wait_We_Have_A_Navy
+		x = 2
+		y = 14
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_A_New_Army }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			navy_experience = 75
+			add_ideas = Ambition_Of_Sea
+		}
+	}
+	
+	focus = {
+		id = CHR_Navy_Modernization #Ships investigation
+		icon = GFX_focus_generic_navy_battleship2
+		x = 0
+		y = 15
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Wait_We_Have_A_Navy }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.65
+				uses = 1
+				category = bc_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.65
+				uses = 2
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.65
+				uses = 1
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_Bigger_Ships #battleship investigation and doctrine being in fleet
+		icon = GFX_goal_generic_navy_battleship
+		x = -1
+		y = 16
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = CHR_Aircraft_Carrier_Focus } 
+		prerequisite = { focus = CHR_Navy_Modernization }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.60
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_Aircraft_Carrier_Focus #the aircraft doctrine and airfcraft ships
+		icon = GFX_goal_generic_navy_carrier
+		x = 1
+		y = 16
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = CHR_Bigger_Ships } 
+		prerequisite = { focus = CHR_Navy_Modernization }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.65
+				uses = 2
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_Bigger_Shipyards # 4 more shipyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 2
+		y = 15
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Wait_We_Have_A_Navy }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			543 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = naval_base					
+					level = 2
+					instant_build = yes					
+				}
+			}
+			544 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = naval_base					
+					level = 2
+					instant_build = yes					
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_Marines_Improvement # spawn 4 marines divisions
+		icon = GFX_goal_generic_amphibious_assault
+		x = 2
+		y = 17
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Bigger_Shipyards }
+		prerequisite = { focus = CHR_Bigger_Ships focus = CHR_Aircraft_Carrier_Focus }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+		custom_effect_tooltip = MI-tt
+			hidden_effect = {
+				load_oob = CHR_Marines
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_A_Navy_Under_Water #investigate submarines faster and construct submarines faster.
+		icon = GFX_CHR_A_Navy_Under_Water
+		x = 4
+		y = 15
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Wait_We_Have_A_Navy }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.55
+				uses = 1
+				category = ss_tech
+			}
+			swap_ideas = {
+				remove_idea = Ambition_Of_Sea
+				add_idea = Ambition_Of_Sea_2
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_A_Pack_Doesnt_Hunt_Alone #Increase submarines attack
+		icon = GFX_CHR_A_Pack_Doesnt_Hunt_Alone
+		x = 4
+		y = 16
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_A_Navy_Under_Water }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			swap_ideas = {
+				remove_idea = Ambition_Of_Sea_2
+				add_idea = Ambition_Of_Sea_3
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Chirno_Freezes_The_Waves #FinalNavy Buff navy in general by a little
+		icon = GFX_CHR_Chirno_Freezes_The_Waves
+		x = 4
+		y = 18
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Marines_Improvement }
+		prerequisite = { focus = CHR_A_Pack_Doesnt_Hunt_Alone }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Ambition_Of_Sea_3
+				add_idea = Ambition_Of_Sea_4
+			}
+		}
+	}	
+
+	#########PLANES##################
+	focus = {
+		id = CHR_Snow_Covered_Planes #Cas gets less enemy detection and weather penalty buff
+		icon = GFX_CHR_Snow_Covered_Planes
+		x = 11
+		y = 14
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_A_New_Army }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_ideas = Ambition_Of_Air
+		}
+	}
+	
+	focus = {
+		id = CHR_Freezing_Bombs #Cas deals a little bit more
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 12
+		y = 15
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Snow_Covered_Planes }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Ambition_Of_Air
+				add_idea = Ambition_Of_Air_2
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Light_Air_Fighters #Chose between light or heavy aircraft, in this case increase more production in light fighters. Also light aircraft tech
+		icon = GFX_goal_generic_air_fighter2
+		x = 12
+		y = 16
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = CHR_Heavy_Air_Fighters }
+		prerequisite = { focus = CHR_Freezing_Bombs }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			set_country_flag = LIGHTAIR
+			add_tech_bonus = {
+				bonus = 0.65
+				uses = 1
+				category = light_air
+			}
+			swap_ideas = {
+				remove_idea = Ambition_Of_Air_2
+				add_idea = Ambition_Of_Air_3
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Heavy_Air_Fighters #Chose between light or heavy aircraft, in this case increase range. Also heavy aircraft tech
+		icon = GFX_goal_generic_air_bomber
+		x = 14
+		y = 16
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = CHR_Light_Air_Fighters }
+		prerequisite = { focus = CHR_Freezing_Bombs }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			set_country_flag = HEAVYAIR
+			add_tech_bonus = {
+				bonus = 0.65
+				uses = 1
+				category = heavy_air
+			}
+			swap_ideas = {
+				remove_idea = Ambition_Of_Air_2
+				add_idea = Ambition_Of_Air_4
+			}
+		}
+	}	
+	
+	focus = {
+		id = CHR_Perfect_Aviation_Class #AIR XP
+		icon = GFX_CHR_Perfect_Aviation_Class
+		x = 10
+		y = 15
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Snow_Covered_Planes }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			air_experience = 75
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				category = medium_air
+			}
+		}
+	}	
+	
+	focus = {
+		id = CHR_Innovate_Our_Air_Fighters #boost on air figherts tech
+		icon = GFX_goal_generic_air_fighter
+		x = 10
+		y = 16
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Perfect_Aviation_Class }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}	
+
+	focus = {
+		id = CHR_Kappa_Improved_Airplanes #Improve reability by 15%
+		icon = GFX_CHR_Kappa_Improved_Airplanes
+		x = 11
+		y = 17
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Innovate_Our_Air_Fighters }
+		prerequisite = { focus = CHR_Heavy_Air_Fighters focus = CHR_Light_Air_Fighters }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.16 }
+		}
+	}
+	
+	focus = {
+		id = CHR_A_Blizzard_Coming_Your_Way #Strategic bombing is increased and better air control
+		icon = GFX_CHR_A_Blizzard_Coming_Your_Way
+		x = 10
+		y = 18
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Kappa_Improved_Airplanes }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.17 }
+		}
+	}
+	
+	####FINAL-ARMY####
+	
+	focus = {
+		id = CHR_The_Strongest_Army
+		icon = GFX_CHR_The_Strongest_Army
+		x = 7
+		y = 19
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_completed_focus = CHR_Commence_The_Construction
+		}
+		prerequisite = { focus = CHR_A_Blizzard_Coming_Your_Way }
+		prerequisite = { focus = CHR_They_Will_Fear_Us }
+		prerequisite = { focus = CHR_Chirno_Freezes_The_Waves }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			country_event = { id = chirno.18 }
+		}
+	}	
+
+	#############INTERNAL-AFFAIRS#################
+
+	focus = {
+		id = CHR_Our_Internal_Affairs
+		icon = GFX_goal_generic_improve_relations
+		x = 32
+		y = 13
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_A_New_Start 
+			#focus = CHR_Scarlet_Takeover
+		}
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	
+	focus = {
+		id = CHR_Make_The_Group
+		icon = GFX_goal_generic_improve_relations
+		x = 37
+		y = 14
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Our_Internal_Affairs }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = CHR_Rumia_Joins_The_Party
+		icon = GFX_CHR_Rumia
+		x = 35
+		y = 15
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			NOT = { country_exists = RMI }
+			has_decision = Rumia_invite
+		}
+		prerequisite = { focus = CHR_Make_The_Group }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			army_experience = 20
+			custom_effect_tooltip = rumia_general-tt
+		}
+	}
+	
+	focus = {
+		id = CHR_Daiyousei_Joins_The_Party
+		icon = GFX_CHR_Daiyousei
+		x = 39
+		y = 15
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_decision = Daiyousei_invite
+		}
+		prerequisite = { focus = CHR_Make_The_Group }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			army_experience = 20
+			custom_effect_tooltip = daiyousei_general-tt
+		}
+	}
+
+	focus = {
+		id = CHR_Mystia_Joins_The_Party
+		icon = GFX_CHR_Mystia
+		x = 36
+		y = 16
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_decision = Mystia_invite
+		}
+		prerequisite = { focus = CHR_Make_The_Group }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = mystia_joins_tt
+		}
+	}
+
+	focus = {
+		id = CHR_Wriggle_Joins_The_Party
+		icon = GFX_CHR_Wriggle
+		x = 38
+		y = 16
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_decision = Wriggle_invite
+		}
+		prerequisite = { focus = CHR_Make_The_Group }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = wriggle_joins_tt
+		}
+	}
+
+	focus = {
+		id = CHR_Manage_Our_Territory
+		icon = GFX_goal_generic_position_armies
+		x = 28
+		y = 14
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Our_Internal_Affairs }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+		}
+	}
+	
+	focus = {
+		id = CHR_Core_Our_Claimed_Land
+		icon = GFX_focus_generic_treaty
+		x = 27
+		y = 15
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			NOT = { country_exists = BWR }
+			has_completed_focus = CHR_British_Western_Colony
+		}
+		prerequisite = { focus = CHR_Manage_Our_Territory }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			every_state = {
+				limit = { is_core_of = BWR }
+				CHR = { add_state_core = PREV }		
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Core_The_Nile
+		icon = GFX_focus_generic_treaty
+		x = 28
+		y = 16
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			446 = {
+				is_owned_by = CHR
+			}
+			447 = {
+				is_owned_by = CHR
+			}
+			551 = {
+				is_owned_by = CHR
+			}
+			456 = {
+				is_owned_by = CHR
+			}
+			has_completed_focus = CHR_Claim_The_Nile
+		}
+		prerequisite = { focus = CHR_Manage_Our_Territory }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			add_state_core = 446
+			add_state_core = 447
+			add_state_core = 551
+			add_state_core = 456
+			add_state_core = 452
+			add_state_core = 457
+			add_state_core = 552
+			add_state_core = 767
+		}
+	}
+
+	focus = {
+		id = CHR_Core_The_Holy_Land
+		icon = GFX_focus_generic_treaty
+		x = 29
+		y = 17
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			453 = {
+				is_owned_by = CHR
+			}
+			454 = {
+				is_owned_by = CHR
+			}
+			455 = {
+				is_owned_by = CHR
+			}
+			has_completed_focus = CHR_Claim_The_Holy_Land
+		}
+		prerequisite = { focus = CHR_Manage_Our_Territory }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			add_state_core = 453
+			add_state_core = 454
+			add_state_core = 455
+			add_state_core = 550
+			add_state_core = 451
+			add_state_core = 450
+			add_state_core = 663
+			add_state_core = 449
+			add_state_core = 550
+			add_state_core = 273
+			add_state_core = 661
+			add_state_core = 448
+			add_state_core = 662
+		}
+	}
+ 
+	focus = {
+		id = CHR_Core_The_North_Africa_Lands
+		icon = GFX_focus_generic_treaty
+		x = 30
+		y = 18
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			448 = {
+				is_owned_by = CHR
+			}
+			450 = {
+				is_owned_by = CHR
+			}
+			550 = {
+				is_owned_by = CHR
+			}
+			has_completed_focus = CHR_Take_Spanish_Land_In_Africa
+			has_completed_focus = CHR_Kick_The_French_Out
+		}
+		prerequisite = { focus = CHR_Manage_Our_Territory }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			add_state_core = 459
+			add_state_core = 460
+			add_state_core = 458
+			add_state_core = 665
+			add_state_core = 513
+			add_state_core = 462
+			add_state_core = 461
+			add_state_core = 786
+			add_state_core = 782
+			add_state_core = 514
+			add_state_core = 775
+			add_state_core = 515
+			add_state_core = 699
+			add_state_core = 290
+			add_state_core = 783
+		}
+	}
+
+	focus = {
+		id = CHR_Manage_Our_Overcontinent_Territory
+		icon = CHR_Manage_Our_Overcontinent_Territory
+		x = 30
+		y = 20
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			292 = {
+				is_owned_by = CHR
+			}
+			291 = {
+				is_owned_by = CHR
+			}
+			439 = {
+				is_owned_by = CHR
+			}
+			266 = {
+				is_owned_by = CHR
+			}
+			has_completed_focus = CHR_Part_2_Asia
+		}
+		prerequisite = { focus = CHR_Core_The_North_Africa_Lands }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			custom_effect_tooltip = underconstruction-tt
+		}
+	}
+
+	focus = {
+		id = CHR_University_In_Gensokyo
+		icon = GFX_CHR_University_In_Gensokyo
+		x = 32
+		y = 14
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_Our_Internal_Affairs }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = CHR_Rearrenge_Our_Policies
+		icon = GFX_focus_generic_self_management
+		x = 33
+		y = 15
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_University_In_Gensokyo }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = CHR_New_Discoveries_On_Nuclear_Tech
+		icon = GFX_CHR_New_Discoveries_On_Nuclear_Tech
+		x = 32
+		y = 16
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_University_In_Gensokyo }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			add_tech_bonus = {
+				bonus = 0.45
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+
+	focus = {
+		id = CHR_Make_A_Deal_With_A_Bird
+		icon = GFX_CHR_Make_A_Deal_With_A_Bird
+		x = 32
+		y = 17
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = CHR_New_Discoveries_On_Nuclear_Tech }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			add_tech_bonus = {
+				bonus = 0.45
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+	
+	focus = {
+		id = CHR_Commence_The_Construction
+		icon = GFX_CHR_Commence_The_Construction
+		x = 34
+		y = 22
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			date > 1941.01.01
+			num_of_civilian_factories > 50
+		}
+		prerequisite = { focus = CHR_Decode_The_Secrets_Of_Nuclear_Fussion }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			796 = {
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			} 
+			add_nuclear_bombs = 1
+		}
+	}
+	#AYAYAYYAYAYAYAYYAYAYYAYYAYAYYAY
+	focus = {
+		id = CHR_Aya
+		icon = GFX_CHR_Aya
+		x = 37
+		y = 15
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+		}
+		bypass = {
+		}
+		allow_branch = { 
+			OR = {
+				has_country_flag = yesayaya
+				has_variable = YesAyaVar
+				check_variable = {
+					YesAyaVar > 1
+				}
+			}
+		}
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#aya
+		}
+	}
+	
+	focus = {
+		id = CHR_Decode_The_Secrets_Of_Nuclear_Fussion
+		icon = GFX_CHR_Decode_The_Secrets_Of_Nuclear_Fussion
+		x = 34
+		y = 18
+		cost = 12
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = { 
+			date > 1940.01.01
+		}
+		prerequisite = { focus = CHR_Make_A_Deal_With_A_Bird }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#event
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = CHR_Scarlet_Devil_Mansion
+		icon = GFX_CHR_Scarlet_Devil_Mansion
+		x = 44
+		y = 14
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+			OR = {
+				has_country_flag = ScarletInfluenceFlag
+				has_country_flag = ScarletInfluenceFinished
+				has_global_flag = ScarletTakeover
+			}
+		}
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#SDM
+		}
+	}
+	focus = {
+		id = CHR_Sakuya_Recruitment
+		icon = GFX_CHR_Sakuya_Recruitment
+		x = 42
+		y = 16
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			OR = {
+				has_decision = recruit_sakuya
+				hidden_trigger = {
+					has_global_flag = ScarletTakeover
+				}
+			}
+		}
+		allow_branch = {
+			OR = {
+				has_country_flag = ScarletInfluenceFlag
+				has_country_flag = ScarletInfluenceFinished
+				has_global_flag = ScarletTakeover
+			}
+		}
+		prerequisite = { focus = CHR_Scarlet_Devil_Mansion }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#SDM
+		}
+	}
+	focus = {
+		id = CHR_Hong_Meiling_Recruitment
+		icon = GFX_CHR_Hong_Meiling_Recruitment
+		x = 41
+		y = 15
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {	
+			OR = {
+				has_decision = recruit_meiling
+				hidden_trigger = {
+					has_global_flag = ScarletTakeover
+				}
+			} 
+		}
+		allow_branch = {
+			OR = {
+				has_country_flag = ScarletInfluenceFlag
+				has_country_flag = ScarletInfluenceFinished
+				has_global_flag = ScarletTakeover
+			}
+		}
+		prerequisite = { focus = CHR_Scarlet_Devil_Mansion }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#SDM
+		}
+	}
+	focus = {
+		id = CHR_Patchouli_Recruitment
+		icon = GFX_CHR_Patchouli_Recruitment
+		x = 47
+		y = 15
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			OR = {
+				has_decision = recruit_patchouli
+				hidden_trigger = {
+					has_global_flag = ScarletTakeover
+				}
+			}
+		}
+		allow_branch = {
+			OR = {
+				has_country_flag = ScarletInfluenceFlag
+				has_country_flag = ScarletInfluenceFinished
+				has_global_flag = ScarletTakeover
+			}
+		}
+		prerequisite = { focus = CHR_Scarlet_Devil_Mansion }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#SDM
+		}
+	}
+	focus = {
+		id = CHR_Koakuma_Recruitment
+		icon = GFX_CHR_Koakuma_Recruitment
+		x = 46
+		y = 16
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = { 			
+			OR = {
+				has_decision = recruit_koakuma
+				hidden_trigger = {
+					has_global_flag = ScarletTakeover
+				}
+			} 
+		}
+		allow_branch = {
+			OR = {
+				has_country_flag = ScarletInfluenceFlag
+				has_country_flag = ScarletInfluenceFinished
+				has_global_flag = ScarletTakeover
+			}
+		}
+		prerequisite = { focus = CHR_Scarlet_Devil_Mansion }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#SDM
+		}
+	}
+	focus = {
+		id = CHR_Remilia_Recruitment
+		icon = GFX_CHR_Remilia_Recruitment
+		x = 43
+		y = 17
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			OR = {
+				has_decision = recruit_remilia
+				hidden_trigger = {
+					has_global_flag = ScarletTakeover
+				}
+			}
+		}
+		#mutually_exclusive = { focus = CHR_Flandre_Recruitment }
+		allow_branch = {
+			OR = {
+				has_country_flag = ScarletInfluenceFlag
+				has_country_flag = ScarletInfluenceFinished
+				has_global_flag = ScarletTakeover
+			}
+		}
+		prerequisite = { focus = CHR_Scarlet_Devil_Mansion }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#SDM
+		}
+	}
+	focus = {
+		id = CHR_Flandre_Recruitment
+		icon = GFX_CHR_Flandre_Recruitment
+		x = 45
+		y = 17
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {			
+			OR = {
+				has_decision = recruit_flandre
+				hidden_trigger = {
+					has_global_flag = ScarletTakeover
+				}
+			}
+		}
+		#mutually_exclusive = { focus = CHR_Remilia_Recruitment }
+		allow_branch = {
+			OR = {
+				has_country_flag = ScarletInfluenceFlag
+				has_country_flag = ScarletInfluenceFinished
+				has_global_flag = ScarletTakeover
+			}
+		}
+		prerequisite = { focus = CHR_Scarlet_Devil_Mansion }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#SDM
+		}
+	}
+	focus = {
+		id = CHR_Scarlet_Incident_Resolved
+		icon = GFX_CHR_Scarlet_Incident_Resolved
+		x = 44
+		y = 18
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+			OR = {
+				has_country_flag = ScarletInfluenceFlag
+				has_country_flag = ScarletInfluenceFinished
+			}
+			NOT = { has_global_flag = ScarletTakeover }
+		}
+		prerequisite = { focus = CHR_Flandre_Recruitment }
+		prerequisite = { focus = CHR_Remilia_Recruitment }
+		prerequisite = { focus = CHR_Hong_Meiling_Recruitment }
+		prerequisite = { focus = CHR_Sakuya_Recruitment }
+		prerequisite = { focus = CHR_Koakuma_Recruitment }
+		prerequisite = { focus = CHR_Patchouli_Recruitment }	
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#SDM
+			clr_country_flag = ScarletInfluenceFlag
+			clear_variable = ScarletInfluenceVar
+			set_country_flag = ScarletInfluenceFinished
+			add_stability = 0.12
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = CHR_Scarlet_Incident_Failed
+		icon = GFX_CHR_Scarlet_Incident_Failed
+		x = 44
+		y = 18
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+			has_global_flag = ScarletTakeover
+		}
+		prerequisite = { focus = CHR_Flandre_Recruitment focus = CHR_Sakuya_Recruitment focus = CHR_Patchouli_Recruitment focus = CHR_Remilia_Recruitment focus = CHR_Hong_Meiling_Recruitment focus = CHR_Koakuma_Recruitment }
+		ai_will_do = { factor = 80 }
+		completion_reward = {
+			#SDM
+			clr_country_flag = ScarletInfluenceFlag
+			clear_variable = ScarletInfluenceVar
+			set_country_flag = ScarletInfluenceFinished
+			#add_stability = -0.12
+			#add_war_support = -0.10
+			custom_effect_tooltip = retake_control-tt 
+			swap_ideas = {
+				remove_idea = The-Tenth_1
+				add_idea = The-Tenth_2
+			}
+		}
+	}
+}

@@ -1,0 +1,6 @@
+removeterrorist = {
+
+CHR = {
+		remove_ideas = Religious-Terrorists_10
+	}
+}

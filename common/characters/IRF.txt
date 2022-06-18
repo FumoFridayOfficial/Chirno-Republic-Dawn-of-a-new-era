@@ -1,0 +1,62 @@
+characters = { 
+  ####    ####   #    #  #    #  #####  #####   #   #      #       ######    ##    #####   ######  #####    ####  
+ #    #  #    #  #    #  ##   #    #    #    #   # #       #       #        #  #   #    #  #       #    #  #      
+ #       #    #  #    #  # #  #    #    #    #    #        #       #####   #    #  #    #  #####   #    #   ####  
+ #       #    #  #    #  #  # #    #    #####     #        #       #       ######  #    #  #       #####        # 
+ #    #  #    #  #    #  #   ##    #    #   #     #        #       #       #    #  #    #  #       #   #   #    # 
+  ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   #### 
+  IRF_Mahmood_Adnan = {
+  	name="Mahmood Adnan"
+		portraits={
+			civilian={
+				large="gfx/leaders/GENERIC/Portrait_Arabia_Generic_land_CHR.dds"
+			}
+			army = {
+				large = "gfx/leaders/GENERIC/Portrait_Arabia_Generic_land_CHR.dds"
+				small = "gfx/leaders/GENERIC/idea_generic_army_arab_3.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MAHMOOD_ADNAN_DESC"
+			ideology=centrism
+			traits={ Nationalist_Symbol }
+			expire="1961.7.2.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IRF_Mahmood_Adnan
+			allowed = {
+			}
+			traits = {
+				army_regrouping_2
+			}
+			visible = {
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	IRF_Nasir_Izz_ud_Din={
+		name="Nasir Izz ud-Din"
+		portraits={
+			army={
+				small="gfx/leaders/GENERIC/idea_generic_army_arab_3.dds"
+			}
+			army={
+				large="gfx/leaders/GENERIC/Portrait_Arabia_Generic_land_CHR.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

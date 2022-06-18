@@ -1,0 +1,62 @@
+characters = { 
+  ####    ####   #    #  #    #  #####  #####   #   #      #       ######    ##    #####   ######  #####    ####  
+ #    #  #    #  #    #  ##   #    #    #    #   # #       #       #        #  #   #    #  #       #    #  #      
+ #       #    #  #    #  # #  #    #    #    #    #        #       #####   #    #  #    #  #####   #    #   ####  
+ #       #    #  #    #  #  # #    #    #####     #        #       #       ######  #    #  #       #####        # 
+ #    #  #    #  #    #  #   ##    #    #   #     #        #       #       #    #  #    #  #       #   #   #    # 
+  ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   #### 
+  CRF_Kayode_Olufunmilayo = {
+  	name="Kayode Olufunmilayo"
+		portraits={
+			civilian={
+				large="gfx/leaders/GENERIC/Portrait_Africa_Generic_land_3.dds"
+			}
+			army = {
+				large = "gfx/leaders/GENERIC/Portrait_Africa_Generic_land_3.dds"
+				small = "gfx/leaders/GENERIC/idea_africa_generic_land_3.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KAYODE_OLUFUNMILAYO_DESC"
+			ideology=centrism
+			traits={ Nationalist_Symbol }
+			expire="1957.3.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CRF_Kayode_Olufunmilayo
+			allowed = {
+			}
+			traits = {
+				army_regrouping_1
+			}
+			visible = {
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CRF_Adisa_Olufunmilola={
+		name="Adisa Olufunmilola"
+		portraits={
+			army={
+				small="gfx/leaders/GENERIC/idea_south_africa_army_generic.dds"
+			}
+			army={
+				large="gfx/leaders/GENERIC/Portrait_South_Africa_Army_Generic.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

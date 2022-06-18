@@ -1,0 +1,43 @@
+defined_text = { 
+	name = fine_situation_desc
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					ScarletInfluenceVar > -100
+				}
+				check_variable = {
+					ScarletInfluenceVar < 47
+				}
+			}
+		}
+		localization_key = fine_situation_desc
+	}
+}
+defined_text = {
+	name = bad_situation_desc
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					ScarletInfluenceVar > 48
+				}
+				check_variable = {
+					ScarletInfluenceVar < 101
+				}
+			}
+		}
+		localization_key = bad_situation_desc
+	}
+}
+defined_text = { 
+	name = Imminent_situation_desc
+	text = {
+		trigger = {
+			check_variable = {
+				ScarletInfluenceVar > 102
+			}
+		}
+		localization_key = Imminent_situation_desc
+	}
+}
