@@ -1,0 +1,360 @@
+##### CHR Division Templates #####
+
+division_template = {
+	name = "Chirno's Fairy Rifle Division"			# Rifle Division
+	division_names_group = CHR_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		#engineer = { x = 0 y = 1 } 	# (semi-mot) Engineer bn
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+
+
+division_template = {
+	name = "Chirno's Combat Cars"		# Motor Rifle Division
+	division_names_group = CHR_MOT_01
+											# Note: only represents Moscow Proletariat Division in 1936; after 1938-40, Motor Rifle Divisions had +1 mot regiment (3 bns) 
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16x L tanks, 45 ACs #Eng and recon removed and they seem rather OP. Could revisit if balance changes 
+		#engineer = { x = 0 y = 1 } 	# (mot) Engineer bn
+	}
+}
+
+division_template = {
+	name = "Chirno's Cavalry" 	# Cavalry Division
+	division_names_group = CHR_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Chirno's Steel Horses" 				# Represents regular mechanized corps (4 existed in 1935-38); 
+	division_names_group = CHR_MEC_01
+												# Also represents groups of independent tank, mech brigades of the time, though groups are best represented by tank bge 
+													# (2x M/L tank + 1x mot), and 2x mech bge (2x L tank + 1x mot)
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }		
+		light_armor = { x = 1 y = 1 }		
+		light_armor = { x = 1 y = 2 }		
+		motorized = { x = 2 y = 0 }		
+		motorized = { x = 2 y = 1 }	
+		motorized = { x = 2 y = 2 }		
+		motorized = { x = 2 y = 3 }		
+	}
+}
+
+units = {				
+	division= {	# "1st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2115
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	
+	division= {	# "2st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2115
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	
+	division= {	# "3st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2115
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "4st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2050
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "5st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10919
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}	
+	division= {	# "6st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1951
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "7st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10862
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "8st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 5010
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}	
+	division= {	# "9st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 8124
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}	
+	division= {	# "10st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7980
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "11st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12589
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "12st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2196
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "13st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12989
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "14st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9962
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "15st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2081
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "16st Chirno Armed Forces."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12991
+		division_template = "Chirno's Fairy Rifle Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}	
+	division= {	# "17st Chirno Tank force."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2115
+		division_template = "Chirno's Steel Horses"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "18st Chirno Tank force."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10833
+		division_template = "Chirno's Cavalry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "19st Chirno Tank force."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 5222
+		division_template = "Chirno's Cavalry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "20st Chirno Tank force."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1468
+		division_template = "Chirno's Cavalry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
+
+	}	
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "CHR"
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "CHR" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "CHR" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_1
+			creator = "CHR" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "CHR" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_1
+			creator = "CHR" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+	}
+}

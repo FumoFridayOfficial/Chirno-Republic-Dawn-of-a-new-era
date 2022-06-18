@@ -1,0 +1,48 @@
+division_template = {
+	name = "Lunarian Fairy Marines"				#Yeah, it's really ice fairy marines.
+	division_names_group = JAP_MAR_01
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}	
+	priority = 2
+}
+
+units = {
+
+	division = {
+		name = "Lunarian Fairy Marines I"
+		location = 2115 #Gensokyo
+		division_template = "Lunarian Fairy Marines"
+		start_experience_factor = 0.9
+	}
+	
+	division = {
+		name = "Lunarian Fairy Marines II"
+		location = 2115 #Gensokyo
+		division_template = "Lunarian Fairy Marines"
+		start_experience_factor = 0.9
+	}	
+	
+	division = {
+		name = "Lunarian Fairy Marines III"
+		location = 2115 #Gensokyo
+		division_template = "Lunarian Fairy Marines"
+		start_experience_factor = 0.9
+	}
+	
+	division = {
+		name = "Lunarian Fairy Marines IV"
+		location = 2115 #Gensokyo
+		division_template = "Lunarian Fairy Marines"
+		start_experience_factor = 0.9
+	}	
+	
+}

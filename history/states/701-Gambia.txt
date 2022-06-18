@@ -1,0 +1,37 @@
+state={
+	id=701
+	name="STATE_701"
+
+	history={
+		owner = BWR
+		add_core_of = BWR
+		add_core_of = GAM
+		victory_points = {
+			4989 10 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 3
+			4989 = {
+				naval_base = 4
+
+			}
+
+		}
+
+	}
+
+	resources = {
+		aluminium=4
+		steel=6
+		tungsten=4
+	}
+
+	provinces={
+		4989 13213 
+	}
+	manpower=899520
+	buildings_max_level_factor=1.250
+	state_category=city
+}

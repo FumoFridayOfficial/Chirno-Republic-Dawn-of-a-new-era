@@ -1,0 +1,32 @@
+
+state={
+	id=296
+	name="STATE_296" # Guinea-Bissau
+	manpower = 764900
+	
+	state_category = town
+	resources={
+		rubber=6 # was: 1
+	}
+	history={
+		owner = BWR
+		add_core_of = BWR
+		add_core_of = GNB
+		victory_points = {
+			12891 5
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			12891 ={
+				naval_base = 1
+			}
+		}
+	}
+	resources = {
+		tungsten=2
+	}
+	provinces={
+		12747 12891 
+	}
+}

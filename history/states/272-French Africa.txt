@@ -1,0 +1,36 @@
+
+state={
+	id=272
+	name="STATE_272"
+	manpower = 2638600
+	resources={
+		steel=6 # was: 4
+	}
+	
+	state_category = town
+
+	history={
+		owner = BWR
+		add_core_of = BWR
+		add_core_of = SEN
+		victory_points = {
+			4948 5 
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 4
+			4948 = {
+				naval_base = 3
+			}
+		}
+	}
+	resources = {
+		oil=2
+		aluminium=4
+		steel=2
+		tungsten=2
+	}
+	provinces={
+		2100 4948 7972 8015 12710 12834 
+	}
+}

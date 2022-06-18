@@ -1,0 +1,30 @@
+
+state={
+	id=681
+	name="STATE_681" # Cape
+	manpower = 2637178
+	buildings_max_level_factor = 8
+	state_category = city
+
+	history={
+		owner = CHR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			air_base = 1
+			dockyard = 3
+			12589 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			12589 15 
+		}
+		add_core_of = CHR
+		add_core_of = SAF
+	}
+
+	provinces={
+		1509 4528 4822 5203 10415 10442 10697 12419 12547 12589 12692 
+	}
+}

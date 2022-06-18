@@ -1,0 +1,415 @@
+capital = 796
+
+oob = "CHR_1936"
+set_naval_oob = "CHR_1936_NAVY"
+set_research_slots = 3
+set_stability = 0.13
+set_war_support = 0.22
+
+set_party_name = {
+	ideology = communism
+	long_name = CHR_communism_party_long
+	name = CHR_communism_party
+}
+
+set_party_name = {
+	ideology = fascism
+	long_name = CHR_fascism_party_long
+	name = CHR_fascism_party
+}
+
+set_party_name = {
+	ideology = democratic
+	long_name = CHR_democratic_party_long
+	name = CHR_democratic_party
+}
+
+set_party_name = {
+	ideology = neutrality
+	long_name = CHR_neutrality_party_long
+	name = CHR_neutrality_party
+}
+
+###Chirno leaders
+recruit_character = CHR_chirno_the_ice_president
+recruit_character = CHR_chirno_the_fumo
+recruit_character = CHR_chirno_the_great_ice_fairy
+recruit_character = CHR_chirno_the_ice_fairy
+
+#Military leaders
+recruit_character = CHR_abioye_lanre
+
+#POLITICAL ADVISORS
+recruit_character = CHR_yetunde_babajide
+recruit_character = CHR_babajide_lekan
+recruit_character = CHR_patchouli_knowledge
+recruit_character = CHR_kayin_temitope
+recruit_character = CHR_patchouli_fumo
+recruit_character = CHR_mystia_lorelei
+recruit_character = CHR_utsuho_reiuji
+recruit_character = CHR_utsuho_fumo
+recruit_character = CHR_chirno_the_ice_fairy
+recruit_character = CHR_aya_shameimaru
+recruit_character = CHR_aya_fumo
+recruit_character = CHR_minamitsu_murasa
+recruit_character = CHR_nitori_kawashiro
+recruit_character = CHR_sakuya_izayoi
+recruit_character = CHR_sakuya_fumo
+recruit_character = CHR_tenshi_hinanawi
+recruit_character = CHR_tenshi_fumo
+recruit_character = CHR_wriggle_nightbug
+recruit_character = CHR_yukari_yakumo
+recruit_character = CHR_Marisa_Kirisame
+recruit_character = CHR_Reimu_Hakurei
+recruit_character = CHR_Rumia
+recruit_character = CHR_Daiyousei
+recruit_character = CHR_dd
+recruit_character = CHR_Hong_Meiling
+recruit_character = CHR_Koakuma
+recruit_character = CHR_Flandre_Scarlet
+recruit_character = CHR_Remilia_Scarlet
+recruit_character = CHR_Remilia_Scarlet_Leader
+recruit_character = CHR_Remilia_Scarlet_Leader_s	
+recruit_character = CHR_Remilia_Scarlet_Leader_n
+recruit_character = CHR_Remilia_Scarlet_Leader_f
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1  # PLACEHOLDER
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	basic_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	early_carrier = 1
+	basic_carrier = 1
+	transport = 1
+	basic_train = 1
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		improved_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_airplane_launcher = 1
+	}
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_operative_leader = {
+		name = "Yukari Yakumo"
+		GFX = GFX_Portrait_Yukari_Yakumo
+		traits = { operative_seducer operative_infiltrator}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { CHR }
+	}
+}
+
+#set_cosmetic_tag = SDM_CHR
+
+#if = { 
+#	limit = { has_cosmetic_tag = SDM_CHR }
+#	
+#	set_country_leader_portrait = {
+#		ideology = democratic
+#		portrait = GFX_Portrait_Remilia_Scarlet
+#	} 
+#	
+#	#set_character_name = {
+#	#	character = CHR_chirno_the_ice_president # optional, use if not in a character scope
+#	#	name = remilia_scarlet # either loc key or direct name
+#	#}
+#
+#	recruit_character = CHR_Remilia_Scarlet_Leader
+#
+#	remove_country_leader_role = {
+#		character = CHR_chirno_the_ice_president
+#		ideology = liberalism
+#	}
+#	CHR = {
+#		promote_character = CHR_Remilia_Scarlet_Leader
+#		promote_character = {
+#			character = CHR_Remilia_Scarlet_Leader
+#			Ideology = liberalism
+#		}
+#	}
+#	
+#	set_party_name = {
+#		ideology = communism
+#		long_name = SDM_CHR_communism_party_long
+#		name = SDM_CHR_communism_party
+#	}
+#
+#	set_party_name = {
+#		ideology = fascism
+#		long_name = SDM_CHR_fascism_party_long
+#		name = SDM_CHR_fascism_party
+#	}
+#
+#	set_party_name = {
+#		ideology = democratic
+#		long_name = SDM_CHR_democratic_party_long
+#		name = SDM_CHR_democratic_party
+#	}
+#
+#	set_party_name = {
+#		ideology = neutrality
+#		long_name = SDM_CHR_neutrality_party_long
+#		name = SDM_CHR_neutrality_party
+#	}
+#}
+
+
+1936.1.1 = {
+#LATER
+}
+
+set_convoys = 150
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1911.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 94
+	fascism = 3
+	communism = 3
+}
+
+add_ideas = {
+The-Ninth
+Frozen-Realm
+Religious-Terrorists
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "C-27"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 1
+		}
+		obsolete = yes
+		icon = "gfx/interface/technologies/gwtank.dds"
+	}
+
+	create_equipment_variant = {
+		name = "C-26CI mod. 1933"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/SOV_basic_light_tank.dds"
+	}
+	create_equipment_variant = {
+		name = "CT-7"
+		type = light_tank_chassis_2
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 10
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/SOV_imp_light_tank.dds"
+	}
+
+create_equipment_variant = {
+		name = "Series I"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Series IX Srednyaya"
+		type = submarine_2
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "Gensokyo & Lagos Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 3
+			destroyer_engine_upgrade = 3
+			ship_ASW_upgrade = 3
+			ship_anti_air_upgrade = 3
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Farut Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 3
+			destroyer_engine_upgrade = 3
+			ship_ASW_upgrade = 3
+			ship_anti_air_upgrade = 3
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Madagascar Class"
+		type = heavy_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_armor_upgrade = 2
+			ship_gun_upgrade = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Angola Class"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_armor_upgrade = 1
+			ship_gun_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "New Luanda Class"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_armor_upgrade = 2
+			ship_gun_upgrade = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Colorado Class"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 3
+			ship_engine_upgrade = 3
+			ship_armor_upgrade = 3
+			ship_gun_upgrade = 4
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Yorktown Class"
+		type = carrier_2
+		upgrades = {
+			ship_deckspace_upgrade = 1
+			carrier_armor_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_reliability_upgrade = 1
+		}
+	}

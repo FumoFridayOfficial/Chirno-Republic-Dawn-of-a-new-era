@@ -1,0 +1,32 @@
+state=
+{
+	id=298
+	name="STATE_298"
+	manpower = 1745000
+	
+	state_category = town
+	resources={
+		rubber=8 # was: 7
+	}	
+	
+
+	history= {
+		owner = BWR
+		add_core_of = BWR
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 3
+			7959 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			7959 5
+		}
+		add_core_of = LIB
+	}
+	provinces={
+		7959 8006
+	}
+}

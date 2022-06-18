@@ -1,0 +1,245 @@
+﻿units= {
+
+	##### NAVAL UNITS #####
+	### Northern Fleet -- Nigeria
+	fleet = {
+		name = "Guinea Force"
+		naval_base = 2050 # Lagos
+		task_force = {				
+			name = "Guinea Force"
+			location = 2050 # Lagos
+			ship = { name = "Chinasa Nakato" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Mumbi Bongani" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Lulit Chizoba" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Masamba Zuberi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Izyaslav" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Chibuike Amadou" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+		}	
+		task_force = {	
+			name = "Guinea Second Force"
+			location = 2050 # Lagos
+			# 5iy Podvodniy Flot
+			ship = { name = "C-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "C-2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "C-3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "C-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "C-5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "C-6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+		}
+	}
+	
+	### -- Gensokyo
+	fleet = {
+		name = "Gensokyo fleet"
+		naval_base = 2115 # Gensokyo
+		task_force = {				
+			name = "Gensokyo fleet"
+			location = 2115 # Gensokyo
+			ship = { name = "Ice Breaker" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Mind Freezing" definition = battleship equipment = { battleship_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Kofi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Thato" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Wanjiku" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Yakov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Frunze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+			# 4ya Flotiliya Esmintsev
+			ship = { name = "Oipufeen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }		
+			ship = { name = "Voykov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }		
+			ship = { name = "Higgagah" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }		
+			ship = { name = "Karl Libknekht" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }		
+		}	
+		task_force = {	
+			name = "Gensokyo Submarine Fleet"
+			location = 2115 # Gensokyo
+			ship = { name = "Shch-301" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-302" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-303" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-304" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-305" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-306" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-307" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-308" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-113" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-114" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-115" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-116" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-117" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-118" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-119" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-120" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-201" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-202" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-203" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-204" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-309" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+		}
+	}
+
+	###
+	fleet = {
+		name = "East of africa Fleet"
+		naval_base = 5210 # 
+		task_force = {				
+			name = "East of africa Fleet"
+			location = 5210 # 
+			ship = { name = "Blicrespe" definition = battleship equipment = { battleship_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Mutiour" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Naucia" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Wuopuo Thaveash" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Qakhag" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Zaixaixx" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Gorralsh" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CHR } } }
+		}	
+		task_force = {	
+			name = "East of africa Submarine Fleet"
+			location = 5210 #
+			ship = { name = "Shch-121" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-122" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-123" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-124" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }
+			ship = { name = "Shch-101" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-102" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-103" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-104" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-105" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-106" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-107" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-108" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-109" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-110" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-111" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+			ship = { name = "Shch-112" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CHR } } }			
+		}	
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "CHR"
+			version_name = "Series IX Srednyaya"
+		}
+		requested_factories = 2
+		progress = 0.80
+		amount = 8
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "CHR"
+			version_name = "Series IX Srednyaya"
+		}
+		requested_factories = 1
+		progress = 0.80
+		amount = 8
+}
+
+	####AIGHT bro thanks for crashing my game 200 times######
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Series I"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Series IX Srednyaya"
+		type = submarine_2
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "Gensokyo & Lagos Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 3
+			destroyer_engine_upgrade = 3
+			ship_ASW_upgrade = 3
+			ship_anti_air_upgrade = 3
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Farut Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 3
+			destroyer_engine_upgrade = 3
+			ship_ASW_upgrade = 3
+			ship_anti_air_upgrade = 3
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Madagascar Class"
+		type = heavy_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_armor_upgrade = 2
+			ship_gun_upgrade = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Angola Class"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_armor_upgrade = 1
+			ship_gun_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "New Luanda Class"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_armor_upgrade = 2
+			ship_gun_upgrade = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Mogadishu Class"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 3
+			ship_engine_upgrade = 3
+			ship_armor_upgrade = 3
+			ship_gun_upgrade = 4
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Cape Class"
+		type = carrier_2
+		upgrades = {
+			ship_deckspace_upgrade = 1
+			carrier_armor_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_reliability_upgrade = 1
+		}
+	}
+
+#####################

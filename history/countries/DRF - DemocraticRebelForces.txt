@@ -1,0 +1,76 @@
+capital = 681
+
+set_research_slots = 3
+set_stability = 0.52
+set_war_support = 0.80
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1  # PLACEHOLDER
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+
+1936.1.1 = {
+#LATER
+}
+
+### Leader
+recruit_character = DRF_Thabani_Olufunmilola
+### Military Leader
+recruit_character = DRF_Gudina_Refilwe
+
+set_convoys = 150
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.7.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 90
+	fascism = 3
+	communism = 3
+	neutrality = 4
+}
+
+add_ideas = {
+Revolutionary_guerillas
+}
+
+#create_country_leader = {
+#	name = "Thabani Olufunmilola"
+#	desc = "POLITICS_THABANI_OLUFUNMILOLA_DESC"
+#	picture = "Portrait_Africa_Generic_land_2.dds"
+#	expire = "1963.3.1"
+#	ideology = liberalism 
+#	traits = {
+#		Nationalist_Symbol
+#	}
+#}
+#create_corps_commander = {
+#	name = " Gudina Refilwe "
+#	picture = "Portrait_Africa_Generic_land_3.dds"
+#	traits = { brilliant_strategist }
+#	skill = 3
+#	attack_skill = 3
+#	defense_skill = 4
+#	planning_skill = 2
+#	logistics_skill = 3
+#}

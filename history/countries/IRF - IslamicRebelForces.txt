@@ -1,0 +1,75 @@
+capital = 559
+
+set_research_slots = 3
+set_stability = 0.52
+set_war_support = 0.70
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1  # PLACEHOLDER
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+
+1936.1.1 = {
+#LATER
+}
+### Leader
+recruit_character = IRF_Mahmood_Adnan
+### Military leader
+recruit_character = IRF_Nasir_Izz_ud_Din
+
+set_convoys = 150
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 4
+	fascism = 3
+	communism = 3
+	neutrality = 90
+}
+
+add_ideas = {
+Revolutionary_guerillas
+}
+
+#create_country_leader = {
+#	name = "Mahmood Adnan"
+#	desc = "POLITICS_MAHMOOD_ADNAN_DESC"
+#	picture = "Portrait_Arabia_Generic_land_CHR.dds"
+#	expire = "1962.3.1"
+#	ideology = centrism 
+#	traits = {
+#		Nationalist_Symbol
+#	}
+#}
+#create_corps_commander = {
+#	name = "Nasir Izz ud-Din"
+#	picture = "Portrait_Arabia_Generic_3.dds"
+#	traits = { brilliant_strategist }
+#	skill = 3
+#	attack_skill = 3
+#	defense_skill = 3
+#	planning_skill = 2
+#	logistics_skill = 2
+#}

@@ -1,0 +1,66 @@
+capital = 701
+
+oob = "BWR_1936"
+set_research_slots = 3
+set_stability = 0.5
+set_war_support = 0.5
+
+set_convoys = 20
+
+1936.1.1 = {
+	set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gwtank = 1
+	early_fighter = 1
+	fighter1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	}
+}
+
+add_ideas = {
+Economic_Resource_Growth
+Through_Exploitation
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 55
+	fascism = 20
+	communism = 5
+	neutrality = 20
+}
+create_country_leader = {
+	name = "Sheldon Aubrey Kent"
+	desc = "POLITICS_SHELDON_AUBREY_KENT_DESC"
+	picture = "Portrait_Britain_Generic_land_4.dds"
+	expire = "1957.3.1"
+	ideology = liberalism 
+	traits = {
+		cruel
+	}
+}
+
+create_corps_commander = {
+ 	name = "Sean McHaggis"
+ 	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+ 	traits = { old_guard }
+ 	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
